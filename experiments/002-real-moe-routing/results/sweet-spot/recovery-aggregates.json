@@ -1,0 +1,187 @@
+{
+  "rows": [
+    {
+      "requested_gib": 4,
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "all_complete": true,
+      "decode_tps": 35.5820437877674,
+      "run_decode_tps": [
+        35.5820437877674
+      ],
+      "allocated_cache_mib": 4084.61,
+      "min_sampled_gpu_free_mib": 1215.0
+    },
+    {
+      "requested_gib": 5,
+      "config": {
+        "cache_mib": 5120,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 3,
+      "all_complete": true,
+      "decode_tps": 40.48900946560778,
+      "run_decode_tps": [
+        40.77757374720537,
+        40.25620698410324,
+        40.4367036635972
+      ],
+      "allocated_cache_mib": 5118.37,
+      "min_sampled_gpu_free_mib": 407.0
+    },
+    {
+      "requested_gib": 5.25,
+      "config": {
+        "cache_mib": 5376,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 3,
+      "all_complete": true,
+      "decode_tps": 42.57335719080206,
+      "run_decode_tps": [
+        42.47656430818052,
+        43.007956133239325,
+        42.24275079471254
+      ],
+      "allocated_cache_mib": 5370.5,
+      "min_sampled_gpu_free_mib": 279.0
+    },
+    {
+      "requested_gib": 5.5,
+      "config": {
+        "cache_mib": 5632,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "all_complete": true,
+      "decode_tps": 32.23999145005581,
+      "run_decode_tps": [
+        32.23999145005581
+      ],
+      "allocated_cache_mib": 5622.64,
+      "min_sampled_gpu_free_mib": 197.0
+    },
+    {
+      "requested_gib": 5.75,
+      "config": {
+        "cache_mib": 5888,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "all_complete": true,
+      "decode_tps": 33.53654189136589,
+      "run_decode_tps": [
+        33.53654189136589
+      ],
+      "allocated_cache_mib": 5887.38,
+      "min_sampled_gpu_free_mib": 200.0
+    },
+    {
+      "requested_gib": 6,
+      "config": {
+        "cache_mib": 6144,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "all_complete": true,
+      "decode_tps": 25.255156625720165,
+      "run_decode_tps": [
+        25.255156625720165
+      ],
+      "allocated_cache_mib": 6139.52,
+      "min_sampled_gpu_free_mib": 289.0
+    },
+    {
+      "requested_gib": 7,
+      "config": {
+        "cache_mib": 7168,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "all_complete": true,
+      "decode_tps": 18.196555177185015,
+      "run_decode_tps": [
+        18.196555177185015
+      ],
+      "allocated_cache_mib": 7160.67,
+      "min_sampled_gpu_free_mib": 254.0
+    },
+    {
+      "requested_gib": 8,
+      "config": {
+        "cache_mib": 8192,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 3,
+      "all_complete": true,
+      "decode_tps": 11.993520476953034,
+      "run_decode_tps": [
+        9.787052238506918,
+        13.378740990945436,
+        13.65862661111298
+      ],
+      "allocated_cache_mib": 8181.82,
+      "min_sampled_gpu_free_mib": 73.0
+    },
+    {
+      "requested_gib": 9,
+      "config": {
+        "cache_mib": 9216,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "all_complete": true,
+      "decode_tps": 10.36684933000767,
+      "run_decode_tps": [
+        10.36684933000767
+      ],
+      "allocated_cache_mib": 9215.58,
+      "min_sampled_gpu_free_mib": 255.0
+    },
+    {
+      "requested_gib": 10,
+      "config": {
+        "cache_mib": 10240,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 2,
+      "all_complete": false,
+      "decode_tps": 11.321429696885657,
+      "run_decode_tps": [
+        11.372477101024849,
+        11.270838515774336
+      ],
+      "allocated_cache_mib": 9745.07,
+      "min_sampled_gpu_free_mib": 270.0
+    },
+    {
+      "requested_gib": 16,
+      "config": {
+        "cache_mib": 16384,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "all_complete": true,
+      "decode_tps": 9.978103170444072,
+      "run_decode_tps": [
+        9.978103170444072
+      ],
+      "allocated_cache_mib": 9745.07,
+      "min_sampled_gpu_free_mib": 320.0
+    }
+  ]
+}

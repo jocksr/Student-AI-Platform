@@ -1,0 +1,42 @@
+{
+  "utc": "2026-11-17T18:11:46.157367+00:00",
+  "requested_gib": [
+    4,
+    4.5,
+    5,
+    5.5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    16,
+    24,
+    32
+  ],
+  "cpu_shares": [
+    0.9,
+    0.95
+  ],
+  "threads": 4,
+  "source_sha256": "bc5b1887e8b7bb1470e0f5510b76509ac4ac9ea775ae1483e2369923f8e780ae",
+  "expected_full_cache_buffer_mib_from_trace": 9745.065307617188,
+  "scope": "Stress exploration requested by user: 4–32 GiB budgets, including above normal GPU headroom. Requested budget may exceed actual allocation or fail.",
+  "guards": "No minimum free-GPU guard for this stress sweep; per-run wall limit 180 s and system available-RAM floor 2 GiB. Existing OS memory settings are unchanged.",
+  "tasks": [
+    {
+      "id": "tune-energy",
+      "prompt": "Explain to a student how conservation of energy applies to a ball thrown upward. Discuss kinetic energy, gravitational potential energy, air resistance, and why the speed changes. Give examples and identify common misconceptions.",
+      "tokens": 192,
+      "fixed_length": true
+    },
+    {
+      "id": "tune-debugging",
+      "prompt": "Explain a systematic process for finding an off-by-one error in a loop that traverses a list. Include examples, boundary cases, a loop invariant, and how to check the proposed repair without relying only on random tests.",
+      "tokens": 192,
+      "fixed_length": true
+    }
+  ],
+  "selection": "Stress results do not automatically qualify for recommendation; normal 512 MiB GPU / 3 GiB RAM headroom rules still apply."
+}

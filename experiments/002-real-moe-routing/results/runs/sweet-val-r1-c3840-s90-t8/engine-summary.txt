@@ -1,0 +1,67 @@
+0.00.107.367 I ggml_cuda_init: found 1 CUDA devices (Total VRAM: 8123 MiB):
+0.00.107.501 I load_backend: loaded CUDA backend from E:\Project_APEX\experiments\002-real-moe-routing\runtime\ggml-cuda.dll
+0.00.165.189 I cmn  common_param:   - CUDA0   : NVIDIA GeForce RTX 5060 (8123 MiB, 7031 MiB free)
+0.00.165.257 I cmn  common_param: system_info: n_threads = 8 (n_threads_batch = 8) / 16 | CUDA : ARCHS = 750,800,860,890,900,1200,1210 | USE_GRAPHS = 1 | FA_QUANTS = q4_0-q4_0,q8_0-q8_0,f16-f16,bf16-bf16,f8_e4m3-f8_e4m3 | NATIVE_FP8 = 1 | BLACKWELL_NATIVE_FP4 = 1 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.237.852 I llama_prepare_model_devices: using device CUDA0 (NVIDIA GeForce RTX 5060) (0000:01:00.0) - 7031 MiB free
+0.00.409.033 I print_info: n_layer               = 24
+0.00.409.033 I print_info: n_layer_all           = 24
+0.00.409.059 I print_info: n_expert              = 32
+0.00.409.059 I print_info: n_expert_used         = 4
+0.00.409.060 I print_info: n_expert_groups       = 0
+0.01.233.662 I load_tensors: offloaded 25/25 layers to GPU
+0.01.233.666 I load_tensors:   CPU_Mapped model buffer size =   586.82 MiB
+0.01.233.667 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.667 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.668 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.668 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.669 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.669 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.670 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.670 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.670 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.671 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.671 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.672 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.672 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.673 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.673 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.674 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.674 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.675 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.675 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.676 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.676 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.677 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.677 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.677 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.678 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.678 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.683 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.684 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.684 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.685 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.685 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.686 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.686 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.687 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.687 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.688 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.688 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.688 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.689 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.689 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.690 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.690 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.690 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.691 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.691 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.692 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.692 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.233.693 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.233.693 I load_tensors:        CUDA0 model buffer size =  1242.03 MiB
+0.01.611.604 I llama_context:  CUDA_Host  output buffer size =     0.77 MiB
+0.01.613.083 I llama_kv_cache:      CUDA0 KV buffer size =    48.00 MiB
+0.01.613.736 I llama_kv_cache:      CUDA0 KV buffer size =    12.00 MiB
+0.01.689.384 I impl:      CUDA0 MoE cache size =  3832.47 MiB for 9682.03 MiB of host experts, 90% of the misses on the CPU
+0.01.697.890 I sched_reserve:      CUDA0 compute buffer size =   168.48 MiB
+0.01.697.896 I sched_reserve:  CUDA_Host compute buffer size =    12.51 MiB

@@ -1,0 +1,53 @@
+{
+  "orders": [
+    [
+      false,
+      true
+    ],
+    [
+      true,
+      false
+    ],
+    [
+      false,
+      true
+    ]
+  ],
+  "flags": [
+    "-ngl",
+    "99",
+    "-cmoe",
+    "--moe-cache-mib",
+    "4096",
+    "--moe-cache-cpu-share",
+    "0.95"
+  ],
+  "tasks": [
+    {
+      "id": "biology",
+      "prompt": "Explain the difference between mitosis and meiosis for a high school biology student. Include the purpose, number of divisions, and resulting cells.",
+      "tokens": 128,
+      "fixed_length": true
+    },
+    {
+      "id": "code-review",
+      "prompt": "A student wrote: def average(xs): return sum(xs) / len(xs). Review the function, explain its behavior for an empty list, and describe ways to handle that case.",
+      "tokens": 128,
+      "fixed_length": true
+    },
+    {
+      "id": "history",
+      "prompt": "Explain how historians distinguish primary sources from secondary sources. Give examples and discuss how each can be misleading.",
+      "tokens": 128,
+      "fixed_length": true
+    },
+    {
+      "id": "algebra",
+      "prompt": "Teach a student how to solve a pair of linear equations by substitution. Work through 2x + y = 11 and x - y = 1, explaining each step.",
+      "tokens": 128,
+      "fixed_length": true
+    }
+  ],
+  "threads": 6,
+  "load_mode": "mmap"
+}

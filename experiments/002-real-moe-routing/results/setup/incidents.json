@@ -1,0 +1,27 @@
+{
+  "incidents": [
+    {
+      "run": "calibration-cpu-t6",
+      "classification": "setup interruption; excluded from performance results",
+      "details": [
+        "Model loaded successfully, but the execution sandbox denied localhost requests with WinError 10013. The interrupted harness did not record inference results.",
+        "psutil.swap_memory raised RuntimeError because PdhAddEnglishCounterW was unavailable. This optional query was removed. RAM, process RSS and nvidia-smi monitoring continued in subsequent runs."
+      ]
+    },
+    {
+      "runs": [
+        "cal-cache2048",
+        "cal-cache2048-retry",
+        "cal-cache3072",
+        "cal-cache3072-share50",
+        "cal-cache3072-share95"
+      ],
+      "classification": "pinned-host loading / CUDA allocation failures; retained",
+      "details": [
+        "The first 2 GiB cache reached warm-up and failed while creating a cuBLAS handle. The retry and 3 GiB variants failed CUDA cache allocation during initialization.",
+        "Available RAM and sampled GPU memory are retained in resource-samples.json. The evidence does not isolate a physical VRAM limit or root cause.",
+        "Memory-mapped loading succeeded with both 3 GiB and 4 GiB caches. All held-out configurations use this loading mode."
+      ]
+    }
+  ]
+}

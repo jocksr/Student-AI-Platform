@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "label": "cal-cache3072",
+  "utc": "2026-11-17T17:15:59.991151+00:00",
+  "command": [
+    "E:\\Project_APEX\\experiments\\002-real-moe-routing\\runtime\\llama-server.exe",
+    "-m",
+    "E:\\Project_APEX\\experiments\\002-real-moe-routing\\models\\gpt-oss-20b-MXFP4.gguf",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "63290",
+    "-c",
+    "2048",
+    "-np",
+    "1",
+    "-b",
+    "256",
+    "-ub",
+    "256",
+    "-t",
+    "6",
+    "-tb",
+    "6",
+    "-fa",
+    "on",
+    "-fit",
+    "off",
+    "-lm",
+    "none",
+    "--no-warmup",
+    "-lv",
+    "4",
+    "--cache-ram",
+    "0",
+    "--cors-origins",
+    "localhost",
+    "--no-webui",
+    "-ngl",
+    "99",
+    "-cmoe",
+    "--moe-cache-mib",
+    "3072"
+  ],
+  "trace": false,
+  "threads": 6,
+  "load_mode": "none",
+  "tasks": [
+    {
+      "id": "calibration-explain",
+      "prompt": "Explain how a student can use dimensional analysis to check a physics calculation. Give several concrete examples and common mistakes.",
+      "tokens": 96,
+      "fixed_length": true
+    },
+    {
+      "id": "calibration-code",
+      "prompt": "Explain binary search to a student. Include the loop invariant, the stopping condition, and a worked example on a sorted list.",
+      "tokens": 96,
+      "fixed_length": true
+    }
+  ],
+  "before": {
+    "available_ram_bytes": 18430488576,
+    "gpu": {
+      "used_mib": 1471.0,
+      "free_mib": 6425.0,
+      "utilization_pct": 3.0,
+      "temperature_c": 35.46,
+      "power_w": 15.88
+    }
+  },
+  "python": "3.14.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "requests": [],
+  "harness_sha256": "a3d28b0386edd9f4709b43dc4d67c4f3f0ce85d03ef074dd3fa1c64a8ccc239e",
+  "status": "failed",
+  "error": "RuntimeError: Server exited: 1; see server.log",
+  "wall_s": 10.584884500000044,
+  "process_exit_code": 1
+}

@@ -1,0 +1,88 @@
+{
+  "configurations": {
+    "cpu": [
+      "-ngl",
+      "99",
+      "-cmoe"
+    ],
+    "static12": [
+      "-ngl",
+      "12"
+    ],
+    "hybrid4096": [
+      "-ngl",
+      "99",
+      "-cmoe",
+      "--moe-cache-mib",
+      "4096",
+      "--moe-cache-cpu-share",
+      "0.95"
+    ]
+  },
+  "tasks": [
+    {
+      "id": "arithmetic-check",
+      "prompt": "Calculate 17 times 23. Output only the integer answer, with no explanation.",
+      "tokens": 256,
+      "fixed_length": false,
+      "check": "exact",
+      "expected": "391",
+      "mode": "chat"
+    },
+    {
+      "id": "algebra-check",
+      "prompt": "Solve 3x + 7 = 22. Output only the integer value of x, with no explanation.",
+      "tokens": 256,
+      "fixed_length": false,
+      "check": "exact",
+      "expected": "5",
+      "mode": "chat"
+    },
+    {
+      "id": "sort-check",
+      "prompt": "Sort these numbers from smallest to largest: 12, -3, 7, 0, 7. Output only a JSON array of numbers.",
+      "tokens": 256,
+      "fixed_length": false,
+      "check": "json",
+      "expected": [
+        -3,
+        0,
+        7,
+        7,
+        12
+      ],
+      "mode": "chat"
+    },
+    {
+      "id": "code-check",
+      "prompt": "Without running it, determine what this Python expression prints: print(sum(i*i for i in range(4))). Output only the integer, with no explanation.",
+      "tokens": 256,
+      "fixed_length": false,
+      "check": "exact",
+      "expected": "14",
+      "mode": "chat"
+    },
+    {
+      "id": "extraction-check",
+      "prompt": "From this sentence extract the name and score: 'Mira earned 87 points on the quiz.' Output only JSON with keys name (string) and score (integer).",
+      "tokens": 256,
+      "fixed_length": false,
+      "check": "json",
+      "expected": {
+        "name": "Mira",
+        "score": 87
+      },
+      "mode": "chat"
+    },
+    {
+      "id": "logic-check",
+      "prompt": "All squares are rectangles. Some rectangles are blue. Does it necessarily follow that some squares are blue? Output only yes or no, in lowercase.",
+      "tokens": 256,
+      "fixed_length": false,
+      "check": "exact",
+      "expected": "no",
+      "mode": "chat"
+    }
+  ],
+  "rationale": "Post-evaluation diagnostic, prompted by incorrect direct-final algebra answer. Separate from frozen performance comparison; no retuning."
+}

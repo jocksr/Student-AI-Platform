@@ -1,0 +1,790 @@
+{
+  "schema_version": 1,
+  "label": "sweet-quality-selected",
+  "utc": "2026-11-17T18:39:41.873965+00:00",
+  "command": [
+    "E:\\Project_APEX\\experiments\\002-real-moe-routing\\runtime\\llama-server.exe",
+    "-m",
+    "E:\\Project_APEX\\experiments\\002-real-moe-routing\\models\\gpt-oss-20b-MXFP4.gguf",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "65008",
+    "-c",
+    "2048",
+    "-np",
+    "1",
+    "-b",
+    "256",
+    "-ub",
+    "256",
+    "-t",
+    "4",
+    "-tb",
+    "4",
+    "-fa",
+    "on",
+    "-fit",
+    "off",
+    "-lm",
+    "mmap",
+    "--no-warmup",
+    "-lv",
+    "4",
+    "--cache-ram",
+    "0",
+    "--cors-origins",
+    "localhost",
+    "--no-webui",
+    "-ngl",
+    "99",
+    "-cmoe",
+    "--moe-cache-mib",
+    "5120",
+    "--moe-cache-cpu-share",
+    "0.9"
+  ],
+  "trace": false,
+  "threads": 4,
+  "load_mode": "mmap",
+  "tasks": [
+    {
+      "id": "arithmetic-check",
+      "prompt": "Calculate 17 times 23. Output only the integer answer, with no explanation.",
+      "tokens": 256,
+      "fixed_length": false,
+      "check": "exact",
+      "expected": "391",
+      "mode": "chat"
+    },
+    {
+      "id": "algebra-check",
+      "prompt": "Solve 3x + 7 = 22. Output only the integer value of x, with no explanation.",
+      "tokens": 256,
+      "fixed_length": false,
+      "check": "exact",
+      "expected": "5",
+      "mode": "chat"
+    },
+    {
+      "id": "sort-check",
+      "prompt": "Sort these numbers from smallest to largest: 12, -3, 7, 0, 7. Output only a JSON array of numbers.",
+      "tokens": 256,
+      "fixed_length": false,
+      "check": "json",
+      "expected": [
+        -3,
+        0,
+        7,
+        7,
+        12
+      ],
+      "mode": "chat"
+    },
+    {
+      "id": "code-check",
+      "prompt": "Without running it, determine what this Python expression prints: print(sum(i*i for i in range(4))). Output only the integer, with no explanation.",
+      "tokens": 256,
+      "fixed_length": false,
+      "check": "exact",
+      "expected": "14",
+      "mode": "chat"
+    },
+    {
+      "id": "extraction-check",
+      "prompt": "From this sentence extract the name and score: 'Mira earned 87 points on the quiz.' Output only JSON with keys name (string) and score (integer).",
+      "tokens": 256,
+      "fixed_length": false,
+      "check": "json",
+      "expected": {
+        "name": "Mira",
+        "score": 87
+      },
+      "mode": "chat"
+    },
+    {
+      "id": "logic-check",
+      "prompt": "All squares are rectangles. Some rectangles are blue. Does it necessarily follow that some squares are blue? Output only yes or no, in lowercase.",
+      "tokens": 256,
+      "fixed_length": false,
+      "check": "exact",
+      "expected": "no",
+      "mode": "chat"
+    }
+  ],
+  "before": {
+    "available_ram_bytes": 17111773184,
+    "gpu": {
+      "used_mib": 471.0,
+      "free_mib": 7425.0,
+      "utilization_pct": 0.0,
+      "temperature_c": 49.18,
+      "power_w": 36.37
+    }
+  },
+  "python": "3.14.0",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "requests": [
+    {
+      "prompt": "Calculate 17 times 23. Output only the integer answer, with no explanation.",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful student tutor."
+          },
+          {
+            "role": "user",
+            "content": "Calculate 17 times 23. Output only the integer answer, with no explanation."
+          }
+        ],
+        "max_tokens": 256,
+        "temperature": 0,
+        "seed": 1729,
+        "cache_prompt": false,
+        "reasoning_effort": "low",
+        "stream": false,
+        "ignore_eos": false
+      },
+      "elapsed_s": 1.2823594000001322,
+      "first_token_s": null,
+      "first_text_s": null,
+      "content": "391",
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "391",
+              "reasoning_content": "Just multiply 17*23=391."
+            }
+          }
+        ],
+        "created": 1794940789,
+        "model": "E:\\Project_APEX\\experiments\\002-real-moe-routing\\models\\gpt-oss-20b-MXFP4.gguf",
+        "system_fingerprint": "b12359-b1b770d90",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 20,
+          "prompt_tokens": 98,
+          "total_tokens": 118,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-iM80gVPyUJRXyhVfOEWbCRXEnctz9ufN",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 98,
+          "prompt_ms": 688.217,
+          "prompt_per_token_ms": 7.022622448979591,
+          "prompt_per_second": 142.39694747441578,
+          "predicted_n": 20,
+          "predicted_ms": 574.506,
+          "predicted_per_token_ms": 30.23715789473684,
+          "predicted_per_second": 33.07189132924635
+        }
+      },
+      "mode": "normal-chat-low-reasoning",
+      "task_id": "arithmetic-check",
+      "correct": true
+    },
+    {
+      "prompt": "Solve 3x + 7 = 22. Output only the integer value of x, with no explanation.",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful student tutor."
+          },
+          {
+            "role": "user",
+            "content": "Solve 3x + 7 = 22. Output only the integer value of x, with no explanation."
+          }
+        ],
+        "max_tokens": 256,
+        "temperature": 0,
+        "seed": 1729,
+        "cache_prompt": false,
+        "reasoning_effort": "low",
+        "stream": false,
+        "ignore_eos": false
+      },
+      "elapsed_s": 1.7125677000003634,
+      "first_token_s": null,
+      "first_text_s": null,
+      "content": "5",
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "5",
+              "reasoning_content": "We solve: 3x+7=22 => 3x=15 => x=5. Output only integer 5."
+            }
+          }
+        ],
+        "created": 1794940790,
+        "model": "E:\\Project_APEX\\experiments\\002-real-moe-routing\\models\\gpt-oss-20b-MXFP4.gguf",
+        "system_fingerprint": "b12359-b1b770d90",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 38,
+          "prompt_tokens": 104,
+          "total_tokens": 142,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-2IIuZaa8siTVzqBMImGGvc0Oywmc38Vn",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 104,
+          "prompt_ms": 740.322,
+          "prompt_per_token_ms": 7.11848076923077,
+          "prompt_per_second": 140.47941301217577,
+          "predicted_n": 38,
+          "predicted_ms": 944.151,
+          "predicted_per_token_ms": 25.517594594594595,
+          "predicted_per_second": 39.18864673129616
+        }
+      },
+      "mode": "normal-chat-low-reasoning",
+      "task_id": "algebra-check",
+      "correct": true
+    },
+    {
+      "prompt": "Sort these numbers from smallest to largest: 12, -3, 7, 0, 7. Output only a JSON array of numbers.",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful student tutor."
+          },
+          {
+            "role": "user",
+            "content": "Sort these numbers from smallest to largest: 12, -3, 7, 0, 7. Output only a JSON array of numbers."
+          }
+        ],
+        "max_tokens": 256,
+        "temperature": 0,
+        "seed": 1729,
+        "cache_prompt": false,
+        "reasoning_effort": "low",
+        "stream": false,
+        "ignore_eos": false
+      },
+      "elapsed_s": 2.6965351999970153,
+      "first_token_s": null,
+      "first_text_s": null,
+      "content": "```json\n[-3, 0, 7, 7, 12]\n```",
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "```json\n[-3, 0, 7, 7, 12]\n```",
+              "reasoning_content": "Need to sort: numbers: 12, -3, 7, 0, 7. Sorted ascending: -3, 0, 7, 7, 12. Output JSON array of numbers."
+            }
+          }
+        ],
+        "created": 1794940793,
+        "model": "E:\\Project_APEX\\experiments\\002-real-moe-routing\\models\\gpt-oss-20b-MXFP4.gguf",
+        "system_fingerprint": "b12359-b1b770d90",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 74,
+          "prompt_tokens": 112,
+          "total_tokens": 186,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-8u1VVwm0eWRzidLx3Z0fOwadqkRGmpFP",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 112,
+          "prompt_ms": 804.392,
+          "prompt_per_token_ms": 7.182071428571429,
+          "prompt_per_second": 139.23559657480433,
+          "predicted_n": 74,
+          "predicted_ms": 1877.94,
+          "predicted_per_token_ms": 25.725205479452054,
+          "predicted_per_second": 38.872381439236605
+        }
+      },
+      "mode": "normal-chat-low-reasoning",
+      "task_id": "sort-check",
+      "correct": true
+    },
+    {
+      "prompt": "Without running it, determine what this Python expression prints: print(sum(i*i for i in range(4))). Output only the integer, with no explanation.",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful student tutor."
+          },
+          {
+            "role": "user",
+            "content": "Without running it, determine what this Python expression prints: print(sum(i*i for i in range(4))). Output only the integer, with no explanation."
+          }
+        ],
+        "max_tokens": 256,
+        "temperature": 0,
+        "seed": 1729,
+        "cache_prompt": false,
+        "reasoning_effort": "low",
+        "stream": false,
+        "ignore_eos": false
+      },
+      "elapsed_s": 2.052593699998397,
+      "first_token_s": null,
+      "first_text_s": null,
+      "content": "14",
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "14",
+              "reasoning_content": "We need sum of i*i for i in range(4). range(4) gives 0,1,2,3. Squares: 0,1,4,9 sum=14."
+            }
+          }
+        ],
+        "created": 1794940795,
+        "model": "E:\\Project_APEX\\experiments\\002-real-moe-routing\\models\\gpt-oss-20b-MXFP4.gguf",
+        "system_fingerprint": "b12359-b1b770d90",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 52,
+          "prompt_tokens": 112,
+          "total_tokens": 164,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-RwXUBnrwtq92YymHWe8IEr1xdxv9o77K",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 112,
+          "prompt_ms": 818.582,
+          "prompt_per_token_ms": 7.308767857142857,
+          "prompt_per_second": 136.8219677442211,
+          "predicted_n": 52,
+          "predicted_ms": 1230.847,
+          "predicted_per_token_ms": 24.134254901960784,
+          "predicted_per_second": 41.43488183340415
+        }
+      },
+      "mode": "normal-chat-low-reasoning",
+      "task_id": "code-check",
+      "correct": true
+    },
+    {
+      "prompt": "From this sentence extract the name and score: 'Mira earned 87 points on the quiz.' Output only JSON with keys name (string) and score (integer).",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful student tutor."
+          },
+          {
+            "role": "user",
+            "content": "From this sentence extract the name and score: 'Mira earned 87 points on the quiz.' Output only JSON with keys name (string) and score (integer)."
+          }
+        ],
+        "max_tokens": 256,
+        "temperature": 0,
+        "seed": 1729,
+        "cache_prompt": false,
+        "reasoning_effort": "low",
+        "stream": false,
+        "ignore_eos": false
+      },
+      "elapsed_s": 1.7147292000008747,
+      "first_token_s": null,
+      "first_text_s": null,
+      "content": "{\"name\":\"Mira\",\"score\":87}",
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "{\"name\":\"Mira\",\"score\":87}",
+              "reasoning_content": "We need to output JSON: {\"name\":\"Mira\",\"score\":87}."
+            }
+          }
+        ],
+        "created": 1794940797,
+        "model": "E:\\Project_APEX\\experiments\\002-real-moe-routing\\models\\gpt-oss-20b-MXFP4.gguf",
+        "system_fingerprint": "b12359-b1b770d90",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 36,
+          "prompt_tokens": 115,
+          "total_tokens": 151,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-1Vcq8mFmPf6V6EtHg2VyyQ3RtpU5Me3i",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 115,
+          "prompt_ms": 817.312,
+          "prompt_per_token_ms": 7.107060869565218,
+          "prompt_per_second": 140.70514075408167,
+          "predicted_n": 36,
+          "predicted_ms": 891.4,
+          "predicted_per_token_ms": 25.468571428571426,
+          "predicted_per_second": 39.26407897689029
+        }
+      },
+      "mode": "normal-chat-low-reasoning",
+      "task_id": "extraction-check",
+      "correct": true
+    },
+    {
+      "prompt": "All squares are rectangles. Some rectangles are blue. Does it necessarily follow that some squares are blue? Output only yes or no, in lowercase.",
+      "payload": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "You are a helpful student tutor."
+          },
+          {
+            "role": "user",
+            "content": "All squares are rectangles. Some rectangles are blue. Does it necessarily follow that some squares are blue? Output only yes or no, in lowercase."
+          }
+        ],
+        "max_tokens": 256,
+        "temperature": 0,
+        "seed": 1729,
+        "cache_prompt": false,
+        "reasoning_effort": "low",
+        "stream": false,
+        "ignore_eos": false
+      },
+      "elapsed_s": 2.219495299999835,
+      "first_token_s": null,
+      "first_text_s": null,
+      "content": "no",
+      "response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "no",
+              "reasoning_content": "We have premise: All squares are rectangles. Some rectangles are blue. Does it necessarily follow that some squares are blue? Not necessarily. Could be that blue rectangles are not squares. So answer no."
+            }
+          }
+        ],
+        "created": 1794940799,
+        "model": "E:\\Project_APEX\\experiments\\002-real-moe-routing\\models\\gpt-oss-20b-MXFP4.gguf",
+        "system_fingerprint": "b12359-b1b770d90",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 51,
+          "prompt_tokens": 110,
+          "total_tokens": 161,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-bqA24aOYer8p55mBoEHPlkNC4utuc4E0",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 110,
+          "prompt_ms": 840.377,
+          "prompt_per_token_ms": 7.639790909090909,
+          "prompt_per_second": 130.89363464254734,
+          "predicted_n": 51,
+          "predicted_ms": 1358.35,
+          "predicted_per_token_ms": 27.166999999999998,
+          "predicted_per_second": 36.8093643022785
+        }
+      },
+      "mode": "normal-chat-low-reasoning",
+      "task_id": "logic-check",
+      "correct": true
+    }
+  ],
+  "harness_sha256": "883bebe1446cd2754becb9e99d654b3a0b1d9443331f1596e1e2cf4d547a4c55",
+  "harness_source_snapshot": "results\\harness-snapshots\\883bebe1446cd2754becb9e99d654b3a0b1d9443331f1596e1e2cf4d547a4c55.py.snapshot",
+  "minimum_gpu_free_mib": 0,
+  "maximum_seconds": 180,
+  "minimum_available_ram_gib": 1,
+  "startup_s": 2.6327072999993106,
+  "props": {
+    "default_generation_settings": {
+      "params": {
+        "seed": 4294967295,
+        "temperature": 0.800000011920929,
+        "dynatemp_range": 0.0,
+        "dynatemp_exponent": 1.0,
+        "top_k": 40,
+        "top_p": 0.949999988079071,
+        "min_p": 0.05000000074505806,
+        "top_n_sigma": -1.0,
+        "xtc_probability": 0.0,
+        "xtc_threshold": 0.10000000149011612,
+        "typical_p": 1.0,
+        "repeat_last_n": 64,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "dry_multiplier": 0.0,
+        "dry_base": 1.75,
+        "dry_allowed_length": 2,
+        "dry_penalty_last_n": 64,
+        "mirostat": 0,
+        "mirostat_tau": 5.0,
+        "mirostat_eta": 0.10000000149011612,
+        "adaptive_target": -1.0,
+        "adaptive_decay": 0.8999999761581421,
+        "max_tokens": -1,
+        "n_predict": -1,
+        "n_keep": 0,
+        "n_discard": 0,
+        "ignore_eos": false,
+        "stream": false,
+        "n_probs": 0,
+        "min_keep": 0,
+        "chat_format": "Content-only",
+        "reasoning_format": "none",
+        "reasoning_in_content": false,
+        "generation_prompt": "",
+        "samplers": [
+          "penalties",
+          "dry",
+          "top_n_sigma",
+          "top_k",
+          "typ_p",
+          "top_p",
+          "min_p",
+          "xtc",
+          "temperature"
+        ],
+        "speculative.types": "none",
+        "timings_per_token": false,
+        "post_sampling_probs": false,
+        "backend_sampling": false,
+        "lora": []
+      },
+      "n_ctx": 2048
+    },
+    "total_slots": 1,
+    "model_alias": "E:\\Project_APEX\\experiments\\002-real-moe-routing\\models\\gpt-oss-20b-MXFP4.gguf",
+    "model_ftype": "MXFP4 MoE",
+    "model_path": "E:\\Project_APEX\\experiments\\002-real-moe-routing\\models\\gpt-oss-20b-MXFP4.gguf",
+    "modalities": {
+      "vision": false,
+      "video": false,
+      "audio": false
+    },
+    "media_marker": "<__media_wh7zfzq7HDOJxaa4qQU5gXIUDlU2yc87__>",
+    "endpoint_slots": true,
+    "endpoint_props": false,
+    "endpoint_metrics": false,
+    "ui": false,
+    "ui_settings": {},
+    "chat_template": "{#-\n  In addition to the normal inputs of `messages` and `tools`, this template also accepts the\n  following kwargs:\n  - \"builtin_tools\": A list, can contain \"browser\" and/or \"python\".\n  - \"model_identity\": A string that optionally describes the model identity.\n  - \"reasoning_effort\": A string that describes the reasoning effort, defaults to \"medium\".\n #}\n\n{#- Tool Definition Rendering ============================================== #}\n{%- macro render_typescript_type(param_spec, required_params, is_nullable=false) -%}\n    {%- if param_spec.type == \"array\" -%}\n        {%- if param_spec['items'] -%}\n            {%- if param_spec['items']['type'] == \"string\" -%}\n                {{- \"string[]\" }}\n            {%- elif param_spec['items']['type'] == \"number\" -%}\n                {{- \"number[]\" }}\n            {%- elif param_spec['items']['type'] == \"integer\" -%}\n                {{- \"number[]\" }}\n            {%- elif param_spec['items']['type'] == \"boolean\" -%}\n                {{- \"boolean[]\" }}\n            {%- else -%}\n                {%- set inner_type = render_typescript_type(param_spec['items'], required_params) -%}\n                {%- if inner_type == \"object | object\" or inner_type|length > 50 -%}\n                    {{- \"any[]\" }}\n                {%- else -%}\n                    {{- inner_type + \"[]\" }}\n                {%- endif -%}\n            {%- endif -%}\n            {%- if param_spec.nullable -%}\n                {{- \" | null\" }}\n            {%- endif -%}\n        {%- else -%}\n            {{- \"any[]\" }}\n            {%- if param_spec.nullable -%}\n                {{- \" | null\" }}\n            {%- endif -%}\n        {%- endif -%}\n    {%- elif param_spec.type is defined and param_spec.type is iterable and param_spec.type is not string and param_spec.type is not mapping and param_spec.type[0] is defined -%}\n        {#- Handle array of types like [\"object\", \"object\"] from Union[dict, list] #}\n        {%- if param_spec.type | length > 1 -%}\n            {{- param_spec.type | join(\" | \") }}\n        {%- else -%}\n            {{- param_spec.type[0] }}\n        {%- endif -%}\n    {%- elif param_spec.oneOf -%}\n        {#- Handle oneOf schemas - check for complex unions and fallback to any #}\n        {%- set has_object_variants = false -%}\n        {%- for variant in param_spec.oneOf -%}\n            {%- if variant.type == \"object\" -%}\n                {%- set has_object_variants = true -%}\n            {%- endif -%}\n        {%- endfor -%}\n        {%- if has_object_variants and param_spec.oneOf|length > 1 -%}\n            {{- \"any\" }}\n        {%- else -%}\n            {%- for variant in param_spec.oneOf -%}\n                {{- render_typescript_type(variant, required_params) -}}\n                {%- if variant.description %}\n                    {{- \"// \" + variant.description }}\n                {%- endif -%}\n                {%- if variant.default is defined %}\n                    {{ \"// default: \" + variant.default|tojson }}\n                {%- endif -%}\n                {%- if not loop.last %}\n                    {{- \" | \" }}\n                {% endif -%}\n            {%- endfor -%}\n        {%- endif -%}\n    {%- elif param_spec.type == \"string\" -%}\n        {%- if param_spec.enum -%}\n            {{- '\"' + param_spec.enum|join('\" | \"') + '\"' -}}\n        {%- else -%}\n            {{- \"string\" }}\n            {%- if param_spec.nullable %}\n                {{- \" | null\" }}\n            {%- endif -%}\n        {%- endif -%}\n    {%- elif param_spec.type == \"number\" -%}\n        {{- \"number\" }}\n    {%- elif param_spec.type == \"integer\" -%}\n        {{- \"number\" }}\n    {%- elif param_spec.type == \"boolean\" -%}\n        {{- \"boolean\" }}\n\n    {%- elif param_spec.type == \"object\" -%}\n        {%- if param_spec.properties -%}\n            {{- \"{\\n\" }}\n            {%- for prop_name, prop_spec in param_spec.properties.items() -%}\n                {{- prop_name -}}\n                {%- if prop_name not in (param_spec.required or []) -%}\n                    {{- \"?\" }}\n                {%- endif -%}\n                {{- \": \" }}\n                {{ render_typescript_type(prop_spec, param_spec.required or []) }}\n                {%- if not loop.last -%}\n                    {{-\", \" }}\n                {%- endif -%}\n            {%- endfor -%}\n            {{- \"}\" }}\n        {%- else -%}\n            {{- \"object\" }}\n        {%- endif -%}\n    {%- else -%}\n        {{- \"any\" }}\n    {%- endif -%}\n{%- endmacro -%}\n\n{%- macro render_tool_namespace(namespace_name, tools) -%}\n    {{- \"## \" + namespace_name + \"\\n\\n\" }}\n    {{- \"namespace \" + namespace_name + \" {\\n\\n\" }}\n    {%- for tool in tools %}\n        {%- set tool = tool.function %}\n        {{- \"// \" + tool.description + \"\\n\" }}\n        {{- \"type \"+ tool.name + \" = \" }}\n        {%- if tool.parameters and tool.parameters.properties %}\n            {{- \"(_: {\\n\" }}\n            {%- for param_name, param_spec in tool.parameters.properties.items() %}\n                {%- if param_spec.description %}\n                    {{- \"// \" + param_spec.description + \"\\n\" }}\n                {%- endif %}\n                {{- param_name }}\n                {%- if param_name not in (tool.parameters.required or []) -%}\n                    {{- \"?\" }}\n                {%- endif -%}\n                {{- \": \" }}\n                {{- render_typescript_type(param_spec, tool.parameters.required or []) }}\n                {%- if param_spec.default is defined -%}\n                    {%- if param_spec.enum %}\n                        {{- \", // default: \" + param_spec.default }}\n                    {%- elif param_spec.oneOf %}\n                        {{- \"// default: \" + param_spec.default }}\n                    {%- else %}\n                        {{- \", // default: \" + param_spec.default|tojson }}\n                    {%- endif -%}\n                {%- endif -%}\n                {%- if not loop.last %}\n                    {{- \",\\n\" }}\n                {%- else %}\n                    {{- \",\\n\" }}\n                {%- endif -%}\n            {%- endfor %}\n            {{- \"}) => any;\\n\\n\" }}\n        {%- else -%}\n            {{- \"() => any;\\n\\n\" }}\n        {%- endif -%}\n    {%- endfor %}\n    {{- \"} // namespace \" + namespace_name }}\n{%- endmacro -%}\n\n{%- macro render_builtin_tools(browser_tool, python_tool) -%}\n    {%- if browser_tool %}\n        {{- \"## browser\\n\\n\" }}\n        {{- \"// Tool for browsing.\\n\" }}\n        {{- \"// The `cursor` appears in brackets before each browsing display: `[{cursor}]`.\\n\" }}\n        {{- \"// Cite information from the tool using the following format:\\n\" }}\n        {{- \"// `【{cursor}†L{line_start}(-L{line_end})?】`, for example: `【6†L9-L11】` or `【8†L3】`.\\n\" }}\n        {{- \"// Do not quote more than 10 words directly from the tool output.\\n\" }}\n        {{- \"// sources=web (default: web)\\n\" }}\n        {{- \"namespace browser {\\n\\n\" }}\n        {{- \"// Searches for information related to `query` and displays `topn` results.\\n\" }}\n        {{- \"type search = (_: {\\n\" }}\n        {{- \"query: string,\\n\" }}\n        {{- \"topn?: number, // default: 10\\n\" }}\n        {{- \"source?: string,\\n\" }}\n        {{- \"}) => any;\\n\\n\" }}\n        {{- \"// Opens the link `id` from the page indicated by `cursor` starting at line number `loc`, showing `num_lines` lines.\\n\" }}\n        {{- \"// Valid link ids are displayed with the formatting: `【{id}†.*】`.\\n\" }}\n        {{- \"// If `cursor` is not provided, the most recent page is implied.\\n\" }}\n        {{- \"// If `id` is a string, it is treated as a fully qualified URL associated with `source`.\\n\" }}\n        {{- \"// If `loc` is not provided, the viewport will be positioned at the beginning of the document or centered on the most relevant passage, if available.\\n\" }}\n        {{- \"// Use this function without `id` to scroll to a new location of an opened page.\\n\" }}\n        {{- \"type open = (_: {\\n\" }}\n        {{- \"id?: number | string, // default: -1\\n\" }}\n        {{- \"cursor?: number, // default: -1\\n\" }}\n        {{- \"loc?: number, // default: -1\\n\" }}\n        {{- \"num_lines?: number, // default: -1\\n\" }}\n        {{- \"view_source?: boolean, // default: false\\n\" }}\n        {{- \"source?: string,\\n\" }}\n        {{- \"}) => any;\\n\\n\" }}\n        {{- \"// Finds exact matches of `pattern` in the current page, or the page given by `cursor`.\\n\" }}\n        {{- \"type find = (_: {\\n\" }}\n        {{- \"pattern: string,\\n\" }}\n        {{- \"cursor?: number, // default: -1\\n\" }}\n        {{- \"}) => any;\\n\\n\" }}\n        {{- \"} // namespace browser\\n\\n\" }}\n    {%- endif -%}\n\n    {%- if python_tool %}\n        {{- \"## python\\n\\n\" }}\n        {{- \"Use this tool to execute Python code in your chain of thought. The code will not be shown to the user. This tool should be used for internal reasoning, but not for code that is intended to be visible to the user (e.g. when creating plots, tables, or files).\\n\\n\" }}\n        {{- \"When you send a message containing Python code to python, it will be executed in a stateful Jupyter notebook environment. python will respond with the output of the execution or time out after 120.0 seconds. The drive at '/mnt/data' can be used to save and persist user files. Internet access for this session is UNKNOWN. Depends on the cluster.\\n\\n\" }}\n    {%- endif -%}\n{%- endmacro -%}\n\n{#- System Message Construction ============================================ #}\n{%- macro build_system_message() -%}\n    {%- if model_identity is not defined %}\n        {%- set model_identity = \"You are ChatGPT, a large language model trained by OpenAI.\" %}\n    {%- endif %}\n    {{- model_identity + \"\\n\" }}\n    {{- \"Knowledge cutoff: 2024-06\\n\" }}\n    {{- \"Current date: \" + strftime_now(\"%Y-%m-%d\") + \"\\n\\n\" }}\n    {%- if reasoning_effort is not defined %}\n        {%- set reasoning_effort = \"medium\" %}\n    {%- endif %}\n    {{- \"Reasoning: \" + reasoning_effort + \"\\n\\n\" }}\n    {%- if builtin_tools %}\n        {{- \"# Tools\\n\\n\" }}\n        {%- set available_builtin_tools = namespace(browser=false, python=false) %}\n        {%- for tool in builtin_tools %}\n            {%- if tool == \"browser\" %}\n                {%- set available_builtin_tools.browser = true %}\n            {%- elif tool == \"python\" %}\n                {%- set available_builtin_tools.python = true %}\n            {%- endif %}\n        {%- endfor %}\n        {{- render_builtin_tools(available_builtin_tools.browser, available_builtin_tools.python) }}\n    {%- endif -%}\n    {{- \"# Valid channels: analysis, commentary, final. Channel must be included for every message.\" }}\n    {%- if tools -%}\n        {{- \"\\nCalls to these tools must go to the commentary channel: 'functions'.\" }}\n    {%- endif -%}\n{%- endmacro -%}\n\n{#- Main Template Logic ================================================= #}\n{#- Set defaults #}\n\n{#- Render system message #}\n{{- \"<|start|>system<|message|>\" }}\n{{- build_system_message() }}\n{{- \"<|end|>\" }}\n\n{#- Extract developer message #}\n{%- if messages[0].role == \"developer\" or messages[0].role == \"system\" %}\n    {%- set developer_message = messages[0].content %}\n    {%- set loop_messages = messages[1:] %}\n{%- else %}\n    {%- set developer_message = \"\" %}\n    {%- set loop_messages = messages %}\n{%- endif %}\n\n{#- Render developer message #}\n{%- if developer_message or tools %}\n    {{- \"<|start|>developer<|message|>\" }}\n    {%- if developer_message %}\n        {{- \"# Instructions\\n\\n\" }}\n        {{- developer_message }}\n        {{- \"\\n\\n\" }}\n    {%- endif %}\n    {%- if tools -%}\n        {{- \"# Tools\\n\\n\" }}\n        {{- render_tool_namespace(\"functions\", tools) }}\n    {%- endif -%}\n    {{- \"<|end|>\" }}\n{%- endif %}\n\n{#- Render messages #}\n{%- set last_tool_call = namespace(name=none) %}\n{%- for message in loop_messages -%}\n    {#- At this point only assistant/user/tool messages should remain #}\n    {%- if message.role == 'assistant' -%}\n        {#- Checks to ensure the messages are being passed in the format we expect #}\n        {%- if \"content\" in message %}\n            {%- if false %}\n                {{- raise_exception(\"You have passed a message containing <|channel|> tags in the content field. Instead of doing this, you should pass analysis messages (the string between '<|message|>' and '<|end|>') in the 'thinking' field, and final messages (the string between '<|message|>' and '<|end|>') in the 'content' field.\") }}\n            {%- endif %}\n        {%- endif %}\n        {%- if \"thinking\" in message %}\n            {%- if \"<|channel|>analysis<|message|>\" in message.thinking or \"<|channel|>final<|message|>\" in message.thinking %}\n                {{- raise_exception(\"You have passed a message containing <|channel|> tags in the thinking field. Instead of doing this, you should pass analysis messages (the string between '<|message|>' and '<|end|>') in the 'thinking' field, and final messages (the string between '<|message|>' and '<|end|>') in the 'content' field.\") }}\n            {%- endif %}\n        {%- endif %}\n        {%- if \"tool_calls\" in message %}\n            {#- We need very careful handling here - we want to drop the tool call analysis message if the model #}\n            {#- has output a later <|final|> message, but otherwise we want to retain it. This is the only case #}\n            {#- when we render CoT/analysis messages in inference. #}\n            {%- set future_final_message = namespace(found=false) %}\n            {%- for future_message in loop_messages[loop.index:] %}\n                {%- if future_message.role == 'assistant' and \"tool_calls\" not in future_message %}\n                    {%- set future_final_message.found = true %}\n                {%- endif %}\n            {%- endfor %}\n            {#- We assume max 1 tool call per message, and so we infer the tool call name #}\n            {#- in \"tool\" messages from the most recent assistant tool call name #}\n            {%- set tool_call = message.tool_calls[0] %}\n            {%- if tool_call.function %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {%- if message.content and message.thinking %}\n                {{- raise_exception(\"Cannot pass both content and thinking in an assistant message with tool calls! Put the analysis message in one or the other, but not both.\") }}\n            {%- elif message.content and not future_final_message.found %}\n                {{- \"<|start|>assistant<|channel|>analysis<|message|>\" + message.content + \"<|end|>\" }}\n            {%- elif message.thinking and not future_final_message.found %}\n                {{- \"<|start|>assistant<|channel|>analysis<|message|>\" + message.thinking + \"<|end|>\" }}\n            {%- endif %}\n            {{- \"<|start|>assistant to=\" }}\n            {{- \"functions.\" + tool_call.name + \"<|channel|>commentary \" }}\n            {{- (tool_call.content_type if tool_call.content_type is defined else \"json\") + \"<|message|>\" }}\n            {{- tool_call.arguments|tojson }}\n            {{- \"<|call|>\" }}\n            {%- set last_tool_call.name = tool_call.name %}\n        {%- elif loop.last and not add_generation_prompt %}\n            {#- Only render the CoT if the final turn is an assistant turn and add_generation_prompt is false #}\n            {#- This is a situation that should only occur in training, never in inference. #}\n            {%- if \"thinking\" in message %}\n                {{- \"<|start|>assistant<|channel|>analysis<|message|>\" + message.thinking + \"<|end|>\" }}\n            {%- endif %}\n            {#- <|return|> indicates the end of generation, but <|end|> does not #}\n            {#- <|return|> should never be an input to the model, but we include it as the final token #}\n            {#- when training, so the model learns to emit it. #}\n            {{- \"<|start|>assistant<|channel|>final<|message|>\" + message.content + \"<|return|>\" }}\n        {%- else %}\n            {#- CoT is dropped during all previous turns, so we never render it for inference #}\n            {{- \"<|start|>assistant<|channel|>final<|message|>\" + message.content + \"<|end|>\" }}\n            {%- set last_tool_call.name = none %}\n        {%- endif %}\n    {%- elif message.role == 'tool' -%}\n        {%- if last_tool_call.name is none %}\n            {{- raise_exception(\"Message has tool role, but there was no previous assistant message with a tool call!\") }}\n        {%- endif %}\n        {{- \"<|start|>functions.\" + last_tool_call.name }}\n        {{- \" to=assistant<|channel|>commentary<|message|>\" + message.content|tojson + \"<|end|>\" }}\n    {%- elif message.role == 'user' -%}\n        {{- \"<|start|>user<|message|>\" + message.content + \"<|end|>\" }}\n    {%- endif -%}\n{%- endfor -%}\n\n{#- Generation prompt #}\n{%- if add_generation_prompt -%}\n<|start|>assistant\n{%- endif -%}",
+    "chat_template_caps": {
+      "supports_object_arguments": true,
+      "supports_parallel_tool_calls": false,
+      "supports_preserve_reasoning": false,
+      "supports_reasoning_effort": true,
+      "supports_string_content": true,
+      "supports_system_role": true,
+      "supports_tool_calls": true,
+      "supports_tools": true,
+      "supports_typed_content": false,
+      "reasoning_effort_levels": [
+        "minimal",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    "bos_token": "<|startoftext|>",
+    "eos_token": "<|return|>",
+    "build_info": "b12359-b1b770d90",
+    "is_sleeping": false,
+    "cors_proxy_enabled": false
+  },
+  "warmup": {
+    "prompt": "Explain in one paragraph why students should check their arithmetic.",
+    "formatted_prompt": "<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-11-17\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>developer<|message|># Instructions\n\nYou are a helpful student tutor. Give a concise direct answer. Reasoning: low.\n\n<|end|><|start|>user<|message|>Explain in one paragraph why students should check their arithmetic.<|end|><|start|>assistant<|channel|>final<|message|>",
+    "payload": {
+      "n_predict": 32,
+      "temperature": 0,
+      "seed": 1729,
+      "cache_prompt": false,
+      "stream": true,
+      "return_tokens": true,
+      "ignore_eos": true
+    },
+    "elapsed_s": 3.199363400002767,
+    "first_token_s": 2.216212000006635,
+    "first_text_s": 2.216212600003928,
+    "content": "Students should check their arithmetic to catch mistakes early, reinforce accuracy, and build confidence in their calculations. A quick double‑check—whether by re‑computing",
+    "tokens": [
+      36954,
+      1757,
+      2371,
+      1043,
+      81645,
+      316,
+      3494,
+      29348,
+      6047,
+      11,
+      93812,
+      18580,
+      11,
+      326,
+      3024,
+      16135,
+      306,
+      1043,
+      48742,
+      13,
+      355,
+      4853,
+      3503,
+      50005,
+      3416,
+      2322,
+      99461,
+      656,
+      322,
+      50005,
+      113429,
+      289
+    ],
+    "response": {
+      "index": 0,
+      "content": "",
+      "tokens": [],
+      "id_slot": 0,
+      "stop": true,
+      "model": "E:\\Project_APEX\\experiments\\002-real-moe-routing\\models\\gpt-oss-20b-MXFP4.gguf",
+      "tokens_predicted": 32,
+      "tokens_evaluated": 106,
+      "generation_settings": {
+        "seed": 1729,
+        "temperature": 0.0,
+        "dynatemp_range": 0.0,
+        "dynatemp_exponent": 1.0,
+        "top_k": 40,
+        "top_p": 0.949999988079071,
+        "min_p": 0.05000000074505806,
+        "top_n_sigma": -1.0,
+        "xtc_probability": 0.0,
+        "xtc_threshold": 0.10000000149011612,
+        "typical_p": 1.0,
+        "repeat_last_n": 64,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "dry_multiplier": 0.0,
+        "dry_base": 1.75,
+        "dry_allowed_length": 2,
+        "dry_penalty_last_n": 64,
+        "dry_sequence_breakers": [
+          "\n",
+          ":",
+          "\"",
+          "*"
+        ],
+        "mirostat": 0,
+        "mirostat_tau": 5.0,
+        "mirostat_eta": 0.10000000149011612,
+        "adaptive_target": -1.0,
+        "adaptive_decay": 0.8999999761581421,
+        "stop": [],
+        "max_tokens": 32,
+        "n_predict": 32,
+        "n_keep": 0,
+        "n_discard": 0,
+        "ignore_eos": true,
+        "stream": true,
+        "logit_bias": [
+          {
+            "bias": null,
+            "token": 199999
+          },
+          {
+            "bias": null,
+            "token": 200002
+          },
+          {
+            "bias": null,
+            "token": 200012
+          }
+        ],
+        "n_probs": 0,
+        "min_keep": 0,
+        "grammar": "",
+        "grammar_lazy": false,
+        "grammar_triggers": [],
+        "preserved_tokens": [],
+        "chat_format": "Content-only",
+        "reasoning_format": "deepseek",
+        "reasoning_in_content": false,
+        "generation_prompt": "",
+        "samplers": [
+          "penalties",
+          "dry",
+          "top_n_sigma",
+          "top_k",
+          "typ_p",
+          "top_p",
+          "min_p",
+          "xtc",
+          "temperature"
+        ],
+        "speculative.types": "none",
+        "timings_per_token": false,
+        "post_sampling_probs": false,
+        "backend_sampling": false,
+        "lora": []
+      },
+      "prompt": "<|start|>system<|message|>You are ChatGPT, a large language model trained by OpenAI.\nKnowledge cutoff: 2024-06\nCurrent date: 2026-11-17\n\nReasoning: medium\n\n# Valid channels: analysis, commentary, final. Channel must be included for every message.<|end|><|start|>developer<|message|># Instructions\n\nYou are a helpful student tutor. Give a concise direct answer. Reasoning: low.\n\n<|end|><|start|>user<|message|>Explain in one paragraph why students should check their arithmetic.<|end|><|start|>assistant<|channel|>final<|message|>",
+      "has_new_line": false,
+      "truncated": false,
+      "stop_type": "limit",
+      "stopping_word": "",
+      "tokens_cached": 137,
+      "timings": {
+        "cache_n": 0,
+        "prompt_n": 106,
+        "prompt_ms": 2203.434,
+        "prompt_per_token_ms": 20.787113207547172,
+        "prompt_per_second": 48.10672795282272,
+        "predicted_n": 32,
+        "predicted_ms": 981.655,
+        "predicted_per_token_ms": 31.666290322580643,
+        "predicted_per_second": 31.57932267446302
+      }
+    }
+  },
+  "status": "complete",
+  "wall_s": 18.75854419999814,
+  "process_exit_code": 1
+}

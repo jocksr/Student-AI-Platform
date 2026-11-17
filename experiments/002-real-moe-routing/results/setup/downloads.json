@@ -1,0 +1,23 @@
+{
+  "utc": "2026-11-17T17:09:02.956733+00:00",
+  "files": [
+    {
+      "path": "models\\gpt-oss-20b-MXFP4.gguf",
+      "bytes": 12109566624,
+      "sha256": "27cd6c432c7672cb812a92f611cf3ba7bbc35928262bb1e1253ff4ee6ae35901",
+      "reused": false
+    },
+    {
+      "path": "downloads\\cudart-llama-bin-win-cuda-13.5-x64.zip",
+      "bytes": 426314199,
+      "sha256": "c2bf4cc202bfbaaa7a0b75f5082457c3811326947bb216059b72839d844e9cba",
+      "reused": false
+    },
+    {
+      "path": "downloads\\llama-b12359-bin-win-cuda-13.5-x64.zip",
+      "bytes": 179546112,
+      "sha256": "1de9ca1ff408d6e348ea0007c6880ad2393311a02e7799bcde26dc16daef03dd",
+      "reused": false
+    }
+  ]
+}

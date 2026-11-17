@@ -10,7 +10,8 @@ The project is independently developed. It does not claim college sponsorship, i
 
 | ID | Experiment | Status | Entry point |
 |---|---|---|---|
-| 001 | APEX: memory-constrained MoE inference research | Working measurement, simulation, and lossless-compression harness; real-model inference remains unproven | [Experiment README](experiments/001-apex-inference/README.md) |
+| 001 | APEX: memory-constrained MoE inference research | Microbenchmarks, synthetic simulations, and lossless-compression measurements | [Experiment README](experiments/001-apex-inference/README.md) |
+| 002 | Real MoE routing and cache effectiveness | Complete: GPT-OSS-20B inference, routing, 4–32 GiB requested cache sweep, repeated validation and graphs | [Experiment README](experiments/002-real-moe-routing/README.md) |
 
 **APEX is one experiment within Student AI Platform.** Its primary architectural target is GPT-OSS-120B, but its hypotheses are not predetermined conclusions or requirements for every future platform component.
 
@@ -22,6 +23,7 @@ Student-AI-Platform/
 ├── .gitignore                        # Shared exclusions
 └── experiments/
     ├── README.md                     # Experiment index and organization
+    ├── 002-real-moe-routing/          # Real inference, routing, cache tuning and results
     └── 001-apex-inference/
         ├── README.md                 # Experiment scope, setup, and commands
         ├── ARCHITECTURE.md

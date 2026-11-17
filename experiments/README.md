@@ -5,6 +5,7 @@ Each directory contains one bounded research effort within Student AI Platform. 
 | ID | Directory | Research question | Current evidence |
 |---|---|---|---|
 | 001 | [APEX inference](001-apex-inference/README.md) | Can expert-aware memory management, lossless compression, and CPU/GPU placement make very large MoE models more usable on modest hardware? | Local microbenchmarks, exact sample reconstruction, and synthetic cache simulations; no full-model inference result |
+| 002 | [Real MoE routing](002-real-moe-routing/README.md) | Does expert reuse improve actual inference, and where is the useful cache/CPU balance? | Complete: real routing, 4–32 GiB requested cache sweep, repeated validation and graphs; selected 5 GiB/90% CPU misses/four threads at 43.14 decode tokens/s |
 
 Use stable numbered directories such as `001-apex-inference`. Each experiment should have its own `README.md` with its hypothesis, scope, setup, reproduction commands, results, limitations, and next decision. Keep experiment-specific source, dependencies, tests, sample manifests, measurements, and notes in that directory. Label synthetic data and retain negative findings.
 

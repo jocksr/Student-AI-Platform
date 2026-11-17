@@ -1,0 +1,20 @@
+0.00.097.639 I ggml_cuda_init: found 1 CUDA devices (Total VRAM: 8123 MiB):
+0.00.097.772 I load_backend: loaded CUDA backend from E:\Project_APEX\experiments\002-real-moe-routing\runtime\ggml-cuda.dll
+0.00.171.748 I cmn  common_param:   - CUDA0   : NVIDIA GeForce RTX 5060 (8123 MiB, 7031 MiB free)
+0.00.171.819 I cmn  common_param: system_info: n_threads = 6 (n_threads_batch = 6) / 16 | CUDA : ARCHS = 750,800,860,890,900,1200,1210 | USE_GRAPHS = 1 | FA_QUANTS = q4_0-q4_0,q8_0-q8_0,f16-f16,bf16-bf16,f8_e4m3-f8_e4m3 | NATIVE_FP8 = 1 | BLACKWELL_NATIVE_FP4 = 1 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.241.512 I llama_prepare_model_devices: using device CUDA0 (NVIDIA GeForce RTX 5060) (0000:01:00.0) - 7031 MiB free
+0.00.449.560 I print_info: n_layer               = 24
+0.00.449.561 I print_info: n_layer_all           = 24
+0.00.449.593 I print_info: n_expert              = 32
+0.00.449.593 I print_info: n_expert_used         = 4
+0.00.449.594 I print_info: n_expert_groups       = 0
+0.01.498.436 I load_tensors: offloaded 8/25 layers to GPU
+0.01.498.439 I load_tensors:        CUDA0 model buffer size =  3609.24 MiB
+0.01.498.441 I load_tensors:    CUDA_Host model buffer size =  7926.94 MiB
+0.07.527.735 I llama_context:  CUDA_Host  output buffer size =     0.77 MiB
+0.07.536.515 I llama_kv_cache:        CPU KV buffer size =    32.00 MiB
+0.07.537.680 I llama_kv_cache:      CUDA0 KV buffer size =    16.00 MiB
+0.07.539.819 I llama_kv_cache:        CPU KV buffer size =     9.00 MiB
+0.07.540.395 I llama_kv_cache:      CUDA0 KV buffer size =     3.00 MiB
+0.07.549.070 I sched_reserve:      CUDA0 compute buffer size =   168.22 MiB
+0.07.549.076 I sched_reserve:  CUDA_Host compute buffer size =    12.51 MiB

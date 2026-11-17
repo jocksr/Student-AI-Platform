@@ -1,0 +1,862 @@
+{
+  "rows": [
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 10
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 34.50817405597786,
+      "run_decode_tps": [
+        34.50817405597786
+      ],
+      "min_sampled_gpu_free_mib": 706.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 6
+      },
+      "runs": 1,
+      "eligible": false,
+      "decode_tps": 35.042148733189634,
+      "run_decode_tps": [
+        35.042148733189634
+      ],
+      "min_sampled_gpu_free_mib": 488.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 35.03320175400787,
+      "run_decode_tps": [
+        35.03320175400787
+      ],
+      "min_sampled_gpu_free_mib": 595.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 35.36451885229731,
+      "run_decode_tps": [
+        35.36451885229731
+      ],
+      "min_sampled_gpu_free_mib": 517.0
+    },
+    {
+      "config": {
+        "cache_mib": 3072,
+        "cpu_share": 0.95,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 32.9847797691739,
+      "run_decode_tps": [
+        32.9847797691739
+      ],
+      "min_sampled_gpu_free_mib": 1519.0
+    },
+    {
+      "config": {
+        "cache_mib": 2560,
+        "cpu_share": 0.95,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 28.65706539947424,
+      "run_decode_tps": [
+        28.65706539947424
+      ],
+      "min_sampled_gpu_free_mib": 2080.0
+    },
+    {
+      "config": {
+        "cache_mib": 4352,
+        "cpu_share": 0.95,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 37.59470272923764,
+      "run_decode_tps": [
+        37.59470272923764
+      ],
+      "min_sampled_gpu_free_mib": 548.0
+    },
+    {
+      "config": {
+        "cache_mib": 2048,
+        "cpu_share": 0.95,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 26.356635358847658,
+      "run_decode_tps": [
+        26.356635358847658
+      ],
+      "min_sampled_gpu_free_mib": 2370.0
+    },
+    {
+      "config": {
+        "cache_mib": 3584,
+        "cpu_share": 0.95,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 34.13739102397517,
+      "run_decode_tps": [
+        34.13739102397517
+      ],
+      "min_sampled_gpu_free_mib": 1007.0
+    },
+    {
+      "config": {
+        "cache_mib": 4352,
+        "cpu_share": 0.5,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": false,
+      "decode_tps": 31.068499371960858,
+      "run_decode_tps": [
+        31.068499371960858
+      ],
+      "min_sampled_gpu_free_mib": 430.0
+    },
+    {
+      "config": {
+        "cache_mib": 4352,
+        "cpu_share": 0.9,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": false,
+      "decode_tps": 39.32641874688322,
+      "run_decode_tps": [
+        39.32641874688322
+      ],
+      "min_sampled_gpu_free_mib": 462.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 1.0,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 24.3095220716142,
+      "run_decode_tps": [
+        24.3095220716142
+      ],
+      "min_sampled_gpu_free_mib": 551.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.9,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 37.89935578040081,
+      "run_decode_tps": [
+        37.89935578040081
+      ],
+      "min_sampled_gpu_free_mib": 684.0
+    },
+    {
+      "config": {
+        "cache_mib": 4352,
+        "cpu_share": 1.0,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": false,
+      "decode_tps": 26.919562093423004,
+      "run_decode_tps": [
+        26.919562093423004
+      ],
+      "min_sampled_gpu_free_mib": 352.0
+    },
+    {
+      "config": {
+        "cache_mib": 4352,
+        "cpu_share": 0.75,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": false,
+      "decode_tps": 33.236532657024995,
+      "run_decode_tps": [
+        33.236532657024995
+      ],
+      "min_sampled_gpu_free_mib": 335.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.75,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 32.6395771277907,
+      "run_decode_tps": [
+        32.6395771277907
+      ],
+      "min_sampled_gpu_free_mib": 700.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.5,
+        "threads": 8
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 30.20956899960459,
+      "run_decode_tps": [
+        30.20956899960459
+      ],
+      "min_sampled_gpu_free_mib": 708.0
+    },
+    {
+      "config": {
+        "cache_mib": 3840,
+        "cpu_share": 0.9,
+        "threads": 8
+      },
+      "runs": 3,
+      "eligible": true,
+      "decode_tps": 36.280764489527435,
+      "run_decode_tps": [
+        36.0794109724478,
+        36.75089741458399,
+        36.02099628040781
+      ],
+      "min_sampled_gpu_free_mib": 995.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 16
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 30.953937138225857,
+      "run_decode_tps": [
+        30.953937138225857
+      ],
+      "min_sampled_gpu_free_mib": 560.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 12
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 34.75687294415826,
+      "run_decode_tps": [
+        34.75687294415826
+      ],
+      "min_sampled_gpu_free_mib": 565.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 2
+      },
+      "runs": 1,
+      "eligible": false,
+      "decode_tps": 27.198723055552964,
+      "run_decode_tps": [
+        27.198723055552964
+      ],
+      "min_sampled_gpu_free_mib": 338.0
+    },
+    {
+      "config": {
+        "cache_mib": 3584,
+        "cpu_share": 1.0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 23.555711168502633,
+      "run_decode_tps": [
+        23.555711168502633
+      ],
+      "min_sampled_gpu_free_mib": 1012.0
+    },
+    {
+      "config": {
+        "cache_mib": 3072,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 30.92717233834845,
+      "run_decode_tps": [
+        30.92717233834845
+      ],
+      "min_sampled_gpu_free_mib": 1786.0
+    },
+    {
+      "config": {
+        "cache_mib": 4352,
+        "cpu_share": 1.0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 25.877240134082037,
+      "run_decode_tps": [
+        25.877240134082037
+      ],
+      "min_sampled_gpu_free_mib": 523.0
+    },
+    {
+      "config": {
+        "cache_mib": 512,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 17.90920361944067,
+      "run_decode_tps": [
+        17.90920361944067
+      ],
+      "min_sampled_gpu_free_mib": 4399.0
+    },
+    {
+      "config": {
+        "cache_mib": 1536,
+        "cpu_share": 1.0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 19.559844111114664,
+      "run_decode_tps": [
+        19.559844111114664
+      ],
+      "min_sampled_gpu_free_mib": 3415.0
+    },
+    {
+      "config": {
+        "cache_mib": 3584,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 32.9435160994187,
+      "run_decode_tps": [
+        32.9435160994187
+      ],
+      "min_sampled_gpu_free_mib": 1306.0
+    },
+    {
+      "config": {
+        "cache_mib": 1536,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 22.61667867560992,
+      "run_decode_tps": [
+        22.61667867560992
+      ],
+      "min_sampled_gpu_free_mib": 3373.0
+    },
+    {
+      "config": {
+        "cache_mib": 3584,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 34.02035450278094,
+      "run_decode_tps": [
+        34.02035450278094
+      ],
+      "min_sampled_gpu_free_mib": 1316.0
+    },
+    {
+      "config": {
+        "cache_mib": 2560,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 28.58953171095475,
+      "run_decode_tps": [
+        28.58953171095475
+      ],
+      "min_sampled_gpu_free_mib": 2342.0
+    },
+    {
+      "config": {
+        "cache_mib": 1536,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 23.72826736067501,
+      "run_decode_tps": [
+        23.72826736067501
+      ],
+      "min_sampled_gpu_free_mib": 3376.0
+    },
+    {
+      "config": {
+        "cache_mib": 4352,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 3,
+      "eligible": false,
+      "decode_tps": 38.512491640924175,
+      "run_decode_tps": [
+        37.9775805020318,
+        38.54546371857775,
+        39.028823910324434
+      ],
+      "min_sampled_gpu_free_mib": 475.0
+    },
+    {
+      "config": {
+        "cache_mib": 2048,
+        "cpu_share": 1.0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 20.40484821330182,
+      "run_decode_tps": [
+        20.40484821330182
+      ],
+      "min_sampled_gpu_free_mib": 2861.0
+    },
+    {
+      "config": {
+        "cache_mib": 2048,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 25.092106752331908,
+      "run_decode_tps": [
+        25.092106752331908
+      ],
+      "min_sampled_gpu_free_mib": 2851.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 1.0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 24.86304497581646,
+      "run_decode_tps": [
+        24.86304497581646
+      ],
+      "min_sampled_gpu_free_mib": 778.0
+    },
+    {
+      "config": {
+        "cache_mib": 512,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 19.788728899490767,
+      "run_decode_tps": [
+        19.788728899490767
+      ],
+      "min_sampled_gpu_free_mib": 4338.0
+    },
+    {
+      "config": {
+        "cache_mib": 3072,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 32.33790161218831,
+      "run_decode_tps": [
+        32.33790161218831
+      ],
+      "min_sampled_gpu_free_mib": 1786.0
+    },
+    {
+      "config": {
+        "cache_mib": 4608,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": false,
+      "decode_tps": 37.47709678470055,
+      "run_decode_tps": [
+        37.47709678470055
+      ],
+      "min_sampled_gpu_free_mib": 396.0
+    },
+    {
+      "config": {
+        "cache_mib": 4352,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 37.44824887282732,
+      "run_decode_tps": [
+        37.44824887282732
+      ],
+      "min_sampled_gpu_free_mib": 604.0
+    },
+    {
+      "config": {
+        "cache_mib": 4608,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": false,
+      "decode_tps": 38.5274136668234,
+      "run_decode_tps": [
+        38.5274136668234
+      ],
+      "min_sampled_gpu_free_mib": 461.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 37.63939879435686,
+      "run_decode_tps": [
+        37.63939879435686
+      ],
+      "min_sampled_gpu_free_mib": 908.0
+    },
+    {
+      "config": {
+        "cache_mib": 1024,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 20.75009304950103,
+      "run_decode_tps": [
+        20.75009304950103
+      ],
+      "min_sampled_gpu_free_mib": 3963.0
+    },
+    {
+      "config": {
+        "cache_mib": 2560,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 28.45116547369142,
+      "run_decode_tps": [
+        28.45116547369142
+      ],
+      "min_sampled_gpu_free_mib": 2423.0
+    },
+    {
+      "config": {
+        "cache_mib": 4608,
+        "cpu_share": 1.0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": false,
+      "decode_tps": 26.7879482843932,
+      "run_decode_tps": [
+        26.7879482843932
+      ],
+      "min_sampled_gpu_free_mib": 423.0
+    },
+    {
+      "config": {
+        "cache_mib": 1024,
+        "cpu_share": 1.0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 19.670335476026754,
+      "run_decode_tps": [
+        19.670335476026754
+      ],
+      "min_sampled_gpu_free_mib": 3938.0
+    },
+    {
+      "config": {
+        "cache_mib": 1024,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 20.01279771263152,
+      "run_decode_tps": [
+        20.01279771263152
+      ],
+      "min_sampled_gpu_free_mib": 3811.0
+    },
+    {
+      "config": {
+        "cache_mib": 512,
+        "cpu_share": 1.0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 18.733953535087224,
+      "run_decode_tps": [
+        18.733953535087224
+      ],
+      "min_sampled_gpu_free_mib": 4492.0
+    },
+    {
+      "config": {
+        "cache_mib": 2048,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 25.598262213051523,
+      "run_decode_tps": [
+        25.598262213051523
+      ],
+      "min_sampled_gpu_free_mib": 2828.0
+    },
+    {
+      "config": {
+        "cache_mib": 2560,
+        "cpu_share": 1.0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 21.873116342475974,
+      "run_decode_tps": [
+        21.873116342475974
+      ],
+      "min_sampled_gpu_free_mib": 2300.0
+    },
+    {
+      "config": {
+        "cache_mib": 3072,
+        "cpu_share": 1.0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 22.607642412907758,
+      "run_decode_tps": [
+        22.607642412907758
+      ],
+      "min_sampled_gpu_free_mib": 1879.0
+    },
+    {
+      "config": {
+        "cache_mib": 4224,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 36.653557102979605,
+      "run_decode_tps": [
+        36.653557102979605
+      ],
+      "min_sampled_gpu_free_mib": 737.0
+    },
+    {
+      "config": {
+        "cache_mib": 3968,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 34.113469078149585,
+      "run_decode_tps": [
+        34.113469078149585
+      ],
+      "min_sampled_gpu_free_mib": 861.0
+    },
+    {
+      "config": {
+        "cache_mib": 3840,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 35.33745745513508,
+      "run_decode_tps": [
+        35.33745745513508
+      ],
+      "min_sampled_gpu_free_mib": 990.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.5,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 30.027187967995733,
+      "run_decode_tps": [
+        30.027187967995733
+      ],
+      "min_sampled_gpu_free_mib": 860.0
+    },
+    {
+      "config": {
+        "cache_mib": 4608,
+        "cpu_share": 0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": false,
+      "decode_tps": 28.71643691261919,
+      "run_decode_tps": [
+        28.71643691261919
+      ],
+      "min_sampled_gpu_free_mib": 492.0
+    },
+    {
+      "config": {
+        "cache_mib": 2048,
+        "cpu_share": 0.5,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 17.716184406928697,
+      "run_decode_tps": [
+        17.716184406928697
+      ],
+      "min_sampled_gpu_free_mib": 3031.0
+    },
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 24.683613582811002,
+      "run_decode_tps": [
+        24.683613582811002
+      ],
+      "min_sampled_gpu_free_mib": 989.0
+    },
+    {
+      "config": {
+        "cache_mib": 4608,
+        "cpu_share": 0.5,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": false,
+      "decode_tps": 32.887223597736565,
+      "run_decode_tps": [
+        32.887223597736565
+      ],
+      "min_sampled_gpu_free_mib": 494.0
+    },
+    {
+      "config": {
+        "cache_mib": 3072,
+        "cpu_share": 0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 17.914651131631462,
+      "run_decode_tps": [
+        17.914651131631462
+      ],
+      "min_sampled_gpu_free_mib": 1974.0
+    },
+    {
+      "config": {
+        "cache_mib": 2048,
+        "cpu_share": 0,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 12.763142503526485,
+      "run_decode_tps": [
+        12.763142503526485
+      ],
+      "min_sampled_gpu_free_mib": 2698.0
+    },
+    {
+      "config": {
+        "cache_mib": 3072,
+        "cpu_share": 0.5,
+        "threads": 4
+      },
+      "runs": 1,
+      "eligible": true,
+      "decode_tps": 23.03061419754166,
+      "run_decode_tps": [
+        23.03061419754166
+      ],
+      "min_sampled_gpu_free_mib": 1818.0
+    }
+  ]
+}

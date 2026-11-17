@@ -1,0 +1,124 @@
+{
+  "trials": [
+    {
+      "label": "sweet-repeat-r2-c4352-s90-t4",
+      "config": {
+        "cache_mib": 4352,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 9.910375,
+      "decode_tps": 38.54546371857775,
+      "mean_ttft_s": 0.6790932000003522,
+      "mean_first_text_s": 0.6790944499989564,
+      "mean_request_s": 5.634672199998022,
+      "mean_prefill_s": 0.6675415,
+      "startup_s": 2.829880700002832,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 22,
+        "min_available_ram_gib": 3.5717086791992188,
+        "max_process_rss_gib": 11.325355529785156,
+        "max_global_gpu_used_mib": 7421.0,
+        "max_gpu_temperature_c": 54.8
+      },
+      "min_sampled_gpu_free_mib": 475.0,
+      "eligible": false,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM"
+    },
+    {
+      "label": "sweet-repeat-r2-c3840-s90-t8",
+      "config": {
+        "cache_mib": 3840,
+        "cpu_share": 0.9,
+        "threads": 8
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 10.394304,
+      "decode_tps": 36.75089741458399,
+      "mean_ttft_s": 0.7454844499989122,
+      "mean_first_text_s": 0.7454852499977278,
+      "mean_request_s": 5.943090349999693,
+      "mean_prefill_s": 0.7434390000000001,
+      "startup_s": 2.5892104000013205,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 22,
+        "min_available_ram_gib": 3.5556869506835938,
+        "max_process_rss_gib": 11.325729370117188,
+        "max_global_gpu_used_mib": 6876.0,
+        "max_gpu_temperature_c": 54.63
+      },
+      "min_sampled_gpu_free_mib": 1020.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM"
+    },
+    {
+      "label": "sweet-repeat-r3-c4352-s90-t4",
+      "config": {
+        "cache_mib": 4352,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 9.787638,
+      "decode_tps": 39.028823910324434,
+      "mean_ttft_s": 0.6653364500016323,
+      "mean_first_text_s": 0.6653372000037052,
+      "mean_request_s": 5.559638300001097,
+      "mean_prefill_s": 0.656498,
+      "startup_s": 2.6036066000015126,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 21,
+        "min_available_ram_gib": 3.4464683532714844,
+        "max_process_rss_gib": 11.313430786132812,
+        "max_global_gpu_used_mib": 7313.0,
+        "max_gpu_temperature_c": 54.86
+      },
+      "min_sampled_gpu_free_mib": 583.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM"
+    },
+    {
+      "label": "sweet-repeat-r3-c3840-s90-t8",
+      "config": {
+        "cache_mib": 3840,
+        "cpu_share": 0.9,
+        "threads": 8
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 10.604925999999999,
+      "decode_tps": 36.02099628040781,
+      "mean_ttft_s": 0.6927262999997765,
+      "mean_first_text_s": 0.6927270500018494,
+      "mean_request_s": 5.995640900000581,
+      "mean_prefill_s": 0.691044,
+      "startup_s": 2.408024899996235,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 22,
+        "min_available_ram_gib": 3.490337371826172,
+        "max_process_rss_gib": 11.325752258300781,
+        "max_global_gpu_used_mib": 6759.0,
+        "max_gpu_temperature_c": 54.43
+      },
+      "min_sampled_gpu_free_mib": 1137.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM"
+    }
+  ]
+}

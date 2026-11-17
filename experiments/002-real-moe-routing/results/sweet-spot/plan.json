@@ -1,0 +1,60 @@
+{
+  "utc": "2026-11-17T17:39:54.639763+00:00",
+  "source_sha256": "169ade169fea488cfc6bf5c6470c903c33979e4605c1d24fca91597607a46f74",
+  "stages": [
+    "threads 4/6/8/10 at 4096 MiB and CPU share .95",
+    "cache 2048/2560/3072/3584/4096/4352 MiB at selected thread count and CPU share .95",
+    "CPU share .5/.75/.9/.95/1.0 at two leading cache sizes",
+    "refine one 256 MiB step below and above the leading eligible cache if in range"
+  ],
+  "tuning_tasks": [
+    {
+      "id": "tune-energy",
+      "prompt": "Explain to a student how conservation of energy applies to a ball thrown upward. Discuss kinetic energy, gravitational potential energy, air resistance, and why the speed changes. Give examples and identify common misconceptions.",
+      "tokens": 192,
+      "fixed_length": true
+    },
+    {
+      "id": "tune-debugging",
+      "prompt": "Explain a systematic process for finding an off-by-one error in a loop that traverses a list. Include examples, boundary cases, a loop invariant, and how to check the proposed repair without relying only on random tests.",
+      "tokens": 192,
+      "fixed_length": true
+    }
+  ],
+  "validation_tasks": [
+    {
+      "id": "validate-chemistry",
+      "prompt": "Teach a student how to balance a chemical equation. Use the reaction between iron and oxygen forming Fe2O3 as the example. Explain why coefficients may change but chemical formulas must remain fixed.",
+      "tokens": 128,
+      "fixed_length": true
+    },
+    {
+      "id": "validate-grammar",
+      "prompt": "Explain the difference between a dependent clause and an independent clause, with examples. Then explain comma splices and how to repair them in student writing.",
+      "tokens": 128,
+      "fixed_length": true
+    },
+    {
+      "id": "validate-statistics",
+      "prompt": "Explain to a beginning statistics student why correlation does not by itself establish causation. Discuss confounding, reverse causation, randomized studies, and a concrete everyday example.",
+      "tokens": 128,
+      "fixed_length": true
+    },
+    {
+      "id": "validate-reading",
+      "prompt": "Use only these notes to write a study guide: A fictional school garden has three plots. Plot A receives six hours of sun and is watered every morning. Plot B receives six hours of sun and is watered every third morning. Plot C receives three hours of sun and is watered every morning. All plots use the same soil, seed variety, planting date, and number of seedlings. At the end of four weeks, the average plant heights are 18 cm in A, 12 cm in B, and 11 cm in C. Students measured height with the same ruler at the same time of day. One seedling in plot B was damaged accidentally during week two. No fertilizer was used. Rainfall was recorded but the plots were not sheltered from rain. Explain which comparisons can address watering and sunlight, what limitations remain, and what the students should record in a follow-up study.",
+      "tokens": 128,
+      "fixed_length": true
+    }
+  ],
+  "eligibility": "complete, minimum sampled GPU free >=512 MiB and minimum system available RAM >=3 GiB",
+  "validation_selection": "original 4096/.95/6 reference, fastest eligible calibration candidate, smallest eligible cache within 5% of that speed, static12/6 baseline; deduplicate equivalent settings",
+  "validation_repetitions": 3,
+  "validation_order": "cyclic rotation, task order rotates within each round",
+  "selection_rule": "Among eligible validated cache configurations within 5% of fastest validated decode throughput, prefer smallest cache, then fewer threads, then measured speed.",
+  "limitations": [
+    "Sequential adaptive search, not exhaustive Cartesian optimization.",
+    "Desktop workload may change; headroom is sampled, not guaranteed.",
+    "Tuning uses direct-final generation; normal-reasoning answer checks follow selection."
+  ]
+}

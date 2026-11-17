@@ -1,0 +1,92 @@
+[
+  {
+    "seconds": 0.000207199998840224,
+    "phase": "startup",
+    "process_memory": {
+      "rss": 2572288,
+      "vms": 385024,
+      "num_page_faults": 650,
+      "peak_wset": 2572288,
+      "wset": 2572288,
+      "peak_paged_pool": 17856,
+      "paged_pool": 17856,
+      "peak_nonpaged_pool": 1784,
+      "nonpaged_pool": 1784,
+      "pagefile": 385024,
+      "peak_pagefile": 385024,
+      "private": 385024
+    },
+    "system_available_bytes": 15591268352,
+    "gpu": {
+      "used_mib": 442.0,
+      "free_mib": 7454.0,
+      "utilization_pct": 1.0,
+      "temperature_c": 47.23,
+      "power_w": 39.91
+    }
+  },
+  {
+    "seconds": 0.8207451999987825,
+    "phase": "startup",
+    "process_memory": {
+      "rss": 434819072,
+      "vms": 645939200,
+      "num_page_faults": 118706,
+      "peak_wset": 434819072,
+      "wset": 434819072,
+      "peak_paged_pool": 25639296,
+      "paged_pool": 25639104,
+      "peak_nonpaged_pool": 34496,
+      "nonpaged_pool": 32816,
+      "pagefile": 645939200,
+      "peak_pagefile": 645947392,
+      "private": 645939200
+    },
+    "system_available_bytes": 14183473152,
+    "gpu": {
+      "used_mib": 545.0,
+      "free_mib": 7351.0,
+      "utilization_pct": 1.0,
+      "temperature_c": 47.17,
+      "power_w": 35.65
+    }
+  },
+  {
+    "seconds": 1.6305494999978691,
+    "phase": "startup",
+    "process_memory": {
+      "rss": 1465999360,
+      "vms": 1952964608,
+      "num_page_faults": 374462,
+      "peak_wset": 1465999360,
+      "wset": 1465999360,
+      "peak_paged_pool": 25644416,
+      "paged_pool": 25644224,
+      "peak_nonpaged_pool": 37344,
+      "nonpaged_pool": 35536,
+      "pagefile": 1952964608,
+      "peak_pagefile": 1952972800,
+      "private": 1952964608
+    },
+    "system_available_bytes": 14137663488,
+    "gpu": {
+      "used_mib": 1806.0,
+      "free_mib": 6090.0,
+      "utilization_pct": 26.0,
+      "temperature_c": 46.65,
+      "power_w": 33.13
+    }
+  },
+  {
+    "seconds": 2.4464450999948895,
+    "error": "process no longer exists (pid=30696)"
+  },
+  {
+    "seconds": 3.202792899995984,
+    "error": "process no longer exists (pid=30696)"
+  },
+  {
+    "seconds": 3.963763399995514,
+    "error": "process no longer exists (pid=30696)"
+  }
+]

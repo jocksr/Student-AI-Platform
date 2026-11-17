@@ -1,0 +1,66 @@
+{
+  "configurations": [
+    [
+      "cache2048-retry",
+      6,
+      [
+        "-ngl",
+        "99",
+        "-cmoe",
+        "--moe-cache-mib",
+        "2048"
+      ]
+    ],
+    [
+      "cache3072",
+      6,
+      [
+        "-ngl",
+        "99",
+        "-cmoe",
+        "--moe-cache-mib",
+        "3072"
+      ]
+    ],
+    [
+      "cache3072-share50",
+      6,
+      [
+        "-ngl",
+        "99",
+        "-cmoe",
+        "--moe-cache-mib",
+        "3072",
+        "--moe-cache-cpu-share",
+        "0.5"
+      ]
+    ],
+    [
+      "cache3072-share95",
+      6,
+      [
+        "-ngl",
+        "99",
+        "-cmoe",
+        "--moe-cache-mib",
+        "3072",
+        "--moe-cache-cpu-share",
+        "0.95"
+      ]
+    ]
+  ],
+  "tasks": [
+    {
+      "id": "calibration-explain",
+      "prompt": "Explain how a student can use dimensional analysis to check a physics calculation. Give several concrete examples and common mistakes.",
+      "tokens": 96,
+      "fixed_length": true
+    },
+    {
+      "id": "calibration-code",
+      "prompt": "Explain binary search to a student. Include the loop invariant, the stopping condition, and a worked example on a sorted list.",
+      "tokens": 96,
+      "fixed_length": true
+    }
+  ]
+}

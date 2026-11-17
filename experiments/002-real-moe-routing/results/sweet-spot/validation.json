@@ -1,0 +1,658 @@
+{
+  "trials": [
+    {
+      "label": "sweet-val-r1-c4096-s95-t6",
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 6
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 14.265057,
+      "decode_tps": 35.61149457727368,
+      "mean_ttft_s": 0.7147116499982076,
+      "mean_first_text_s": 0.7147126499985461,
+      "mean_request_s": 4.28151539999817,
+      "mean_prefill_s": 0.704904,
+      "startup_s": 2.6263536999977077,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 29,
+        "min_available_ram_gib": 4.89739990234375,
+        "max_process_rss_gib": 11.215888977050781,
+        "max_global_gpu_used_mib": 6383.0,
+        "max_gpu_temperature_c": 46.77
+      },
+      "min_sampled_gpu_free_mib": 1513.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 1
+    },
+    {
+      "label": "sweet-val-r1-c5376-s90-t4",
+      "config": {
+        "cache_mib": 5376,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 11.654385,
+      "decode_tps": 43.58874363597908,
+      "mean_ttft_s": 0.9744572250001511,
+      "mean_first_text_s": 0.97445770000013,
+      "mean_request_s": 3.8882035499991616,
+      "mean_prefill_s": 0.96247775,
+      "startup_s": 2.6517007000002195,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 27,
+        "min_available_ram_gib": 4.816925048828125,
+        "max_process_rss_gib": 11.30679702758789,
+        "max_global_gpu_used_mib": 7567.0,
+        "max_gpu_temperature_c": 49.06
+      },
+      "min_sampled_gpu_free_mib": 329.0,
+      "eligible": false,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 1
+    },
+    {
+      "label": "sweet-val-r1-c5120-s90-t4",
+      "config": {
+        "cache_mib": 5120,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 12.008753,
+      "decode_tps": 42.302477201421326,
+      "mean_ttft_s": 0.5948475249988405,
+      "mean_first_text_s": 0.5948484250002366,
+      "mean_request_s": 3.5972490749991266,
+      "mean_prefill_s": 0.582871,
+      "startup_s": 2.640445800003363,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 25,
+        "min_available_ram_gib": 4.9910430908203125,
+        "max_process_rss_gib": 11.20327377319336,
+        "max_global_gpu_used_mib": 7278.0,
+        "max_gpu_temperature_c": 50.07
+      },
+      "min_sampled_gpu_free_mib": 618.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 1
+    },
+    {
+      "label": "sweet-val-r1-c5632-s90-t4",
+      "config": {
+        "cache_mib": 5632,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 14.963477000000001,
+      "decode_tps": 33.94932875560941,
+      "mean_ttft_s": 2.9964308500002517,
+      "mean_first_text_s": 2.996431575000315,
+      "mean_request_s": 6.737575824998203,
+      "mean_prefill_s": 2.9868315,
+      "startup_s": 2.6403518000006443,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 43,
+        "min_available_ram_gib": 4.156261444091797,
+        "max_process_rss_gib": 11.420734405517578,
+        "max_global_gpu_used_mib": 7813.0,
+        "max_gpu_temperature_c": 49.78
+      },
+      "min_sampled_gpu_free_mib": 83.0,
+      "eligible": false,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 1
+    },
+    {
+      "label": "sweet-val-r1-c3840-s90-t8",
+      "config": {
+        "cache_mib": 3840,
+        "cpu_share": 0.9,
+        "threads": 8
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 14.530213999999999,
+      "decode_tps": 34.96163236136784,
+      "mean_ttft_s": 0.7162341499970353,
+      "mean_first_text_s": 0.7162349000009272,
+      "mean_request_s": 4.34943632499926,
+      "mean_prefill_s": 0.7073395,
+      "startup_s": 2.568219999993744,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 29,
+        "min_available_ram_gib": 4.480594635009766,
+        "max_process_rss_gib": 11.191879272460938,
+        "max_global_gpu_used_mib": 6069.0,
+        "max_gpu_temperature_c": 50.79
+      },
+      "min_sampled_gpu_free_mib": 1827.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 1
+    },
+    {
+      "label": "sweet-val-r1-c6144-s90-t4",
+      "config": {
+        "cache_mib": 6144,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 21.959711,
+      "decode_tps": 23.133273475229252,
+      "mean_ttft_s": 2.6290720749984757,
+      "mean_first_text_s": 2.6290727499999775,
+      "mean_request_s": 8.119655824999427,
+      "mean_prefill_s": 2.61879925,
+      "startup_s": 2.808501500003331,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 51,
+        "min_available_ram_gib": 3.9342880249023438,
+        "max_process_rss_gib": 11.961822509765625,
+        "max_global_gpu_used_mib": 7604.0,
+        "max_gpu_temperature_c": 49.78
+      },
+      "min_sampled_gpu_free_mib": 292.0,
+      "eligible": false,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 1
+    },
+    {
+      "label": "sweet-val-r1-static12-t6",
+      "config": {
+        "static_layers": 12,
+        "threads": 6,
+        "cache_mib": 0,
+        "cpu_share": 0
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 18.224987000000002,
+      "decode_tps": 27.873819608211512,
+      "mean_ttft_s": 0.7167737000036141,
+      "mean_first_text_s": 0.7167757750030432,
+      "mean_request_s": 5.273414650000632,
+      "mean_prefill_s": 0.7112565,
+      "startup_s": 3.3006368999995175,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 33,
+        "min_available_ram_gib": 4.543720245361328,
+        "max_process_rss_gib": 11.330909729003906,
+        "max_global_gpu_used_mib": 6243.0,
+        "max_gpu_temperature_c": 47.91
+      },
+      "min_sampled_gpu_free_mib": 1653.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 1
+    },
+    {
+      "label": "sweet-val-r2-c5376-s90-t4",
+      "config": {
+        "cache_mib": 5376,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 11.149989,
+      "decode_tps": 45.56058306425235,
+      "mean_ttft_s": 0.5565574749998632,
+      "mean_first_text_s": 0.5565627500018309,
+      "mean_request_s": 3.3448175499997888,
+      "mean_prefill_s": 0.540461,
+      "startup_s": 2.634295799995016,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 24,
+        "min_available_ram_gib": 4.651889801025391,
+        "max_process_rss_gib": 11.252880096435547,
+        "max_global_gpu_used_mib": 7480.0,
+        "max_gpu_temperature_c": 51.99
+      },
+      "min_sampled_gpu_free_mib": 416.0,
+      "eligible": false,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 2
+    },
+    {
+      "label": "sweet-val-r2-c5120-s90-t4",
+      "config": {
+        "cache_mib": 5120,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 11.503476999999998,
+      "decode_tps": 44.16056119380254,
+      "mean_ttft_s": 0.5701184000008652,
+      "mean_first_text_s": 0.5701188500024728,
+      "mean_request_s": 3.446211600003153,
+      "mean_prefill_s": 0.55929075,
+      "startup_s": 2.44640249999793,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 24,
+        "min_available_ram_gib": 4.7157440185546875,
+        "max_process_rss_gib": 11.19033432006836,
+        "max_global_gpu_used_mib": 7247.0,
+        "max_gpu_temperature_c": 52.62
+      },
+      "min_sampled_gpu_free_mib": 649.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 2
+    },
+    {
+      "label": "sweet-val-r2-c5632-s90-t4",
+      "config": {
+        "cache_mib": 5632,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 14.684029,
+      "decode_tps": 34.59540974755634,
+      "mean_ttft_s": 2.903534249999211,
+      "mean_first_text_s": 2.9035350249996554,
+      "mean_request_s": 6.575463999999556,
+      "mean_prefill_s": 2.897709,
+      "startup_s": 2.5747195000003558,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 42,
+        "min_available_ram_gib": 4.497051239013672,
+        "max_process_rss_gib": 11.494026184082031,
+        "max_global_gpu_used_mib": 7491.0,
+        "max_gpu_temperature_c": 52.05
+      },
+      "min_sampled_gpu_free_mib": 405.0,
+      "eligible": false,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 2
+    },
+    {
+      "label": "sweet-val-r2-c3840-s90-t8",
+      "config": {
+        "cache_mib": 3840,
+        "cpu_share": 0.9,
+        "threads": 8
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 14.131455,
+      "decode_tps": 35.948173772622845,
+      "mean_ttft_s": 0.7322968999997101,
+      "mean_first_text_s": 0.7322980499975529,
+      "mean_request_s": 4.265514599997914,
+      "mean_prefill_s": 0.71739325,
+      "startup_s": 2.406367900002806,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 28,
+        "min_available_ram_gib": 4.702178955078125,
+        "max_process_rss_gib": 11.192031860351562,
+        "max_global_gpu_used_mib": 6156.0,
+        "max_gpu_temperature_c": 52.62
+      },
+      "min_sampled_gpu_free_mib": 1740.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 2
+    },
+    {
+      "label": "sweet-val-r2-c6144-s90-t4",
+      "config": {
+        "cache_mib": 6144,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 21.412915,
+      "decode_tps": 23.724000212021576,
+      "mean_ttft_s": 2.5766363000002457,
+      "mean_first_text_s": 2.576636924997729,
+      "mean_request_s": 7.930578324998351,
+      "mean_prefill_s": 2.5693955,
+      "startup_s": 2.6791814000025624,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 49,
+        "min_available_ram_gib": 3.9044151306152344,
+        "max_process_rss_gib": 11.949249267578125,
+        "max_global_gpu_used_mib": 7555.0,
+        "max_gpu_temperature_c": 51.5
+      },
+      "min_sampled_gpu_free_mib": 341.0,
+      "eligible": false,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 2
+    },
+    {
+      "label": "sweet-val-r2-static12-t6",
+      "config": {
+        "static_layers": 12,
+        "threads": 6,
+        "cache_mib": 0,
+        "cpu_share": 0
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 18.064095000000002,
+      "decode_tps": 28.122084167515723,
+      "mean_ttft_s": 0.7099209000007249,
+      "mean_first_text_s": 0.7099227749986312,
+      "mean_request_s": 5.226597949998904,
+      "mean_prefill_s": 0.7039535,
+      "startup_s": 3.2299216000028537,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 33,
+        "min_available_ram_gib": 4.529445648193359,
+        "max_process_rss_gib": 11.33090591430664,
+        "max_global_gpu_used_mib": 6217.0,
+        "max_gpu_temperature_c": 50.3
+      },
+      "min_sampled_gpu_free_mib": 1679.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 2
+    },
+    {
+      "label": "sweet-val-r2-c4096-s95-t6",
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 6
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 13.381602999999998,
+      "decode_tps": 37.9625669660055,
+      "mean_ttft_s": 0.6574340750012198,
+      "mean_first_text_s": 0.6574349750026158,
+      "mean_request_s": 4.003993600003014,
+      "mean_prefill_s": 0.6479617499999999,
+      "startup_s": 2.4453833000006853,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 27,
+        "min_available_ram_gib": 4.7393341064453125,
+        "max_process_rss_gib": 11.190677642822266,
+        "max_global_gpu_used_mib": 6246.0,
+        "max_gpu_temperature_c": 52.85
+      },
+      "min_sampled_gpu_free_mib": 1650.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 2
+    },
+    {
+      "label": "sweet-val-r3-c5120-s90-t4",
+      "config": {
+        "cache_mib": 5120,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 11.811439,
+      "decode_tps": 43.009154092062786,
+      "mean_ttft_s": 0.5923170250007388,
+      "mean_first_text_s": 0.5923177000004216,
+      "mean_request_s": 3.5454223500000808,
+      "mean_prefill_s": 0.5722625,
+      "startup_s": 2.3718331000054604,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 25,
+        "min_available_ram_gib": 4.834953308105469,
+        "max_process_rss_gib": 11.178211212158203,
+        "max_global_gpu_used_mib": 7258.0,
+        "max_gpu_temperature_c": 53.54
+      },
+      "min_sampled_gpu_free_mib": 638.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 3
+    },
+    {
+      "label": "sweet-val-r3-c5632-s90-t4",
+      "config": {
+        "cache_mib": 5632,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 14.725663,
+      "decode_tps": 34.49759783311624,
+      "mean_ttft_s": 2.8796918249990995,
+      "mean_first_text_s": 2.8796924499965826,
+      "mean_request_s": 6.562780624999505,
+      "mean_prefill_s": 2.86982425,
+      "startup_s": 2.607553599998937,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 42,
+        "min_available_ram_gib": 4.61602783203125,
+        "max_process_rss_gib": 11.431930541992188,
+        "max_global_gpu_used_mib": 7537.0,
+        "max_gpu_temperature_c": 52.85
+      },
+      "min_sampled_gpu_free_mib": 359.0,
+      "eligible": false,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 3
+    },
+    {
+      "label": "sweet-val-r3-c3840-s90-t8",
+      "config": {
+        "cache_mib": 3840,
+        "cpu_share": 0.9,
+        "threads": 8
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 14.304564000000001,
+      "decode_tps": 35.51314112055425,
+      "mean_ttft_s": 0.7347283749986673,
+      "mean_first_text_s": 0.7347293000002537,
+      "mean_request_s": 4.311167199997726,
+      "mean_prefill_s": 0.72952625,
+      "startup_s": 2.639054799998121,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 28,
+        "min_available_ram_gib": 4.76995849609375,
+        "max_process_rss_gib": 11.204017639160156,
+        "max_global_gpu_used_mib": 5999.0,
+        "max_gpu_temperature_c": 53.05
+      },
+      "min_sampled_gpu_free_mib": 1897.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 3
+    },
+    {
+      "label": "sweet-val-r3-c6144-s90-t4",
+      "config": {
+        "cache_mib": 6144,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 21.778275,
+      "decode_tps": 23.325998041626345,
+      "mean_ttft_s": 2.603523249998034,
+      "mean_first_text_s": 2.6035239249995357,
+      "mean_request_s": 8.04901452500053,
+      "mean_prefill_s": 2.5975495,
+      "startup_s": 2.6379511000050115,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 50,
+        "min_available_ram_gib": 4.089946746826172,
+        "max_process_rss_gib": 11.949542999267578,
+        "max_global_gpu_used_mib": 7539.0,
+        "max_gpu_temperature_c": 52.16
+      },
+      "min_sampled_gpu_free_mib": 357.0,
+      "eligible": false,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 3
+    },
+    {
+      "label": "sweet-val-r3-static12-t6",
+      "config": {
+        "static_layers": 12,
+        "threads": 6,
+        "cache_mib": 0,
+        "cpu_share": 0
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 18.320253,
+      "decode_tps": 27.72887470495085,
+      "mean_ttft_s": 0.7278143999992608,
+      "mean_first_text_s": 0.7278152999988379,
+      "mean_request_s": 5.308657075000156,
+      "mean_prefill_s": 0.7159565,
+      "startup_s": 3.273286499999813,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 33,
+        "min_available_ram_gib": 4.625530242919922,
+        "max_process_rss_gib": 11.33108901977539,
+        "max_global_gpu_used_mib": 6196.0,
+        "max_gpu_temperature_c": 50.87
+      },
+      "min_sampled_gpu_free_mib": 1700.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 3
+    },
+    {
+      "label": "sweet-val-r3-c4096-s95-t6",
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 6
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 13.760913,
+      "decode_tps": 36.916155199876634,
+      "mean_ttft_s": 0.6840205750013411,
+      "mean_first_text_s": 0.6840214249987184,
+      "mean_request_s": 4.124666024999897,
+      "mean_prefill_s": 0.67306425,
+      "startup_s": 2.4278927000050317,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 28,
+        "min_available_ram_gib": 4.791744232177734,
+        "max_process_rss_gib": 11.191387176513672,
+        "max_global_gpu_used_mib": 6260.0,
+        "max_gpu_temperature_c": 53.22
+      },
+      "min_sampled_gpu_free_mib": 1636.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 3
+    },
+    {
+      "label": "sweet-val-r3-c5376-s90-t4",
+      "config": {
+        "cache_mib": 5376,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 4,
+      "decode_steps": 508,
+      "decode_seconds": 11.62377,
+      "decode_tps": 43.70354884860936,
+      "mean_ttft_s": 0.5675693999965006,
+      "mean_first_text_s": 0.5675700749980024,
+      "mean_request_s": 3.474679399998422,
+      "mean_prefill_s": 0.56272875,
+      "startup_s": 2.6022850000008475,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 25,
+        "min_available_ram_gib": 4.6839141845703125,
+        "max_process_rss_gib": 11.227413177490234,
+        "max_global_gpu_used_mib": 7663.0,
+        "max_gpu_temperature_c": 54.57
+      },
+      "min_sampled_gpu_free_mib": 233.0,
+      "eligible": false,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "repetition": 3
+    }
+  ]
+}

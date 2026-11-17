@@ -1,0 +1,14 @@
+[
+  {
+    "id": "tune-energy",
+    "prompt": "Explain to a student how conservation of energy applies to a ball thrown upward. Discuss kinetic energy, gravitational potential energy, air resistance, and why the speed changes. Give examples and identify common misconceptions.",
+    "tokens": 192,
+    "fixed_length": true
+  },
+  {
+    "id": "tune-debugging",
+    "prompt": "Explain a systematic process for finding an off-by-one error in a loop that traverses a list. Include examples, boundary cases, a loop invariant, and how to check the proposed repair without relying only on random tests.",
+    "tokens": 192,
+    "fixed_length": true
+  }
+]

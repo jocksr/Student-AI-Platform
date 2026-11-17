@@ -1,0 +1,17 @@
+{
+  "preliminary": [],
+  "repeat_configurations": [
+    {
+      "cache_mib": 4352,
+      "cpu_share": 0.9,
+      "threads": 4
+    },
+    {
+      "cache_mib": 3840,
+      "cpu_share": 0.9,
+      "threads": 8
+    }
+  ],
+  "threshold_pct": 5,
+  "note": "Single-run turning points are candidates, not established physical effects; repeated measurements determine stability."
+}

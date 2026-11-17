@@ -1,0 +1,612 @@
+{
+  "trials": [
+    {
+      "label": "recovery-r1-c4096-s90-t4",
+      "requested_gib": 4,
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 3.569216,
+      "decode_tps": 35.5820437877674,
+      "mean_ttft_s": 0.6508974000025773,
+      "mean_first_text_s": 0.6508981000006315,
+      "mean_request_s": 4.220553200000722,
+      "mean_prefill_s": 0.6473329999999999,
+      "startup_s": 2.664209100003063,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 13,
+        "min_available_ram_gib": 4.709556579589844,
+        "max_process_rss_gib": 10.881450653076172,
+        "max_global_gpu_used_mib": 6681.0,
+        "max_gpu_temperature_c": 43.38
+      },
+      "allocated_cache_mib": 4084.61,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 1215.0
+    },
+    {
+      "label": "recovery-r1-c5120-s90-t4",
+      "requested_gib": 5,
+      "config": {
+        "cache_mib": 5120,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 3.114457,
+      "decode_tps": 40.77757374720537,
+      "mean_ttft_s": 0.5663207999969018,
+      "mean_first_text_s": 0.566321300000709,
+      "mean_request_s": 3.6810785999987274,
+      "mean_prefill_s": 0.550227,
+      "startup_s": 2.568382000004931,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 12,
+        "min_available_ram_gib": 5.27374267578125,
+        "max_process_rss_gib": 10.906768798828125,
+        "max_global_gpu_used_mib": 7489.0,
+        "max_gpu_temperature_c": 44.45
+      },
+      "allocated_cache_mib": 5118.37,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 407.0
+    },
+    {
+      "label": "recovery-r1-c5376-s90-t4",
+      "requested_gib": 5.25,
+      "config": {
+        "cache_mib": 5376,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 2.989884,
+      "decode_tps": 42.47656430818052,
+      "mean_ttft_s": 0.5325743000066723,
+      "mean_first_text_s": 0.5325750000047265,
+      "mean_request_s": 3.522782300002291,
+      "mean_prefill_s": 0.531104,
+      "startup_s": 2.57666369999788,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 12,
+        "min_available_ram_gib": 5.0801544189453125,
+        "max_process_rss_gib": 11.043476104736328,
+        "max_global_gpu_used_mib": 7598.0,
+        "max_gpu_temperature_c": 44.67
+      },
+      "allocated_cache_mib": 5370.5,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 298.0
+    },
+    {
+      "label": "recovery-r1-c5632-s90-t4",
+      "requested_gib": 5.5,
+      "config": {
+        "cache_mib": 5632,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 3.9392069999999997,
+      "decode_tps": 32.23999145005581,
+      "mean_ttft_s": 2.550635300001886,
+      "mean_first_text_s": 2.5506357999984175,
+      "mean_request_s": 6.490190500000608,
+      "mean_prefill_s": 2.5336399999999997,
+      "startup_s": 2.624550199994701,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 18,
+        "min_available_ram_gib": 4.942466735839844,
+        "max_process_rss_gib": 11.146537780761719,
+        "max_global_gpu_used_mib": 7699.0,
+        "max_gpu_temperature_c": 44.07
+      },
+      "allocated_cache_mib": 5622.64,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 197.0
+    },
+    {
+      "label": "recovery-r1-c5888-s90-t4",
+      "requested_gib": 5.75,
+      "config": {
+        "cache_mib": 5888,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 3.7869140000000003,
+      "decode_tps": 33.53654189136589,
+      "mean_ttft_s": 2.159204800002044,
+      "mean_first_text_s": 2.1592053000058513,
+      "mean_request_s": 5.9465597000016714,
+      "mean_prefill_s": 2.157311,
+      "startup_s": 2.6086649000062607,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 17,
+        "min_available_ram_gib": 4.685859680175781,
+        "max_process_rss_gib": 11.13699722290039,
+        "max_global_gpu_used_mib": 7696.0,
+        "max_gpu_temperature_c": 45.22
+      },
+      "allocated_cache_mib": 5887.38,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 200.0
+    },
+    {
+      "label": "recovery-r1-c6144-s90-t4",
+      "requested_gib": 6,
+      "config": {
+        "cache_mib": 6144,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 5.028676000000001,
+      "decode_tps": 25.255156625720165,
+      "mean_ttft_s": 2.269036000005144,
+      "mean_first_text_s": 2.2690369000047212,
+      "mean_request_s": 7.300235200003954,
+      "mean_prefill_s": 2.267486,
+      "startup_s": 2.8175354999984847,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 19,
+        "min_available_ram_gib": 4.4902801513671875,
+        "max_process_rss_gib": 11.46484375,
+        "max_global_gpu_used_mib": 7607.0,
+        "max_gpu_temperature_c": 45.11
+      },
+      "allocated_cache_mib": 6139.52,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 289.0
+    },
+    {
+      "label": "recovery-r1-c7168-s90-t4",
+      "requested_gib": 7,
+      "config": {
+        "cache_mib": 7168,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 6.979343,
+      "decode_tps": 18.196555177185015,
+      "mean_ttft_s": 2.629771300002176,
+      "mean_first_text_s": 2.62977160000446,
+      "mean_request_s": 9.610244399998919,
+      "mean_prefill_s": 2.627172,
+      "startup_s": 3.425011999999697,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 24,
+        "min_available_ram_gib": 3.4688262939453125,
+        "max_process_rss_gib": 12.44717025756836,
+        "max_global_gpu_used_mib": 7642.0,
+        "max_gpu_temperature_c": 44.96
+      },
+      "allocated_cache_mib": 7160.67,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 254.0
+    },
+    {
+      "label": "recovery-r1-c8192-s90-t4",
+      "requested_gib": 8,
+      "config": {
+        "cache_mib": 8192,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 12.976327999999999,
+      "decode_tps": 9.787052238506918,
+      "mean_ttft_s": 3.295977399997355,
+      "mean_first_text_s": 3.2959783999976935,
+      "mean_request_s": 16.272704399998474,
+      "mean_prefill_s": 3.2844029999999997,
+      "startup_s": 3.504052900003444,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 35,
+        "min_available_ram_gib": 1.154815673828125,
+        "max_process_rss_gib": 13.67214584350586,
+        "max_global_gpu_used_mib": 7823.0,
+        "max_gpu_temperature_c": 44.79
+      },
+      "allocated_cache_mib": 8181.82,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 73.0
+    },
+    {
+      "label": "recovery-r1-c9216-s90-t4",
+      "requested_gib": 9,
+      "config": {
+        "cache_mib": 9216,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 12.250588,
+      "decode_tps": 10.36684933000767,
+      "mean_ttft_s": 2.5754524000003585,
+      "mean_first_text_s": 2.575452999997651,
+      "mean_request_s": 14.826585899994825,
+      "mean_prefill_s": 2.5719830000000004,
+      "startup_s": 4.001454400000512,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 33,
+        "min_available_ram_gib": 1.3639945983886719,
+        "max_process_rss_gib": 14.568656921386719,
+        "max_global_gpu_used_mib": 7641.0,
+        "max_gpu_temperature_c": 45.88
+      },
+      "allocated_cache_mib": 9215.58,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 255.0
+    },
+    {
+      "label": "recovery-r1-c10240-s90-t4",
+      "requested_gib": 10,
+      "config": {
+        "cache_mib": 10240,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 11.167311999999999,
+      "decode_tps": 11.372477101024849,
+      "mean_ttft_s": 2.480881399998907,
+      "mean_first_text_s": 2.480881800001953,
+      "mean_request_s": 13.64980949999881,
+      "mean_prefill_s": 2.4790569999999996,
+      "startup_s": 3.8803466000026674,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 31,
+        "min_available_ram_gib": 1.0560836791992188,
+        "max_process_rss_gib": 15.10015869140625,
+        "max_global_gpu_used_mib": 7626.0,
+        "max_gpu_temperature_c": 46.05
+      },
+      "allocated_cache_mib": 9745.07,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 270.0
+    },
+    {
+      "label": "recovery-r1-c16384-s90-t4",
+      "requested_gib": 16,
+      "config": {
+        "cache_mib": 16384,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 12.727870000000001,
+      "decode_tps": 9.978103170444072,
+      "mean_ttft_s": 2.59864060000109,
+      "mean_first_text_s": 2.598641399999906,
+      "mean_request_s": 15.32641120000335,
+      "mean_prefill_s": 2.5823850000000004,
+      "startup_s": 3.9143136000056984,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 33,
+        "min_available_ram_gib": 1.0281524658203125,
+        "max_process_rss_gib": 15.099903106689453,
+        "max_global_gpu_used_mib": 7576.0,
+        "max_gpu_temperature_c": 46.14
+      },
+      "allocated_cache_mib": 9745.07,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 320.0
+    },
+    {
+      "label": "recovery-r1-c32768-s90-t4",
+      "requested_gib": 32,
+      "config": {
+        "cache_mib": 32768,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "failed",
+      "error": "[WinError 10054] An existing connection was forcibly closed by the remote host",
+      "resource_guard": "system RAM headroom guard triggered",
+      "allocated_cache_mib": 9745.07,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 293.0
+    },
+    {
+      "label": "recovery-r2-c10240-s90-t4",
+      "requested_gib": 10,
+      "config": {
+        "cache_mib": 10240,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 2,
+      "status": "failed",
+      "error": "[WinError 10054] An existing connection was forcibly closed by the remote host",
+      "resource_guard": "system RAM headroom guard triggered",
+      "allocated_cache_mib": 9745.07,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 332.0
+    },
+    {
+      "label": "recovery-r2-c8192-s90-t4",
+      "requested_gib": 8,
+      "config": {
+        "cache_mib": 8192,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 2,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 9.492672,
+      "decode_tps": 13.378740990945436,
+      "mean_ttft_s": 2.5050277000045753,
+      "mean_first_text_s": 2.505028100000345,
+      "mean_request_s": 12.000033100004657,
+      "mean_prefill_s": 2.484251,
+      "startup_s": 3.501685600000201,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 28,
+        "min_available_ram_gib": 2.2449874877929688,
+        "max_process_rss_gib": 13.600482940673828,
+        "max_global_gpu_used_mib": 7765.0,
+        "max_gpu_temperature_c": 46.8
+      },
+      "allocated_cache_mib": 8181.82,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 131.0
+    },
+    {
+      "label": "recovery-r2-c5376-s90-t4",
+      "requested_gib": 5.25,
+      "config": {
+        "cache_mib": 5376,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 2,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 2.952942,
+      "decode_tps": 43.007956133239325,
+      "mean_ttft_s": 0.5887220000004163,
+      "mean_first_text_s": 0.5887228999999934,
+      "mean_request_s": 3.5418400000053225,
+      "mean_prefill_s": 0.58594,
+      "startup_s": 2.649223100001109,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 12,
+        "min_available_ram_gib": 4.979480743408203,
+        "max_process_rss_gib": 10.918712615966797,
+        "max_global_gpu_used_mib": 7539.0,
+        "max_gpu_temperature_c": 50.55
+      },
+      "allocated_cache_mib": 5370.5,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 357.0
+    },
+    {
+      "label": "recovery-r2-c5120-s90-t4",
+      "requested_gib": 5,
+      "config": {
+        "cache_mib": 5120,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 2,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 3.154793,
+      "decode_tps": 40.25620698410324,
+      "mean_ttft_s": 0.5938546000033966,
+      "mean_first_text_s": 0.5938556999972207,
+      "mean_request_s": 3.7488784000015585,
+      "mean_prefill_s": 0.5779890000000001,
+      "startup_s": 2.5933788000038476,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 12,
+        "min_available_ram_gib": 4.716835021972656,
+        "max_process_rss_gib": 10.905853271484375,
+        "max_global_gpu_used_mib": 7363.0,
+        "max_gpu_temperature_c": 50.36
+      },
+      "allocated_cache_mib": 5118.37,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 533.0
+    },
+    {
+      "label": "recovery-r3-c5120-s90-t4",
+      "requested_gib": 5,
+      "config": {
+        "cache_mib": 5120,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 3,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 3.1407109999999996,
+      "decode_tps": 40.4367036635972,
+      "mean_ttft_s": 0.6135795000009239,
+      "mean_first_text_s": 0.613580400000501,
+      "mean_request_s": 3.7545141000009608,
+      "mean_prefill_s": 0.611651,
+      "startup_s": 2.5712270999938482,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 12,
+        "min_available_ram_gib": 4.618083953857422,
+        "max_process_rss_gib": 10.90658950805664,
+        "max_global_gpu_used_mib": 7436.0,
+        "max_gpu_temperature_c": 50.84
+      },
+      "allocated_cache_mib": 5118.37,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 460.0
+    },
+    {
+      "label": "recovery-r3-c5376-s90-t4",
+      "requested_gib": 5.25,
+      "config": {
+        "cache_mib": 5376,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 3,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 3.006433,
+      "decode_tps": 42.24275079471254,
+      "mean_ttft_s": 0.5509906000006595,
+      "mean_first_text_s": 0.5509913999994751,
+      "mean_request_s": 3.557767500002228,
+      "mean_prefill_s": 0.549095,
+      "startup_s": 2.5463143000015407,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 12,
+        "min_available_ram_gib": 4.688793182373047,
+        "max_process_rss_gib": 10.918453216552734,
+        "max_global_gpu_used_mib": 7617.0,
+        "max_gpu_temperature_c": 50.67
+      },
+      "allocated_cache_mib": 5370.5,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 279.0
+    },
+    {
+      "label": "recovery-r3-c8192-s90-t4",
+      "requested_gib": 8,
+      "config": {
+        "cache_mib": 8192,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 3,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 9.298153000000001,
+      "decode_tps": 13.65862661111298,
+      "mean_ttft_s": 2.8076230000006035,
+      "mean_first_text_s": 2.807623799999419,
+      "mean_request_s": 12.106080800003838,
+      "mean_prefill_s": 2.789981,
+      "startup_s": 3.2249709999960032,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 28,
+        "min_available_ram_gib": 2.3355674743652344,
+        "max_process_rss_gib": 13.609485626220703,
+        "max_global_gpu_used_mib": 7603.0,
+        "max_gpu_temperature_c": 47.43
+      },
+      "allocated_cache_mib": 8181.82,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 293.0
+    },
+    {
+      "label": "recovery-r3-c10240-s90-t4",
+      "requested_gib": 10,
+      "config": {
+        "cache_mib": 10240,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 3,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 11.268017,
+      "decode_tps": 11.270838515774336,
+      "mean_ttft_s": 2.4622122000000672,
+      "mean_first_text_s": 2.46221279999736,
+      "mean_request_s": 13.73046809999505,
+      "mean_prefill_s": 2.445338,
+      "startup_s": 3.8697128999992856,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 30,
+        "min_available_ram_gib": 1.2417488098144531,
+        "max_process_rss_gib": 15.131172180175781,
+        "max_global_gpu_used_mib": 7576.0,
+        "max_gpu_temperature_c": 47.48
+      },
+      "allocated_cache_mib": 9745.07,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 320.0
+    }
+  ]
+}

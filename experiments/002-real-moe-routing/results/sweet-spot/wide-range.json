@@ -1,0 +1,598 @@
+{
+  "trials": [
+    {
+      "label": "wide-c4096-s90-t4",
+      "requested_gib": 4,
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 10.890476,
+      "decode_tps": 35.076520071298994,
+      "mean_ttft_s": 0.7990797000020393,
+      "mean_first_text_s": 0.7990807500027586,
+      "mean_request_s": 6.244795650000015,
+      "mean_prefill_s": 0.7842060000000001,
+      "startup_s": 2.679128600000695,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 23,
+        "min_available_ram_gib": 2.4807891845703125,
+        "max_process_rss_gib": 11.287223815917969,
+        "max_global_gpu_used_mib": 7443.0,
+        "max_gpu_temperature_c": 47.89
+      },
+      "allocated_cache_mib": 4084.61,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 453.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c4096-s95-t4",
+      "requested_gib": 4,
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 11.636448,
+      "decode_tps": 32.82788699781927,
+      "mean_ttft_s": 0.7318978500006779,
+      "mean_first_text_s": 0.7319008000013127,
+      "mean_request_s": 6.5505920499999775,
+      "mean_prefill_s": 0.7249104999999999,
+      "startup_s": 2.6488520999992033,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 24,
+        "min_available_ram_gib": 2.5709228515625,
+        "max_process_rss_gib": 11.325424194335938,
+        "max_global_gpu_used_mib": 7504.0,
+        "max_gpu_temperature_c": 49.35
+      },
+      "allocated_cache_mib": 4084.61,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 392.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c4608-s90-t4",
+      "requested_gib": 4.5,
+      "config": {
+        "cache_mib": 4608,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 10.269905999999999,
+      "decode_tps": 37.19605612748549,
+      "mean_ttft_s": 0.7165611999989778,
+      "mean_first_text_s": 0.7165620999985549,
+      "mean_request_s": 5.851999599999544,
+      "mean_prefill_s": 0.706188,
+      "startup_s": 2.656777999996848,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 22,
+        "min_available_ram_gib": 2.171764373779297,
+        "max_process_rss_gib": 11.388435363769531,
+        "max_global_gpu_used_mib": 7548.0,
+        "max_gpu_temperature_c": 50.75
+      },
+      "allocated_cache_mib": 4601.49,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 348.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c4608-s95-t4",
+      "requested_gib": 4.5,
+      "config": {
+        "cache_mib": 4608,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 10.411333999999998,
+      "decode_tps": 36.69078333285629,
+      "mean_ttft_s": 0.674271999996563,
+      "mean_first_text_s": 0.6742731499980437,
+      "mean_request_s": 5.880564149996644,
+      "mean_prefill_s": 0.672081,
+      "startup_s": 2.7760807999948156,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 22,
+        "min_available_ram_gib": 2.167896270751953,
+        "max_process_rss_gib": 11.345771789550781,
+        "max_global_gpu_used_mib": 7499.0,
+        "max_gpu_temperature_c": 51.36
+      },
+      "allocated_cache_mib": 4601.49,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 397.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c5120-s90-t4",
+      "requested_gib": 5,
+      "config": {
+        "cache_mib": 5120,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 9.786401,
+      "decode_tps": 39.033757149334065,
+      "mean_ttft_s": 0.6225999499984027,
+      "mean_first_text_s": 0.6226020000030985,
+      "mean_request_s": 5.517125049998867,
+      "mean_prefill_s": 0.6140305,
+      "startup_s": 2.9971137000029557,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 22,
+        "min_available_ram_gib": 2.2809295654296875,
+        "max_process_rss_gib": 11.46426773071289,
+        "max_global_gpu_used_mib": 7574.0,
+        "max_gpu_temperature_c": 51.84
+      },
+      "allocated_cache_mib": 5118.37,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 322.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c5120-s95-t4",
+      "requested_gib": 5,
+      "config": {
+        "cache_mib": 5120,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 9.953226999999998,
+      "decode_tps": 38.379512493787196,
+      "mean_ttft_s": 0.6063778499992623,
+      "mean_first_text_s": 0.6063788999999815,
+      "mean_request_s": 5.583686250000028,
+      "mean_prefill_s": 0.604038,
+      "startup_s": 2.791532499999448,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 22,
+        "min_available_ram_gib": 2.48858642578125,
+        "max_process_rss_gib": 11.492610931396484,
+        "max_global_gpu_used_mib": 7553.0,
+        "max_gpu_temperature_c": 52.16
+      },
+      "allocated_cache_mib": 5118.37,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 343.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c5632-s90-t4",
+      "requested_gib": 5.5,
+      "config": {
+        "cache_mib": 5632,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 8.380896,
+      "decode_tps": 45.57985208264128,
+      "mean_ttft_s": 0.5644272999998066,
+      "mean_first_text_s": 0.5644281000022602,
+      "mean_request_s": 4.756593450005312,
+      "mean_prefill_s": 0.548426,
+      "startup_s": 2.994114699999045,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 20,
+        "min_available_ram_gib": 3.4343528747558594,
+        "max_process_rss_gib": 11.320220947265625,
+        "max_global_gpu_used_mib": 7529.0,
+        "max_gpu_temperature_c": 53.77
+      },
+      "allocated_cache_mib": 5622.64,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 367.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c5632-s95-t4",
+      "requested_gib": 5.5,
+      "config": {
+        "cache_mib": 5632,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 8.820941,
+      "decode_tps": 43.306037303729845,
+      "mean_ttft_s": 0.5449603500019293,
+      "mean_first_text_s": 0.5449611999974877,
+      "mean_request_s": 4.955791649997991,
+      "mean_prefill_s": 0.5431644999999999,
+      "startup_s": 2.874615000000631,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 20,
+        "min_available_ram_gib": 3.0835800170898438,
+        "max_process_rss_gib": 11.300548553466797,
+        "max_global_gpu_used_mib": 7650.0,
+        "max_gpu_temperature_c": 53.88
+      },
+      "allocated_cache_mib": 5622.64,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 246.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c6144-s90-t4",
+      "requested_gib": 6,
+      "config": {
+        "cache_mib": 6144,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 13.867359,
+      "decode_tps": 27.546701574539174,
+      "mean_ttft_s": 2.304542499998206,
+      "mean_first_text_s": 2.304543199999898,
+      "mean_request_s": 9.238528949997999,
+      "mean_prefill_s": 2.289504,
+      "startup_s": 2.792366100002255,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 33,
+        "min_available_ram_gib": 2.7318077087402344,
+        "max_process_rss_gib": 11.771202087402344,
+        "max_global_gpu_used_mib": 7694.0,
+        "max_gpu_temperature_c": 52.33
+      },
+      "allocated_cache_mib": 6139.52,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 202.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c6144-s95-t4",
+      "requested_gib": 6,
+      "config": {
+        "cache_mib": 6144,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 15.268412,
+      "decode_tps": 25.01897381338675,
+      "mean_ttft_s": 2.3688194999995176,
+      "mean_first_text_s": 2.368820500003494,
+      "mean_request_s": 10.003197900001396,
+      "mean_prefill_s": 2.3559355,
+      "startup_s": 2.814846799999941,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 35,
+        "min_available_ram_gib": 2.8171958923339844,
+        "max_process_rss_gib": 11.821891784667969,
+        "max_global_gpu_used_mib": 7685.0,
+        "max_gpu_temperature_c": 52.36
+      },
+      "allocated_cache_mib": 6139.52,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 211.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c7168-s90-t4",
+      "requested_gib": 7,
+      "config": {
+        "cache_mib": 7168,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "[WinError 10054] An existing connection was forcibly closed by the remote host",
+      "resource_guard": "system RAM headroom guard triggered",
+      "allocated_cache_mib": 7160.67,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 235.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c7168-s95-t4",
+      "requested_gib": 7,
+      "config": {
+        "cache_mib": 7168,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "[WinError 10054] An existing connection was forcibly closed by the remote host",
+      "resource_guard": "system RAM headroom guard triggered",
+      "allocated_cache_mib": 7160.67,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 272.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c8192-s90-t4",
+      "requested_gib": 8,
+      "config": {
+        "cache_mib": 8192,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "[WinError 10054] An existing connection was forcibly closed by the remote host",
+      "resource_guard": "system RAM headroom guard triggered",
+      "allocated_cache_mib": 8181.82,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 163.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c8192-s95-t4",
+      "requested_gib": 8,
+      "config": {
+        "cache_mib": 8192,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "[WinError 10054] An existing connection was forcibly closed by the remote host",
+      "resource_guard": "system RAM headroom guard triggered",
+      "allocated_cache_mib": 8181.82,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 344.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c9216-s90-t4",
+      "requested_gib": 9,
+      "config": {
+        "cache_mib": 9216,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "Server exited: 1; see server.log",
+      "allocated_cache_mib": 9215.58,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 427.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c9216-s95-t4",
+      "requested_gib": 9,
+      "config": {
+        "cache_mib": 9216,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "Server exited: 3221226505; see server.log",
+      "allocated_cache_mib": 9215.58,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 369.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c10240-s90-t4",
+      "requested_gib": 10,
+      "config": {
+        "cache_mib": 10240,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "Server exited: 1; see server.log",
+      "allocated_cache_mib": null,
+      "failed_allocation_request_mib": 9745.07,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 6090.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c10240-s95-t4",
+      "requested_gib": 10,
+      "config": {
+        "cache_mib": 10240,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "Server exited: 1; see server.log",
+      "allocated_cache_mib": null,
+      "failed_allocation_request_mib": 9745.07,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 6124.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c12288-s90-t4",
+      "requested_gib": 12,
+      "config": {
+        "cache_mib": 12288,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "Server exited: 3221226505; see server.log",
+      "allocated_cache_mib": 9745.07,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 441.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c12288-s95-t4",
+      "requested_gib": 12,
+      "config": {
+        "cache_mib": 12288,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "Server exited: 3221226505; see server.log",
+      "allocated_cache_mib": null,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 294.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c16384-s90-t4",
+      "requested_gib": 16,
+      "config": {
+        "cache_mib": 16384,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "Server exited: 1; see server.log",
+      "allocated_cache_mib": 9745.07,
+      "failed_allocation_request_mib": 168.48,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 379.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c16384-s95-t4",
+      "requested_gib": 16,
+      "config": {
+        "cache_mib": 16384,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "Server exited: 3221226505; see server.log",
+      "allocated_cache_mib": 9745.07,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 372.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c24576-s90-t4",
+      "requested_gib": 24,
+      "config": {
+        "cache_mib": 24576,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "Server exited: 3221226505; see server.log",
+      "allocated_cache_mib": 9745.07,
+      "failed_allocation_request_mib": null,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 2845.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c24576-s95-t4",
+      "requested_gib": 24,
+      "config": {
+        "cache_mib": 24576,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "Server exited: 1; see server.log",
+      "allocated_cache_mib": 9745.07,
+      "failed_allocation_request_mib": 168.48,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 348.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c32768-s90-t4",
+      "requested_gib": 32,
+      "config": {
+        "cache_mib": 32768,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "Server exited: 1; see server.log",
+      "allocated_cache_mib": 9745.07,
+      "failed_allocation_request_mib": 168.48,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 347.0,
+      "eligible": false
+    },
+    {
+      "label": "wide-c32768-s95-t4",
+      "requested_gib": 32,
+      "config": {
+        "cache_mib": 32768,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "failed",
+      "error": "Server exited: 1; see server.log",
+      "allocated_cache_mib": null,
+      "failed_allocation_request_mib": 9745.07,
+      "expected_effective_cache_cap_mib": 9745.065307617188,
+      "min_sampled_gpu_free_mib": 6036.0,
+      "eligible": false
+    }
+  ],
+  "requested_range_gib": [
+    4,
+    32
+  ]
+}

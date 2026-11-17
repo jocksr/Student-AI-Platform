@@ -1,0 +1,23 @@
+0.00.084.771 I ggml_cuda_init: found 1 CUDA devices (Total VRAM: 8123 MiB):
+0.00.084.910 I load_backend: loaded CUDA backend from E:\Project_APEX\experiments\002-real-moe-routing\runtime\ggml-cuda.dll
+0.00.163.118 I cmn  common_param:   - CUDA0   : NVIDIA GeForce RTX 5060 (8123 MiB, 7031 MiB free)
+0.00.163.190 I cmn  common_param: system_info: n_threads = 6 (n_threads_batch = 6) / 16 | CUDA : ARCHS = 750,800,860,890,900,1200,1210 | USE_GRAPHS = 1 | FA_QUANTS = q4_0-q4_0,q8_0-q8_0,f16-f16,bf16-bf16,f8_e4m3-f8_e4m3 | NATIVE_FP8 = 1 | BLACKWELL_NATIVE_FP4 = 1 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.237.451 I llama_prepare_model_devices: using device CUDA0 (NVIDIA GeForce RTX 5060) (0000:01:00.0) - 7031 MiB free
+0.00.412.120 I print_info: n_layer               = 24
+0.00.412.120 I print_info: n_layer_all           = 24
+0.00.412.150 I print_info: n_expert              = 32
+0.00.412.150 I print_info: n_expert_used         = 4
+0.00.412.150 I print_info: n_expert_groups       = 0
+0.01.729.921 I load_tensors: offloaded 25/25 layers to GPU
+0.01.729.925 I load_tensors:        CUDA0 model buffer size =  1242.03 MiB
+0.01.729.927 I load_tensors:    CUDA_Host model buffer size = 10294.17 MiB
+0.07.681.609 I llama_context:  CUDA_Host  output buffer size =     0.77 MiB
+0.07.688.238 I llama_kv_cache:      CUDA0 KV buffer size =    48.00 MiB
+0.07.690.187 I llama_kv_cache:      CUDA0 KV buffer size =    12.00 MiB
+0.08.130.225 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 3063.46 MiB on device 0: cudaMalloc failed: out of memory
+0.08.130.235 E ggml_backend_buft_alloc_buffer_n_default: failed to allocate CUDA0 buffer of size 3212265984
+0.08.131.601 E llama_init_from_model: failed to initialize the context: failed to allocate buffer for MoE cache
+0.08.131.607 E cmn  common_init_: failed to create context with model 'E:\Project_APEX\experiments\002-real-moe-routing\models\gpt-oss-20b-MXFP4.gguf'
+0.08.131.610 E cmn  common_init_: failed to create context with model 'E:\Project_APEX\experiments\002-real-moe-routing\models\gpt-oss-20b-MXFP4.gguf'
+0.08.131.612 E srv    load_model: failed to create_context with model 'E:\Project_APEX\experiments\002-real-moe-routing\models\gpt-oss-20b-MXFP4.gguf'
+0.08.138.370 E srv  server_run_i: exiting due to model loading error

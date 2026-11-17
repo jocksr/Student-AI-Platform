@@ -1,0 +1,6 @@
+{
+  "executed_evaluation_harness_sha256": "1e691487dec17961614edab701b3354961a2e56d00fd71bbdd7ed80e5873fc9e",
+  "source_snapshot": "results\\harness-snapshots\\1e691487dec17961614edab701b3354961a2e56d00fd71bbdd7ed80e5873fc9e.py.snapshot",
+  "applies_to": "All eval-r1 through eval-r4 runs in the one evaluation-matrix process",
+  "note": "The process loads Python source once. The per-run harness_sha256 field hashes the file on disk at each run start. The file was extended with separate post-evaluation diagnostic commands while this process ran; later per-run on-disk hashes differ. This byte-exact snapshot matches the initial executing source hash. Evaluation commands, prompts and metrics were not changed."
+}

@@ -1,0 +1,74 @@
+{
+  "budgets_gib": [
+    5,
+    5.25,
+    8,
+    10
+  ],
+  "candidate_turning_point": {
+    "low": {
+      "label": "recovery-r1-c8192-s90-t4",
+      "requested_gib": 8,
+      "config": {
+        "cache_mib": 8192,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 12.976327999999999,
+      "decode_tps": 9.787052238506918,
+      "mean_ttft_s": 3.295977399997355,
+      "mean_first_text_s": 3.2959783999976935,
+      "mean_request_s": 16.272704399998474,
+      "mean_prefill_s": 3.2844029999999997,
+      "startup_s": 3.504052900003444,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 35,
+        "min_available_ram_gib": 1.154815673828125,
+        "max_process_rss_gib": 13.67214584350586,
+        "max_global_gpu_used_mib": 7823.0,
+        "max_gpu_temperature_c": 44.79
+      },
+      "allocated_cache_mib": 8181.82,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 73.0
+    },
+    "recovery": {
+      "label": "recovery-r1-c10240-s90-t4",
+      "requested_gib": 10,
+      "config": {
+        "cache_mib": 10240,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "repetition": 1,
+      "status": "complete",
+      "fixed_requests": 1,
+      "decode_steps": 127,
+      "decode_seconds": 11.167311999999999,
+      "decode_tps": 11.372477101024849,
+      "mean_ttft_s": 2.480881399998907,
+      "mean_first_text_s": 2.480881800001953,
+      "mean_request_s": 13.64980949999881,
+      "mean_prefill_s": 2.4790569999999996,
+      "startup_s": 3.8803466000026674,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 31,
+        "min_available_ram_gib": 1.0560836791992188,
+        "max_process_rss_gib": 15.10015869140625,
+        "max_global_gpu_used_mib": 7626.0,
+        "max_gpu_temperature_c": 46.05
+      },
+      "allocated_cache_mib": 9745.07,
+      "failed_allocation_request_mib": null,
+      "min_sampled_gpu_free_mib": 270.0
+    }
+  }
+}

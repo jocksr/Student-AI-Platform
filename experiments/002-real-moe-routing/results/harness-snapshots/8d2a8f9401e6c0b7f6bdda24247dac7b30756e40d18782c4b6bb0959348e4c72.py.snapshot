@@ -1,0 +1,310 @@
+"""Local, single-request inference measurements; never executes model output."""
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import platform
+import socket
+import subprocess
+import sys
+import threading
+import time
+import urllib.error
+import urllib.request
+
+import psutil
+
+ROOT = Path(__file__).resolve().parents[1]
+CREATE_FLAGS = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+LOADED_SOURCE = Path(__file__).read_bytes()
+LOADED_SOURCE_SHA256 = hashlib.sha256(LOADED_SOURCE).hexdigest()
+
+
+def save(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def http(port, endpoint, body=None, timeout=300):
+    req = urllib.request.Request(f"http://127.0.0.1:{port}{endpoint}",
+        data=None if body is None else json.dumps(body).encode(),
+        headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=timeout) as response:
+        return json.loads(response.read())
+
+
+def gpu():
+    p = subprocess.run(["nvidia-smi", "--query-gpu=memory.used,memory.free,utilization.gpu,temperature.gpu,power.draw",
+        "--format=csv,noheader,nounits"], capture_output=True, text=True, timeout=5, creationflags=CREATE_FLAGS)
+    if p.returncode:
+        return {"error": p.stderr.strip()}
+    values = p.stdout.strip().splitlines()[0].split(",")
+    names = ("used_mib", "free_mib", "utilization_pct", "temperature_c", "power_w")
+    return {k: float(v.strip()) if v.strip() != "[N/A]" else None for k, v in zip(names, values)}
+
+
+class Monitor:
+    def __init__(self, process):
+        self.process = psutil.Process(process.pid)
+        self.rows = []
+        self.phase = "startup"
+        self.stop = threading.Event()
+        self.started = time.perf_counter()
+        self.thread = threading.Thread(target=self.run, daemon=True)
+        self.thread.start()
+
+    def run(self):
+        while not self.stop.is_set():
+            try:
+                m = self.process.memory_info()._asdict()
+                row = dict(seconds=time.perf_counter()-self.started, phase=self.phase,
+                    process_memory=m, system_available_bytes=psutil.virtual_memory().available, gpu=gpu())
+                self.rows.append(row)
+            except (psutil.Error, OSError, RuntimeError, subprocess.TimeoutExpired) as error:
+                self.rows.append(dict(seconds=time.perf_counter()-self.started, error=str(error)))
+            self.stop.wait(0.75)
+
+    def close(self):
+        self.stop.set()
+        self.thread.join(timeout=7)
+
+
+def completion(port, prompt, n_predict, fixed_length):
+    # Use the checkpoint's chat template, then force the explicit final channel.
+    # This isolates answer generation rather than measuring hidden reasoning length.
+    formatted = http(port, "/apply-template", {"messages": [
+        {"role": "system", "content": "You are a helpful student tutor. Give a concise direct answer. Reasoning: low."},
+        {"role": "user", "content": prompt}]})["prompt"]
+    if formatted.endswith("<|start|>assistant"):
+        formatted += "<|channel|>final<|message|>"
+    elif not formatted.endswith("<|channel|>final<|message|>"):
+        raise ValueError(f"Unexpected assistant template ending: {formatted[-120:]!r}")
+    payload = dict(prompt=formatted, n_predict=n_predict, temperature=0, seed=1729,
+        cache_prompt=False, stream=True, return_tokens=True, ignore_eos=fixed_length)
+    req = urllib.request.Request(f"http://127.0.0.1:{port}/completion", data=json.dumps(payload).encode(),
+        headers={"Content-Type": "application/json"})
+    started = time.perf_counter(); first_token = first_text = None
+    chunks = []; tokens = []; final = None
+    with urllib.request.urlopen(req, timeout=300) as response:
+        for line in response:
+            if not line.startswith(b"data: "): continue
+            raw = line[6:].strip()
+            if raw == b"[DONE]": break
+            item = json.loads(raw)
+            if "error" in item: raise RuntimeError(item)
+            if item.get("tokens") and first_token is None: first_token = time.perf_counter()-started
+            if item.get("content") and first_text is None: first_text = time.perf_counter()-started
+            chunks.append(item.get("content", "")); tokens.extend(item.get("tokens", []))
+            if item.get("stop"): final = item
+    elapsed = time.perf_counter()-started
+    if final is None: raise ValueError("stream did not return final timings")
+    return dict(prompt=prompt, formatted_prompt=formatted, payload={k:v for k,v in payload.items() if k != "prompt"},
+        elapsed_s=elapsed, first_token_s=first_token, first_text_s=first_text,
+        content="".join(chunks), tokens=tokens, response=final)
+
+
+def check_answer(task, content):
+    """Deliberately narrow exact checks. This is not a general quality benchmark."""
+    import re
+    answer = content.split("<|im_end|>", 1)[0].strip()
+    if task.get("check") == "exact":
+        normalized = re.sub(r"\s+", " ", answer).strip(" .`\n")
+        return normalized == task["expected"]
+    if task.get("check") == "json":
+        answer = re.sub(r"^```(?:json)?\s*|\s*```$", "", answer)
+        try: return json.loads(answer) == task["expected"]
+        except (ValueError, TypeError): return False
+    return None
+
+
+def chat_completion(port, prompt, max_tokens):
+    """Separate follow-up diagnostic using the normal low-reasoning chat path."""
+    payload = dict(messages=[{"role":"system","content":"You are a helpful student tutor."},
+        {"role":"user","content":prompt}], max_tokens=max_tokens, temperature=0,
+        seed=1729, cache_prompt=False, reasoning_effort="low", stream=False)
+    started = time.perf_counter()
+    response = http(port,"/v1/chat/completions",payload)
+    elapsed = time.perf_counter()-started
+    return dict(prompt=prompt,payload=dict(payload,ignore_eos=False),
+        elapsed_s=elapsed,first_token_s=None,first_text_s=None,
+        content=response["choices"][0]["message"].get("content") or "",response=response,
+        mode="normal-chat-low-reasoning")
+
+
+def run(label, flags, tasks, threads=6, trace=False, load_mode="none", minimum_gpu_free_mib=0):
+    folder = ROOT / "results/runs" / label
+    if folder.exists(): raise FileExistsError(f"Refusing to overwrite run {label}")
+    folder.mkdir(parents=True)
+    snapshot = ROOT/"results/harness-snapshots"/(LOADED_SOURCE_SHA256+".py.snapshot")
+    snapshot.parent.mkdir(parents=True,exist_ok=True)
+    if not snapshot.exists(): snapshot.write_bytes(LOADED_SOURCE)
+    server = next((ROOT/"runtime").rglob("llama-server.exe"))
+    with socket.socket() as sock:
+        sock.bind(("127.0.0.1", 0)); port = sock.getsockname()[1]
+    command = [str(server), "-m", str(ROOT/"models/gpt-oss-20b-MXFP4.gguf"),
+        "--host", "127.0.0.1", "--port", str(port), "-c", "2048", "-np", "1",
+        "-b", "256", "-ub", "256", "-t", str(threads), "-tb", str(threads),
+        "-fa", "on", "-fit", "off", "-lm", load_mode, "--no-warmup", "-lv", "4",
+        "--cache-ram", "0", "--cors-origins", "localhost", "--no-webui"] + flags
+    environment = dict(os.environ)
+    environment.pop("LLAMA_MOE_CACHE_TRACE", None)
+    if trace: environment["LLAMA_MOE_CACHE_TRACE"] = str(folder/"routing.trace")
+    record = dict(schema_version=1, label=label, utc=datetime.now(timezone.utc).isoformat(),
+        command=command, trace=trace, threads=threads, load_mode=load_mode, tasks=tasks,
+        before=dict(available_ram_bytes=psutil.virtual_memory().available, gpu=gpu()),
+        python=platform.python_version(), platform=platform.platform(), requests=[],
+        harness_sha256=LOADED_SOURCE_SHA256, harness_source_snapshot=str(snapshot.relative_to(ROOT)),
+        minimum_gpu_free_mib=minimum_gpu_free_mib)
+    save(folder/"run.json", record)
+    started = time.perf_counter(); monitor = process = None
+    try:
+        with (folder/"server.log").open("wb") as log:
+            process = subprocess.Popen(command, stdout=log, stderr=subprocess.STDOUT,
+                env=environment, creationflags=CREATE_FLAGS)
+        monitor = Monitor(process)
+        while True:
+            if process.poll() is not None: raise RuntimeError(f"Server exited: {process.returncode}; see server.log")
+            if time.perf_counter()-started > 240: raise TimeoutError("Server startup >240 seconds")
+            try:
+                if http(port, "/health", timeout=2).get("status") == "ok": break
+            except (OSError, urllib.error.URLError) as error:
+                if "10013" in str(error): raise PermissionError("Localhost requests blocked by execution sandbox") from error
+            time.sleep(0.2)
+        record["startup_s"] = time.perf_counter()-started
+        record["props"] = http(port, "/props")
+        if minimum_gpu_free_mib and gpu()["free_mib"] < minimum_gpu_free_mib:
+            raise RuntimeError("GPU headroom guard stopped this trial before warm-up")
+        monitor.phase = "warmup"
+        warm = completion(port, "Explain in one paragraph why students should check their arithmetic.", 32, True)
+        record["warmup"] = warm
+        save(folder/"run.json", record)
+        for task in tasks:
+            if minimum_gpu_free_mib and gpu()["free_mib"] < minimum_gpu_free_mib:
+                raise RuntimeError("GPU headroom guard stopped this trial before the next request")
+            if minimum_gpu_free_mib and psutil.virtual_memory().available < 2*2**30:
+                raise RuntimeError("RAM headroom guard stopped this trial")
+            monitor.phase = task["id"]
+            result = chat_completion(port,task["prompt"],task.get("tokens",256)) if task.get("mode")=="chat" else completion(port, task["prompt"], task.get("tokens", 96), task.get("fixed_length", True))
+            result["task_id"] = task["id"]
+            result["correct"] = check_answer(task, result["content"])
+            record["requests"].append(result)
+            save(folder/"run.json", record)
+            timings = result["response"].get("timings", {})
+            print(f"{label}/{task['id']}: {result['elapsed_s']:.2f}s, {timings.get('predicted_per_second',0):.2f} tok/s, correct={result['correct']}", flush=True)
+        if trace:
+            # Windows TerminateProcess cannot flush the C stdio trace. A separate
+            # tail workload flushes buffered bytes of all measured requests. The
+            # parser explicitly excludes this tail and rejects incomplete coverage.
+            monitor.phase = "trace_flush_tail"
+            record["trace_flush_tail"] = completion(port, "List study tips with brief explanations.", 64, True)
+        record["status"] = "complete"
+    except BaseException as error:
+        record["status"] = "failed"
+        record["error"] = f"{type(error).__name__}: {error}"
+        print(record["error"], flush=True)
+        raise
+    finally:
+        if monitor:
+            monitor.close(); save(folder/"resource-samples.json", monitor.rows)
+        if process and process.poll() is None:
+            process.terminate()
+            try: process.wait(timeout=15)
+            except subprocess.TimeoutExpired: process.kill(); process.wait(timeout=10)
+        record["wall_s"] = time.perf_counter()-started
+        record["process_exit_code"] = process.returncode if process else None
+        save(folder/"run.json", record)
+        # Keep compact diagnostic excerpts under version control; bulk log is ignored.
+        log_text = (folder/"server.log").read_text(encoding="utf-8", errors="replace")
+        keys = ("build:", "system_info:", "buffer size", "MoE cache size", "offloaded", "pinned", "error", "failed", "CUDA", "model size", "n_expert", "n_layer")
+        (folder/"engine-summary.txt").write_text("\n".join(line for line in log_text.splitlines() if any(k in line for k in keys))+"\n", encoding="utf-8")
+    return record
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("label")
+    parser.add_argument("--threads", type=int, default=6)
+    parser.add_argument("--trace", action="store_true")
+    parser.add_argument("--load-mode", default="none")
+    parser.add_argument("--suite", default="calibration")
+    argv = sys.argv[1:]
+    split = argv.index("--") if "--" in argv else len(argv)
+    args = parser.parse_args(argv[:split])
+    flags = argv[split+1:]
+    suite = json.loads((ROOT/"fixtures"/(args.suite+".json")).read_text(encoding="utf-8"))
+    if args.label in ("calibration-matrix", "calibration-cache-followup", "calibration-mmap", "calibration-cache4096"):
+        configs = [
+            ("cpu-t6", 6, ["-ngl","99","-cmoe"]),
+            ("cpu-t10", 10, ["-ngl","99","-cmoe"]),
+            ("static8", 6, ["-ngl","8"]),
+            ("static12", 6, ["-ngl","12"]),
+            ("cache1024", 6, ["-ngl","99","-cmoe","--moe-cache-mib","1024"]),
+            ("cache2048", 6, ["-ngl","99","-cmoe","--moe-cache-mib","2048"]),
+            ("cache3072", 6, ["-ngl","99","-cmoe","--moe-cache-mib","3072"]),
+            ("cache3072-share50", 6, ["-ngl","99","-cmoe","--moe-cache-mib","3072","--moe-cache-cpu-share","0.5"]),
+            ("cache3072-share95", 6, ["-ngl","99","-cmoe","--moe-cache-mib","3072","--moe-cache-cpu-share","0.95"]),
+        ]
+        if args.label == "calibration-cache-followup":
+            configs = [
+                ("cache2048-retry",6,["-ngl","99","-cmoe","--moe-cache-mib","2048"]),
+                ("cache3072",6,["-ngl","99","-cmoe","--moe-cache-mib","3072"]),
+                ("cache3072-share50",6,["-ngl","99","-cmoe","--moe-cache-mib","3072","--moe-cache-cpu-share","0.5"]),
+                ("cache3072-share95",6,["-ngl","99","-cmoe","--moe-cache-mib","3072","--moe-cache-cpu-share","0.95"]),
+            ]
+        if args.label == "calibration-mmap":
+            configs = [
+                ("mmap-cpu-t6",6,["-ngl","99","-cmoe"]),
+                ("mmap-static12",6,["-ngl","12"]),
+                ("mmap-cache3072",6,["-ngl","99","-cmoe","--moe-cache-mib","3072"]),
+                ("mmap-cache3072-share50",6,["-ngl","99","-cmoe","--moe-cache-mib","3072","--moe-cache-cpu-share","0.5"]),
+                ("mmap-cache3072-share95",6,["-ngl","99","-cmoe","--moe-cache-mib","3072","--moe-cache-cpu-share","0.95"]),
+            ]
+        if args.label == "calibration-cache4096":
+            configs = [("mmap-cache4096"+("" if share==0 else "-share"+str(int(share*100))),6,
+                ["-ngl","99","-cmoe","--moe-cache-mib","4096","--moe-cache-cpu-share",str(share)])
+                for share in (0,0.5,0.95)]
+        save(ROOT/("results/"+args.label+"-plan.json"),dict(configurations=configs, tasks=suite))
+        for name, threads, options in configs:
+            try: run("cal-"+name, options, suite, threads=threads,load_mode=args.load_mode)
+            except Exception: continue  # failure evidence is already saved; try the next independent configuration
+    elif args.label == "evaluation-matrix":
+        if args.suite != "evaluation" or args.load_mode != "mmap":
+            raise ValueError("Evaluation protocol requires --suite evaluation --load-mode mmap")
+        configs = {
+            "cpu":["-ngl","99","-cmoe"],
+            "static12":["-ngl","12"],
+            "cache4096":["-ngl","99","-cmoe","--moe-cache-mib","4096"],
+            "hybrid4096":["-ngl","99","-cmoe","--moe-cache-mib","4096","--moe-cache-cpu-share","0.95"],
+        }
+        names = list(configs)
+        orders = [names[i:]+names[:i] for i in range(4)]
+        save(ROOT/"results/evaluation-plan.json",dict(configurations=configs,orders=orders,
+            threads=6,load_mode="mmap",suite=suite,
+            rationale="4 GiB / share .95 selected using calibration only. Four Latin-square configuration orders; identical tasks within each round. Performance prompt order rotates across rounds; quality checks follow."))
+        for repetition,order in enumerate(orders,1):
+            fixed = [t for t in suite if t.get("fixed_length")]
+            checked = [t for t in suite if not t.get("fixed_length")]
+            rotation = repetition-1
+            tasks = fixed[rotation:]+fixed[:rotation]+checked
+            for name in order:
+                run(f"eval-r{repetition}-{name}", configs[name], tasks, threads=6,load_mode="mmap")
+    elif args.label == "tracing-matrix":
+        options = ["-ngl","99","-cmoe","--moe-cache-mib","4096","--moe-cache-cpu-share","0.95"]
+        orders = [[False,True],[True,False],[False,True]]
+        save(ROOT/"results/tracing-plan.json",dict(orders=orders,flags=options,tasks=suite,threads=6,load_mode="mmap"))
+        for repetition,order in enumerate(orders,1):
+            for enabled in order:
+                run(f"trace-r{repetition}-{'on' if enabled else 'off'}",options,suite,threads=6,trace=enabled,load_mode="mmap")
+    elif args.label == "reasoning-check":
+        checked = [dict(t,mode="chat",tokens=256) for t in suite if t.get("check")]
+        if not checked: raise ValueError("Select evaluation suite for reasoning diagnostics")
+        configs = {"cpu":["-ngl","99","-cmoe"],"static12":["-ngl","12"],
+            "hybrid4096":["-ngl","99","-cmoe","--moe-cache-mib","4096","--moe-cache-cpu-share","0.95"]}
+        save(ROOT/"results/reasoning-check-plan.json",dict(configurations=configs,tasks=checked,
+            rationale="Post-evaluation diagnostic, prompted by incorrect direct-final algebra answer. Separate from frozen performance comparison; no retuning."))
+        for name,options in configs.items():
+            run("reasoning-"+name,options,checked,threads=6,load_mode="mmap")
+    else:
+        run(args.label, flags, suite, args.threads, args.trace, args.load_mode)

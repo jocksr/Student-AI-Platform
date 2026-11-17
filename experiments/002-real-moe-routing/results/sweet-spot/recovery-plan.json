@@ -1,0 +1,32 @@
+{
+  "utc": "2026-11-17T18:22:01.163588+00:00",
+  "requested_gib": [
+    4,
+    5,
+    5.25,
+    5.5,
+    5.75,
+    6,
+    7,
+    8,
+    9,
+    10,
+    16,
+    32
+  ],
+  "source_sha256": "2e84d162b86da9e563d32407763ee379e8ff90025d3811bfd06636e0050dee36",
+  "tasks": [
+    {
+      "id": "recovery-energy",
+      "prompt": "Explain to a student how conservation of energy applies to a ball thrown upward. Discuss kinetic energy, gravitational potential energy, air resistance, and why the speed changes. Give examples and identify common misconceptions.",
+      "tokens": 128,
+      "fixed_length": true
+    }
+  ],
+  "cpu_share": 0.9,
+  "threads": 4,
+  "maximum_seconds": 90,
+  "minimum_available_ram_gib": 1,
+  "rationale": "The 2 GiB RAM reserve interrupted 7–8 GiB long runs after a measured 5.5-to-6 GiB performance drop. One shorter request and a 1 GiB reserve probe for recovery without treating guard stops as proof of a hardware performance limit.",
+  "selection_revision": "Validate the fastest working setting and a smallest-within-5% performance choice separately from the earlier conservative headroom alternative. No mixing short-probe rates with longer tuning rates."
+}

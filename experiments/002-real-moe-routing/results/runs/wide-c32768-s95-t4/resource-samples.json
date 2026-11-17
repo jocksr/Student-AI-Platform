@@ -1,0 +1,92 @@
+[
+  {
+    "seconds": 0.00019630000315373763,
+    "phase": "startup",
+    "process_memory": {
+      "rss": 2572288,
+      "vms": 389120,
+      "num_page_faults": 650,
+      "peak_wset": 2572288,
+      "wset": 2572288,
+      "peak_paged_pool": 17856,
+      "paged_pool": 17856,
+      "peak_nonpaged_pool": 1784,
+      "nonpaged_pool": 1784,
+      "pagefile": 389120,
+      "peak_pagefile": 389120,
+      "private": 389120
+    },
+    "system_available_bytes": 16165855232,
+    "gpu": {
+      "used_mib": 602.0,
+      "free_mib": 7294.0,
+      "utilization_pct": 1.0,
+      "temperature_c": 44.04,
+      "power_w": 24.83
+    }
+  },
+  {
+    "seconds": 0.8113301999983378,
+    "phase": "startup",
+    "process_memory": {
+      "rss": 435097600,
+      "vms": 646344704,
+      "num_page_faults": 119128,
+      "peak_wset": 435097600,
+      "wset": 435097600,
+      "peak_paged_pool": 25639296,
+      "paged_pool": 25639104,
+      "peak_nonpaged_pool": 34624,
+      "nonpaged_pool": 32816,
+      "pagefile": 646344704,
+      "peak_pagefile": 646352896,
+      "private": 646344704
+    },
+    "system_available_bytes": 15723020288,
+    "gpu": {
+      "used_mib": 681.0,
+      "free_mib": 7215.0,
+      "utilization_pct": 3.0,
+      "temperature_c": 44.88,
+      "power_w": 25.82
+    }
+  },
+  {
+    "seconds": 1.6173254000023007,
+    "phase": "startup",
+    "process_memory": {
+      "rss": 1416704000,
+      "vms": 1953402880,
+      "num_page_faults": 362730,
+      "peak_wset": 1416704000,
+      "wset": 1416704000,
+      "peak_paged_pool": 25644416,
+      "paged_pool": 25644224,
+      "peak_nonpaged_pool": 37344,
+      "nonpaged_pool": 35536,
+      "pagefile": 1953402880,
+      "peak_pagefile": 1953411072,
+      "private": 1953402880
+    },
+    "system_available_bytes": 14720339968,
+    "gpu": {
+      "used_mib": 1860.0,
+      "free_mib": 6036.0,
+      "utilization_pct": 28.0,
+      "temperature_c": 44.82,
+      "power_w": 29.79
+    }
+  },
+  {
+    "seconds": 2.4240906999984873,
+    "error": "process no longer exists (pid=31240)"
+  },
+  {
+    "seconds": 3.1808772000003955,
+    "error": "process no longer exists (pid=31240)"
+  },
+  {
+    "seconds": 3.9356932000009692,
+    "error": "process no longer exists (pid=31240)"
+  }
+]

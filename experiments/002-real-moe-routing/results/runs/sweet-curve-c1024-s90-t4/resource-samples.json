@@ -1,0 +1,886 @@
+[
+  {
+    "seconds": 0.00018249999993713573,
+    "phase": "startup",
+    "process_memory": {
+      "rss": 2736128,
+      "vms": 405504,
+      "num_page_faults": 695,
+      "peak_wset": 2736128,
+      "wset": 2736128,
+      "peak_paged_pool": 18376,
+      "paged_pool": 18376,
+      "peak_nonpaged_pool": 2872,
+      "nonpaged_pool": 2872,
+      "pagefile": 405504,
+      "peak_pagefile": 405504,
+      "private": 405504
+    },
+    "system_available_bytes": 16626933760,
+    "gpu": {
+      "used_mib": 1201.0,
+      "free_mib": 6695.0,
+      "utilization_pct": 0.0,
+      "temperature_c": 46.42,
+      "power_w": 21.61
+    }
+  },
+  {
+    "seconds": 0.8163905999972485,
+    "phase": "startup",
+    "process_memory": {
+      "rss": 435359744,
+      "vms": 646803456,
+      "num_page_faults": 118818,
+      "peak_wset": 435359744,
+      "wset": 435359744,
+      "peak_paged_pool": 25639296,
+      "paged_pool": 25639104,
+      "peak_nonpaged_pool": 34624,
+      "nonpaged_pool": 32816,
+      "pagefile": 646803456,
+      "peak_pagefile": 646811648,
+      "private": 646803456
+    },
+    "system_available_bytes": 16197148672,
+    "gpu": {
+      "used_mib": 1300.0,
+      "free_mib": 6596.0,
+      "utilization_pct": 0.0,
+      "temperature_c": 47.11,
+      "power_w": 23.26
+    }
+  },
+  {
+    "seconds": 1.6275460999968345,
+    "phase": "startup",
+    "process_memory": {
+      "rss": 1724428288,
+      "vms": 3154522112,
+      "num_page_faults": 442487,
+      "peak_wset": 1738149888,
+      "wset": 1724428288,
+      "peak_paged_pool": 25649088,
+      "paged_pool": 25649088,
+      "peak_nonpaged_pool": 39144,
+      "nonpaged_pool": 38680,
+      "pagefile": 3154522112,
+      "peak_pagefile": 3154530304,
+      "private": 3154522112
+    },
+    "system_available_bytes": 14887079936,
+    "gpu": {
+      "used_mib": 3810.0,
+      "free_mib": 4086.0,
+      "utilization_pct": 25.0,
+      "temperature_c": 47.6,
+      "power_w": 30.16
+    }
+  },
+  {
+    "seconds": 2.4392040999955498,
+    "phase": "startup",
+    "process_memory": {
+      "rss": 3884748800,
+      "vms": 3504087040,
+      "num_page_faults": 981117,
+      "peak_wset": 3884748800,
+      "wset": 3884748800,
+      "peak_paged_pool": 25651328,
+      "paged_pool": 25651136,
+      "peak_nonpaged_pool": 44800,
+      "nonpaged_pool": 42992,
+      "pagefile": 3504087040,
+      "peak_pagefile": 3504095232,
+      "private": 3504087040
+    },
+    "system_available_bytes": 12712919040,
+    "gpu": {
+      "used_mib": 3810.0,
+      "free_mib": 4086.0,
+      "utilization_pct": 0.0,
+      "temperature_c": 47.11,
+      "power_w": 32.55
+    }
+  },
+  {
+    "seconds": 3.249921299997368,
+    "phase": "warmup",
+    "process_memory": {
+      "rss": 6083457024,
+      "vms": 3758489600,
+      "num_page_faults": 1546008,
+      "peak_wset": 6083457024,
+      "wset": 6083457024,
+      "peak_paged_pool": 25652352,
+      "paged_pool": 25652352,
+      "peak_nonpaged_pool": 47952,
+      "nonpaged_pool": 47488,
+      "pagefile": 3758489600,
+      "peak_pagefile": 3758489600,
+      "private": 3758489600
+    },
+    "system_available_bytes": 10549825536,
+    "gpu": {
+      "used_mib": 3910.0,
+      "free_mib": 3986.0,
+      "utilization_pct": 28.0,
+      "temperature_c": 47.29,
+      "power_w": 31.97
+    }
+  },
+  {
+    "seconds": 4.06278200000088,
+    "phase": "warmup",
+    "process_memory": {
+      "rss": 8690061312,
+      "vms": 3759181824,
+      "num_page_faults": 2182386,
+      "peak_wset": 8690061312,
+      "wset": 8690061312,
+      "peak_paged_pool": 25652352,
+      "paged_pool": 25652352,
+      "peak_nonpaged_pool": 48064,
+      "nonpaged_pool": 47488,
+      "pagefile": 3759181824,
+      "peak_pagefile": 3759181824,
+      "private": 3759181824
+    },
+    "system_available_bytes": 7929282560,
+    "gpu": {
+      "used_mib": 3910.0,
+      "free_mib": 3986.0,
+      "utilization_pct": 32.0,
+      "temperature_c": 47.34,
+      "power_w": 34.85
+    }
+  },
+  {
+    "seconds": 4.876985999995668,
+    "phase": "warmup",
+    "process_memory": {
+      "rss": 10495733760,
+      "vms": 3785359360,
+      "num_page_faults": 2625076,
+      "peak_wset": 10495733760,
+      "wset": 10495733760,
+      "peak_paged_pool": 25653120,
+      "paged_pool": 25653120,
+      "peak_nonpaged_pool": 49016,
+      "nonpaged_pool": 48440,
+      "pagefile": 3785359360,
+      "peak_pagefile": 3785359360,
+      "private": 3785359360
+    },
+    "system_available_bytes": 6111916032,
+    "gpu": {
+      "used_mib": 3918.0,
+      "free_mib": 3978.0,
+      "utilization_pct": 31.0,
+      "temperature_c": 48.61,
+      "power_w": 36.71
+    }
+  },
+  {
+    "seconds": 5.690923900001508,
+    "phase": "warmup",
+    "process_memory": {
+      "rss": 10722000896,
+      "vms": 3786821632,
+      "num_page_faults": 2680318,
+      "peak_wset": 10722000896,
+      "wset": 10722000896,
+      "peak_paged_pool": 25653376,
+      "paged_pool": 25653376,
+      "peak_nonpaged_pool": 49016,
+      "nonpaged_pool": 48328,
+      "pagefile": 3786821632,
+      "peak_pagefile": 3786821632,
+      "private": 3786821632
+    },
+    "system_available_bytes": 5880119296,
+    "gpu": {
+      "used_mib": 3918.0,
+      "free_mib": 3978.0,
+      "utilization_pct": 36.0,
+      "temperature_c": 49.92,
+      "power_w": 48.69
+    }
+  },
+  {
+    "seconds": 6.51051429999643,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 10876674048,
+      "vms": 3782647808,
+      "num_page_faults": 2719283,
+      "peak_wset": 10876674048,
+      "wset": 10876674048,
+      "peak_paged_pool": 25653632,
+      "paged_pool": 25653632,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48056,
+      "pagefile": 3782647808,
+      "peak_pagefile": 3786977280,
+      "private": 3782647808
+    },
+    "system_available_bytes": 5725966336,
+    "gpu": {
+      "used_mib": 3920.0,
+      "free_mib": 3976.0,
+      "utilization_pct": 8.0,
+      "temperature_c": 48.09,
+      "power_w": 52.25
+    }
+  },
+  {
+    "seconds": 7.337725999997929,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 11307069440,
+      "vms": 3790200832,
+      "num_page_faults": 2824364,
+      "peak_wset": 11307069440,
+      "wset": 11307069440,
+      "peak_paged_pool": 25654176,
+      "paged_pool": 25654176,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48328,
+      "pagefile": 3790200832,
+      "peak_pagefile": 3790200832,
+      "private": 3790200832
+    },
+    "system_available_bytes": 5422620672,
+    "gpu": {
+      "used_mib": 3928.0,
+      "free_mib": 3968.0,
+      "utilization_pct": 81.0,
+      "temperature_c": 48.83,
+      "power_w": 44.62
+    }
+  },
+  {
+    "seconds": 8.155406300000323,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 11405717504,
+      "vms": 3802681344,
+      "num_page_faults": 2848456,
+      "peak_wset": 11405717504,
+      "wset": 11405717504,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802681344,
+      "peak_pagefile": 3802685440,
+      "private": 3802681344
+    },
+    "system_available_bytes": 5325729792,
+    "gpu": {
+      "used_mib": 3932.0,
+      "free_mib": 3964.0,
+      "utilization_pct": 33.0,
+      "temperature_c": 49.61,
+      "power_w": 49.72
+    }
+  },
+  {
+    "seconds": 8.976391099997272,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 11485159424,
+      "vms": 3802701824,
+      "num_page_faults": 2867851,
+      "peak_wset": 11485159424,
+      "wset": 11485159424,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48600,
+      "pagefile": 3802701824,
+      "peak_pagefile": 3802701824,
+      "private": 3802701824
+    },
+    "system_available_bytes": 5243822080,
+    "gpu": {
+      "used_mib": 3932.0,
+      "free_mib": 3964.0,
+      "utilization_pct": 32.0,
+      "temperature_c": 49.78,
+      "power_w": 52.44
+    }
+  },
+  {
+    "seconds": 9.806633899999724,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 11670142976,
+      "vms": 3802714112,
+      "num_page_faults": 2913013,
+      "peak_wset": 11670142976,
+      "wset": 11670142976,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802714112,
+      "peak_pagefile": 3802714112,
+      "private": 3802714112
+    },
+    "system_available_bytes": 5032259584,
+    "gpu": {
+      "used_mib": 3932.0,
+      "free_mib": 3964.0,
+      "utilization_pct": 28.0,
+      "temperature_c": 49.49,
+      "power_w": 51.4
+    }
+  },
+  {
+    "seconds": 10.617163299997628,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 11683385344,
+      "vms": 3802255360,
+      "num_page_faults": 2916246,
+      "peak_wset": 11683385344,
+      "wset": 11683385344,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802255360,
+      "peak_pagefile": 3802714112,
+      "private": 3802255360
+    },
+    "system_available_bytes": 5037395968,
+    "gpu": {
+      "used_mib": 3932.0,
+      "free_mib": 3964.0,
+      "utilization_pct": 34.0,
+      "temperature_c": 49.72,
+      "power_w": 52.25
+    }
+  },
+  {
+    "seconds": 11.435598799995205,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 11696685056,
+      "vms": 3802255360,
+      "num_page_faults": 2919493,
+      "peak_wset": 11696685056,
+      "wset": 11696685056,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802255360,
+      "peak_pagefile": 3802714112,
+      "private": 3802255360
+    },
+    "system_available_bytes": 5026267136,
+    "gpu": {
+      "used_mib": 3932.0,
+      "free_mib": 3964.0,
+      "utilization_pct": 33.0,
+      "temperature_c": 50.12,
+      "power_w": 53.14
+    }
+  },
+  {
+    "seconds": 12.267139499999757,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 11696791552,
+      "vms": 3802316800,
+      "num_page_faults": 2919519,
+      "peak_wset": 11696791552,
+      "wset": 11696791552,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802316800,
+      "peak_pagefile": 3802714112,
+      "private": 3802316800
+    },
+    "system_available_bytes": 5053751296,
+    "gpu": {
+      "used_mib": 3932.0,
+      "free_mib": 3964.0,
+      "utilization_pct": 36.0,
+      "temperature_c": 50.47,
+      "power_w": 53.58
+    }
+  },
+  {
+    "seconds": 13.095659999999043,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 11710062592,
+      "vms": 3802316800,
+      "num_page_faults": 2922759,
+      "peak_wset": 11710062592,
+      "wset": 11710062592,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802316800,
+      "peak_pagefile": 3802714112,
+      "private": 3802316800
+    },
+    "system_available_bytes": 5032882176,
+    "gpu": {
+      "used_mib": 3932.0,
+      "free_mib": 3964.0,
+      "utilization_pct": 32.0,
+      "temperature_c": 49.89,
+      "power_w": 53.12
+    }
+  },
+  {
+    "seconds": 13.930518900000607,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 11723358208,
+      "vms": 3802329088,
+      "num_page_faults": 2926005,
+      "peak_wset": 11723358208,
+      "wset": 11723358208,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802329088,
+      "peak_pagefile": 3802714112,
+      "private": 3802329088
+    },
+    "system_available_bytes": 5017845760,
+    "gpu": {
+      "used_mib": 3932.0,
+      "free_mib": 3964.0,
+      "utilization_pct": 34.0,
+      "temperature_c": 50.32,
+      "power_w": 52.47
+    }
+  },
+  {
+    "seconds": 14.756208899998455,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 11723423744,
+      "vms": 3802345472,
+      "num_page_faults": 2926021,
+      "peak_wset": 11723423744,
+      "wset": 11723423744,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802345472,
+      "peak_pagefile": 3802714112,
+      "private": 3802345472
+    },
+    "system_available_bytes": 5019389952,
+    "gpu": {
+      "used_mib": 3943.0,
+      "free_mib": 3953.0,
+      "utilization_pct": 33.0,
+      "temperature_c": 50.15,
+      "power_w": 52.28
+    }
+  },
+  {
+    "seconds": 15.585277099999075,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 11723485184,
+      "vms": 3802365952,
+      "num_page_faults": 2926036,
+      "peak_wset": 11723485184,
+      "wset": 11723485184,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802365952,
+      "peak_pagefile": 3802714112,
+      "private": 3802365952
+    },
+    "system_available_bytes": 5015011328,
+    "gpu": {
+      "used_mib": 3949.0,
+      "free_mib": 3947.0,
+      "utilization_pct": 32.0,
+      "temperature_c": 50.36,
+      "power_w": 53.55
+    }
+  },
+  {
+    "seconds": 16.39171379999607,
+    "phase": "tune-energy",
+    "process_memory": {
+      "rss": 11736702976,
+      "vms": 3802365952,
+      "num_page_faults": 2929263,
+      "peak_wset": 11736702976,
+      "wset": 11736702976,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802365952,
+      "peak_pagefile": 3802714112,
+      "private": 3802365952
+    },
+    "system_available_bytes": 4998160384,
+    "gpu": {
+      "used_mib": 3965.0,
+      "free_mib": 3931.0,
+      "utilization_pct": 32.0,
+      "temperature_c": 50.12,
+      "power_w": 53.36
+    }
+  },
+  {
+    "seconds": 17.210148799997114,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 11850260480,
+      "vms": 3796852736,
+      "num_page_faults": 2958346,
+      "peak_wset": 11850260480,
+      "wset": 11850260480,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48440,
+      "pagefile": 3796852736,
+      "peak_pagefile": 3802714112,
+      "private": 3796852736
+    },
+    "system_available_bytes": 4896432128,
+    "gpu": {
+      "used_mib": 3965.0,
+      "free_mib": 3931.0,
+      "utilization_pct": 77.0,
+      "temperature_c": 48.66,
+      "power_w": 46.88
+    }
+  },
+  {
+    "seconds": 18.045704199998,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 12001120256,
+      "vms": 3802435584,
+      "num_page_faults": 2995181,
+      "peak_wset": 12001120256,
+      "wset": 12001120256,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802435584,
+      "peak_pagefile": 3802714112,
+      "private": 3802435584
+    },
+    "system_available_bytes": 4730363904,
+    "gpu": {
+      "used_mib": 3968.0,
+      "free_mib": 3928.0,
+      "utilization_pct": 22.0,
+      "temperature_c": 49.29,
+      "power_w": 45.33
+    }
+  },
+  {
+    "seconds": 18.860811400001694,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 12027588608,
+      "vms": 3802435584,
+      "num_page_faults": 3001643,
+      "peak_wset": 12027588608,
+      "wset": 12027588608,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802435584,
+      "peak_pagefile": 3802714112,
+      "private": 3802435584
+    },
+    "system_available_bytes": 4721360896,
+    "gpu": {
+      "used_mib": 3965.0,
+      "free_mib": 3931.0,
+      "utilization_pct": 32.0,
+      "temperature_c": 50.64,
+      "power_w": 52.26
+    }
+  },
+  {
+    "seconds": 19.696439699997427,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 12067250176,
+      "vms": 3802435584,
+      "num_page_faults": 3011326,
+      "peak_wset": 12067250176,
+      "wset": 12067250176,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802435584,
+      "peak_pagefile": 3802714112,
+      "private": 3802435584
+    },
+    "system_available_bytes": 4690173952,
+    "gpu": {
+      "used_mib": 3962.0,
+      "free_mib": 3934.0,
+      "utilization_pct": 30.0,
+      "temperature_c": 49.78,
+      "power_w": 53.27
+    }
+  },
+  {
+    "seconds": 20.50790319999942,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 12093726720,
+      "vms": 3802435584,
+      "num_page_faults": 3017790,
+      "peak_wset": 12093726720,
+      "wset": 12093726720,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802435584,
+      "peak_pagefile": 3802714112,
+      "private": 3802435584
+    },
+    "system_available_bytes": 4651786240,
+    "gpu": {
+      "used_mib": 3961.0,
+      "free_mib": 3935.0,
+      "utilization_pct": 30.0,
+      "temperature_c": 49.78,
+      "power_w": 51.1
+    }
+  },
+  {
+    "seconds": 21.33775710000191,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 12093792256,
+      "vms": 3802435584,
+      "num_page_faults": 3017806,
+      "peak_wset": 12093792256,
+      "wset": 12093792256,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802435584,
+      "peak_pagefile": 3802714112,
+      "private": 3802435584
+    },
+    "system_available_bytes": 4661673984,
+    "gpu": {
+      "used_mib": 3959.0,
+      "free_mib": 3937.0,
+      "utilization_pct": 30.0,
+      "temperature_c": 50.09,
+      "power_w": 52.15
+    }
+  },
+  {
+    "seconds": 22.15648599999986,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 12107034624,
+      "vms": 3802435584,
+      "num_page_faults": 3021039,
+      "peak_wset": 12107034624,
+      "wset": 12107034624,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802435584,
+      "peak_pagefile": 3802714112,
+      "private": 3802435584
+    },
+    "system_available_bytes": 4606963712,
+    "gpu": {
+      "used_mib": 4071.0,
+      "free_mib": 3825.0,
+      "utilization_pct": 30.0,
+      "temperature_c": 49.35,
+      "power_w": 50.47
+    }
+  },
+  {
+    "seconds": 22.987323299996206,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 12146728960,
+      "vms": 3802435584,
+      "num_page_faults": 3030730,
+      "peak_wset": 12146728960,
+      "wset": 12146728960,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802435584,
+      "peak_pagefile": 3802714112,
+      "private": 3802435584
+    },
+    "system_available_bytes": 4578267136,
+    "gpu": {
+      "used_mib": 4085.0,
+      "free_mib": 3811.0,
+      "utilization_pct": 33.0,
+      "temperature_c": 50.04,
+      "power_w": 50.67
+    }
+  },
+  {
+    "seconds": 23.813932999997633,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 12146774016,
+      "vms": 3802435584,
+      "num_page_faults": 3030741,
+      "peak_wset": 12146774016,
+      "wset": 12146774016,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802435584,
+      "peak_pagefile": 3802714112,
+      "private": 3802435584
+    },
+    "system_available_bytes": 4557832192,
+    "gpu": {
+      "used_mib": 4064.0,
+      "free_mib": 3832.0,
+      "utilization_pct": 32.0,
+      "temperature_c": 49.66,
+      "power_w": 50.3
+    }
+  },
+  {
+    "seconds": 24.64116429999558,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 12146798592,
+      "vms": 3802435584,
+      "num_page_faults": 3030747,
+      "peak_wset": 12146798592,
+      "wset": 12146798592,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802435584,
+      "peak_pagefile": 3802714112,
+      "private": 3802435584
+    },
+    "system_available_bytes": 4511326208,
+    "gpu": {
+      "used_mib": 4083.0,
+      "free_mib": 3813.0,
+      "utilization_pct": 31.0,
+      "temperature_c": 50.01,
+      "power_w": 50.73
+    }
+  },
+  {
+    "seconds": 25.47078650000185,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 12146851840,
+      "vms": 3802435584,
+      "num_page_faults": 3030760,
+      "peak_wset": 12146851840,
+      "wset": 12146851840,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802435584,
+      "peak_pagefile": 3802714112,
+      "private": 3802435584
+    },
+    "system_available_bytes": 4522024960,
+    "gpu": {
+      "used_mib": 3971.0,
+      "free_mib": 3925.0,
+      "utilization_pct": 34.0,
+      "temperature_c": 50.01,
+      "power_w": 52.55
+    }
+  },
+  {
+    "seconds": 26.28721989999758,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 12146905088,
+      "vms": 3802435584,
+      "num_page_faults": 3030773,
+      "peak_wset": 12146905088,
+      "wset": 12146905088,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48712,
+      "pagefile": 3802435584,
+      "peak_pagefile": 3802714112,
+      "private": 3802435584
+    },
+    "system_available_bytes": 4527759360,
+    "gpu": {
+      "used_mib": 3951.0,
+      "free_mib": 3945.0,
+      "utilization_pct": 33.0,
+      "temperature_c": 50.36,
+      "power_w": 54.62
+    }
+  },
+  {
+    "seconds": 27.11703529999795,
+    "phase": "tune-debugging",
+    "process_memory": {
+      "rss": 12160249856,
+      "vms": 3802566656,
+      "num_page_faults": 3034033,
+      "peak_wset": 12160249856,
+      "wset": 12160249856,
+      "peak_paged_pool": 25654944,
+      "paged_pool": 25654944,
+      "peak_nonpaged_pool": 56804,
+      "nonpaged_pool": 48848,
+      "pagefile": 3802566656,
+      "peak_pagefile": 3802714112,
+      "private": 3802566656
+    },
+    "system_available_bytes": 4537995264,
+    "gpu": {
+      "used_mib": 3941.0,
+      "free_mib": 3955.0,
+      "utilization_pct": 33.0,
+      "temperature_c": 49.81,
+      "power_w": 52.43
+    }
+  }
+]

@@ -1,0 +1,153 @@
+"""Separate adaptive tuning phase, started after the primary series completed."""
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+import random
+import statistics
+
+from benchmark import ROOT, run, save
+from summarize import metrics, resources
+
+OUT = ROOT/"results/sweet-spot"
+TUNING = [
+    dict(id="tune-energy",prompt="Explain to a student how conservation of energy applies to a ball thrown upward. Discuss kinetic energy, gravitational potential energy, air resistance, and why the speed changes. Give examples and identify common misconceptions.",tokens=192,fixed_length=True),
+    dict(id="tune-debugging",prompt="Explain a systematic process for finding an off-by-one error in a loop that traverses a list. Include examples, boundary cases, a loop invariant, and how to check the proposed repair without relying only on random tests.",tokens=192,fixed_length=True),
+]
+VALIDATION = [
+    dict(id="validate-chemistry",prompt="Teach a student how to balance a chemical equation. Use the reaction between iron and oxygen forming Fe2O3 as the example. Explain why coefficients may change but chemical formulas must remain fixed.",tokens=128,fixed_length=True),
+    dict(id="validate-grammar",prompt="Explain the difference between a dependent clause and an independent clause, with examples. Then explain comma splices and how to repair them in student writing.",tokens=128,fixed_length=True),
+    dict(id="validate-statistics",prompt="Explain to a beginning statistics student why correlation does not by itself establish causation. Discuss confounding, reverse causation, randomized studies, and a concrete everyday example.",tokens=128,fixed_length=True),
+    dict(id="validate-reading",prompt="Use only these notes to write a study guide: A fictional school garden has three plots. Plot A receives six hours of sun and is watered every morning. Plot B receives six hours of sun and is watered every third morning. Plot C receives three hours of sun and is watered every morning. All plots use the same soil, seed variety, planting date, and number of seedlings. At the end of four weeks, the average plant heights are 18 cm in A, 12 cm in B, and 11 cm in C. Students measured height with the same ruler at the same time of day. One seedling in plot B was damaged accidentally during week two. No fertilizer was used. Rainfall was recorded but the plots were not sheltered from rain. Explain which comparisons can address watering and sunlight, what limitations remain, and what the students should record in a follow-up study.",tokens=128,fixed_length=True),
+]
+
+
+def key(config): return (config["cache_mib"],config["cpu_share"],config["threads"])
+def name(config): return f"c{config['cache_mib']}-s{int(round(config['cpu_share']*100))}-t{config['threads']}"
+def flags(config):
+    if config.get("static_layers"):
+        return ["-ngl",str(config["static_layers"])]
+    return ["-ngl","99","-cmoe","--moe-cache-mib",str(config["cache_mib"]),"--moe-cache-cpu-share",str(config["cpu_share"])]
+
+
+def trial(label,config,tasks,stress=False):
+    # This phase keeps the engine, weights, sampler and context frozen.
+    # Errors remain in the underlying run directory and in the sweep index.
+    try:
+        record=run(label,flags(config),tasks,threads=config["threads"],load_mode="mmap",
+            minimum_gpu_free_mib=0 if stress else 256,maximum_seconds=180 if stress else 0,
+            minimum_available_ram_gib=1 if stress else 0)
+        path=ROOT/"results/runs"/label
+        sample=json.loads((path/"resource-samples.json").read_text(encoding="utf-8"))
+        rows=[r for r in sample if "gpu" in r and "free_mib" in r["gpu"]]
+        free=min(r["gpu"]["free_mib"] for r in rows)
+        resource=resources(path/"resource-samples.json")
+        eligible=record["status"]=="complete" and free>=512 and resource["min_available_ram_gib"]>=3
+        return dict(label=label,config=config,status=record["status"],**metrics(record),resources=resource,
+            min_sampled_gpu_free_mib=free,eligible=eligible,
+            eligibility_rule="at least 512 MiB sampled free GPU memory and 3 GiB available system RAM")
+    except Exception as error:
+        return dict(label=label,config=config,status="failed",error=str(error),eligible=False)
+
+
+def tune():
+    OUT.mkdir(parents=True,exist_ok=True)
+    if (OUT/"calibration.json").exists(): raise FileExistsError("Tuning evidence already exists; archive explicitly before a new sweep")
+    protocol=dict(utc=datetime.now(timezone.utc).isoformat(),source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        stages=["threads 4/6/8/10 at 4096 MiB and CPU share .95",
+            "cache 2048/2560/3072/3584/4096/4352 MiB at selected thread count and CPU share .95",
+            "CPU share .5/.75/.9/.95/1.0 at two leading cache sizes",
+            "refine one 256 MiB step below and above the leading eligible cache if in range"],
+        tuning_tasks=TUNING,validation_tasks=VALIDATION,
+        eligibility="complete, minimum sampled GPU free >=512 MiB and minimum system available RAM >=3 GiB",
+        validation_selection="original 4096/.95/6 reference, fastest eligible calibration candidate, smallest eligible cache within 5% of that speed, static12/6 baseline; deduplicate equivalent settings",
+        validation_repetitions=3,validation_order="cyclic rotation, task order rotates within each round",
+        selection_rule="Among eligible validated cache configurations within 5% of fastest validated decode throughput, prefer smallest cache, then fewer threads, then measured speed.",
+        limitations=["Sequential adaptive search, not exhaustive Cartesian optimization.","Desktop workload may change; headroom is sampled, not guaranteed.","Tuning uses direct-final generation; normal-reasoning answer checks follow selection."])
+    save(OUT/"plan.json",protocol)
+    save(ROOT/"fixtures/sweet-tuning.json",TUNING);save(ROOT/"fixtures/sweet-validation.json",VALIDATION)
+    trials=[]; known={}; rng=random.Random(2049)
+    def measure(configs,stage):
+        configs=list(configs);rng.shuffle(configs)
+        for config in configs:
+            k=key(config)
+            if k in known: continue
+            row=trial("sweet-cal-"+name(config),config,TUNING)
+            row["stage"]=stage;trials.append(row);known[k]=row
+            save(OUT/"calibration.json",dict(trials=trials,stage=stage))
+            print(f"SWEET {name(config)}: {row.get('decode_tps')} tok/s; eligible={row['eligible']}; free={row.get('min_sampled_gpu_free_mib')}",flush=True)
+    def eligible(): return [r for r in trials if r["eligible"]]
+    measure([dict(cache_mib=4096,cpu_share=.95,threads=t) for t in (4,6,8,10)],"threads")
+    if not eligible(): raise RuntimeError("No headroom-qualified thread candidate")
+    best=max(eligible(),key=lambda r:r["decode_tps"]); threads=best["config"]["threads"]
+    measure([dict(cache_mib=c,cpu_share=.95,threads=threads) for c in (2048,2560,3072,3584,4096,4352)],"cache-size")
+    ranked=sorted([r for r in eligible() if r["config"]["threads"]==threads],key=lambda r:r["decode_tps"],reverse=True)
+    caches=[]
+    for row in ranked:
+        if row["config"]["cache_mib"] not in caches: caches.append(row["config"]["cache_mib"])
+        if len(caches)==2: break
+    measure([dict(cache_mib=c,cpu_share=s,threads=threads) for c in caches for s in (.5,.75,.9,.95,1.0)],"cpu-share")
+    best=max(eligible(),key=lambda r:r["decode_tps"])
+    c=best["config"]["cache_mib"]; share=best["config"]["cpu_share"]
+    measure([dict(cache_mib=v,cpu_share=share,threads=threads) for v in (c-256,c+256) if 2048<=v<=4352],"cache-refinement")
+    best=max(eligible(),key=lambda r:r["decode_tps"])
+    near=[r for r in eligible() if r["decode_tps"]>=best["decode_tps"]*.95]
+    smallest=min(near,key=lambda r:(r["config"]["cache_mib"],r["config"]["threads"],-r["decode_tps"]))
+    candidates=[dict(cache_mib=4096,cpu_share=.95,threads=6),best["config"],smallest["config"]]
+    unique=[]
+    for config in candidates:
+        if config not in unique: unique.append(config)
+    unique.append(dict(static_layers=12,threads=6,cache_mib=0,cpu_share=0))
+    save(OUT/"validation-plan.json",dict(configurations=unique,calibration_fastest=best,calibration_smallest_near_best=smallest,tasks=VALIDATION,repetitions=3))
+    print("Tuning complete; frozen validation candidates:",json.dumps(unique),flush=True)
+
+
+def validate():
+    plan=json.loads((OUT/"validation-plan.json").read_text(encoding="utf-8"))
+    configs=plan["configurations"];trials=[]
+    if (OUT/"validation.json").exists(): raise FileExistsError("Validation evidence already exists")
+    for repetition in range(1,4):
+        n=repetition-1; order=configs[n:]+configs[:n]
+        tasks=VALIDATION[n:]+VALIDATION[:n]
+        for config in order:
+            label="static12-t6" if config.get("static_layers") else name(config)
+            row=trial(f"sweet-val-r{repetition}-{label}",config,tasks,stress=True)
+            row["repetition"]=repetition; trials.append(row)
+            save(OUT/"validation.json",dict(trials=trials))
+    aggregate=[]
+    for config in configs:
+        rows=[r for r in trials if r["config"]==config]
+        complete=[r for r in rows if r["status"]=="complete"]
+        if len(complete)!=3:
+            aggregate.append(dict(config=config,eligible=False,reason="fewer than three successful validation runs"));continue
+        aggregate.append(dict(config=config,eligible=all(r["eligible"] for r in rows),runs=3,
+            decode_tps=sum(r["decode_steps"] for r in rows)/sum(r["decode_seconds"] for r in rows),
+            run_decode_tps=[r["decode_tps"] for r in rows],
+            mean_request_s=statistics.mean(r["mean_request_s"] for r in rows),
+            mean_ttft_s=statistics.mean(r["mean_ttft_s"] for r in rows),
+            min_sampled_gpu_free_mib=min(r["min_sampled_gpu_free_mib"] for r in rows),
+            min_available_ram_gib=min(r["resources"]["min_available_ram_gib"] for r in rows)))
+    candidates=[r for r in aggregate if r.get("runs")==3 and not r["config"].get("static_layers")]
+    if not candidates: raise RuntimeError("No cache candidate completed all three validation runs")
+    fastest=max(candidates,key=lambda r:r["decode_tps"])
+    near=[r for r in candidates if r["decode_tps"]>=fastest["decode_tps"]*.95]
+    selected=min(near,key=lambda r:(r["config"]["cache_mib"],r["config"]["threads"],-r["decode_tps"]))
+    conservative_candidates=[r for r in candidates if r["eligible"]]
+    conservative=None
+    if conservative_candidates:
+        conservative_best=max(conservative_candidates,key=lambda r:r["decode_tps"])
+        conservative_near=[r for r in conservative_candidates if r["decode_tps"]>=conservative_best["decode_tps"]*.95]
+        conservative=min(conservative_near,key=lambda r:(r["config"]["cache_mib"],r["config"]["threads"],-r["decode_tps"]))
+    save(OUT/"selection.json",dict(aggregate=aggregate,fastest=fastest,recommended=selected,conservative=conservative,
+        rule="Performance choice: smallest cache within 5% of fastest cache configuration completing all three fresh-prompt runs. Earlier 512 MiB GPU / 3 GiB RAM criteria define a separately reported conservative alternative, not a veto on the user's wider experiment."))
+    checks=json.loads((ROOT/"fixtures/evaluation.json").read_text(encoding="utf-8"))
+    checks=[dict(t,mode="chat",tokens=256) for t in checks if t.get("check")]
+    quality=trial("sweet-quality-selected",selected["config"],checks,stress=True)
+    save(OUT/"quality.json",quality)
+    print("Selected",json.dumps(selected),flush=True)
+
+
+if __name__=="__main__":
+    parser=argparse.ArgumentParser();parser.add_argument("action",choices=["tune","validate"])
+    args=parser.parse_args();{"tune":tune,"validate":validate}[args.action]()

@@ -1,0 +1,12 @@
+[
+  {"id":"biology", "prompt":"Explain the difference between mitosis and meiosis for a high school biology student. Include the purpose, number of divisions, and resulting cells.", "tokens":128, "fixed_length":true},
+  {"id":"code-review", "prompt":"A student wrote: def average(xs): return sum(xs) / len(xs). Review the function, explain its behavior for an empty list, and describe ways to handle that case.", "tokens":128, "fixed_length":true},
+  {"id":"history", "prompt":"Explain how historians distinguish primary sources from secondary sources. Give examples and discuss how each can be misleading.", "tokens":128, "fixed_length":true},
+  {"id":"algebra", "prompt":"Teach a student how to solve a pair of linear equations by substitution. Work through 2x + y = 11 and x - y = 1, explaining each step.", "tokens":128, "fixed_length":true},
+  {"id":"arithmetic-check", "prompt":"Calculate 17 times 23. Output only the integer answer, with no explanation.", "tokens":64, "fixed_length":false, "check":"exact", "expected":"391"},
+  {"id":"algebra-check", "prompt":"Solve 3x + 7 = 22. Output only the integer value of x, with no explanation.", "tokens":64, "fixed_length":false, "check":"exact", "expected":"5"},
+  {"id":"sort-check", "prompt":"Sort these numbers from smallest to largest: 12, -3, 7, 0, 7. Output only a JSON array of numbers.", "tokens":64, "fixed_length":false, "check":"json", "expected":[-3,0,7,7,12]},
+  {"id":"code-check", "prompt":"Without running it, determine what this Python expression prints: print(sum(i*i for i in range(4))). Output only the integer, with no explanation.", "tokens":64, "fixed_length":false, "check":"exact", "expected":"14"},
+  {"id":"extraction-check", "prompt":"From this sentence extract the name and score: 'Mira earned 87 points on the quiz.' Output only JSON with keys name (string) and score (integer).", "tokens":64, "fixed_length":false, "check":"json", "expected":{"name":"Mira","score":87}},
+  {"id":"logic-check", "prompt":"All squares are rectangles. Some rectangles are blue. Does it necessarily follow that some squares are blue? Output only yes or no, in lowercase.", "tokens":64, "fixed_length":false, "check":"exact", "expected":"no"}
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b1b770d90d94cad9e9ea5b993bdbc383a522fb28/docs/moe-cache.md",
+    "path": "runtime\\upstream\\docs\\moe-cache.md",
+    "bytes": 2342,
+    "sha256": "a3e8a88499d9055595894855a0754429196db2abe41e199656791a98790a28b8"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b1b770d90d94cad9e9ea5b993bdbc383a522fb28/scripts/moe-cache-tune.py",
+    "path": "runtime\\upstream\\scripts\\moe-cache-tune.py",
+    "bytes": 25404,
+    "sha256": "c3baf2d21ba7119cdd78a941f4f587caee2b376bad1c83bb44d194231ae6998b"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b1b770d90d94cad9e9ea5b993bdbc383a522fb28/src/llama-moe-cache.cpp",
+    "path": "runtime\\upstream\\src\\llama-moe-cache.cpp",
+    "bytes": 38648,
+    "sha256": "721355f5d9d1d54f9fe802279cb10964c82352168ca6b359ccdbb02af39c1a8a"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b1b770d90d94cad9e9ea5b993bdbc383a522fb28/tools/server/README.md",
+    "path": "runtime\\upstream\\tools\\server\\README.md",
+    "bytes": 139914,
+    "sha256": "0d16e91b78b8fe1306e6f0dc69b0bd8571f0fa2dbc1ef10252299a67db9dcdbf"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b1b770d90d94cad9e9ea5b993bdbc383a522fb28/LICENSE",
+    "path": "runtime\\upstream\\LICENSE",
+    "bytes": 1078,
+    "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "source_sha256": "91ab2e33339ef84cfc68e5c848e980247cd2278014bed650f252c6d00bc9c621",
+  "reason": "User requested sampling beyond performance falloff to detect a later re-rise, and a graph.",
+  "cache_sizes_mib": [
+    512,
+    1024,
+    1536,
+    2048,
+    2560,
+    3072,
+    3584,
+    4096,
+    4352,
+    4608
+  ],
+  "full_curve_cpu_shares": [
+    0.9,
+    0.95,
+    1.0
+  ],
+  "additional_shares": [
+    0,
+    0.5
+  ],
+  "additional_share_cache_sizes": [
+    2048,
+    3072,
+    4096,
+    4608
+  ],
+  "additional_thread_counts": [
+    2,
+    12,
+    16
+  ],
+  "thread_selection": "fewest threads within 3% of highest observed 4096 MiB/.95 calibration throughput",
+  "safeguards": "abort a run below 256 MiB observed free GPU memory or 2 GiB available RAM; recommendation requires >=512 MiB GPU and >=3 GiB RAM",
+  "repeated_turning_points": "repeat twice the endpoints of each >=5% cache or thread dip followed by >=5% recovery, plus leading eligible configurations",
+  "limits": "4608 MiB upper cache test boundary on this 8 GiB display GPU; no inference of performance beyond that boundary"
+}

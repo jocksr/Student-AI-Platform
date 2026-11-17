@@ -1,0 +1,4 @@
+# Measured on Python 3.14.0, Windows x64. Reuse Experiment 001's source locally.
+psutil==7.2.2
+matplotlib==3.10.7
+numpy==2.3.5

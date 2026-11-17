@@ -1,0 +1,223 @@
+{
+  "threads": 4,
+  "reference_best_tps": 35.36451885229731,
+  "candidates": [
+    {
+      "label": "sweet-cal-c4096-s95-t10",
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 10
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 11.069841,
+      "decode_tps": 34.50817405597786,
+      "mean_ttft_s": 0.7157921999969403,
+      "mean_first_text_s": 0.7157929999993939,
+      "mean_request_s": 6.251169499999378,
+      "mean_prefill_s": 0.701593,
+      "startup_s": 2.6821141999971587,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 23,
+        "min_available_ram_gib": 5.181205749511719,
+        "max_process_rss_gib": 11.326412200927734,
+        "max_global_gpu_used_mib": 7190.0,
+        "max_gpu_temperature_c": 44.64
+      },
+      "min_sampled_gpu_free_mib": 706.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "stage": "threads"
+    },
+    {
+      "label": "sweet-cal-c4096-s95-t6",
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 6
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 10.901157999999999,
+      "decode_tps": 35.042148733189634,
+      "mean_ttft_s": 0.7203197999988333,
+      "mean_first_text_s": 0.7203206999984104,
+      "mean_request_s": 6.1712789999983215,
+      "mean_prefill_s": 0.7115710000000001,
+      "startup_s": 2.85889170000155,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 23,
+        "min_available_ram_gib": 5.485889434814453,
+        "max_process_rss_gib": 11.325313568115234,
+        "max_global_gpu_used_mib": 7408.0,
+        "max_gpu_temperature_c": 46.48
+      },
+      "min_sampled_gpu_free_mib": 488.0,
+      "eligible": false,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "stage": "threads"
+    },
+    {
+      "label": "sweet-cal-c4096-s95-t4",
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 4
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 10.903941999999999,
+      "decode_tps": 35.03320175400787,
+      "mean_ttft_s": 0.6692573000000266,
+      "mean_first_text_s": 0.6692580500020995,
+      "mean_request_s": 6.1216919500038784,
+      "mean_prefill_s": 0.6673924999999999,
+      "startup_s": 2.774010000000999,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 23,
+        "min_available_ram_gib": 4.902652740478516,
+        "max_process_rss_gib": 11.324932098388672,
+        "max_global_gpu_used_mib": 7301.0,
+        "max_gpu_temperature_c": 47.23
+      },
+      "min_sampled_gpu_free_mib": 595.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "stage": "threads"
+    },
+    {
+      "label": "sweet-cal-c4096-s95-t8",
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 8
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 10.801787000000001,
+      "decode_tps": 35.36451885229731,
+      "mean_ttft_s": 0.7672018999946886,
+      "mean_first_text_s": 0.7672028999986651,
+      "mean_request_s": 6.168506549995072,
+      "mean_prefill_s": 0.7584314999999999,
+      "startup_s": 2.589196399996581,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 23,
+        "min_available_ram_gib": 4.8104095458984375,
+        "max_process_rss_gib": 11.325939178466797,
+        "max_global_gpu_used_mib": 7379.0,
+        "max_gpu_temperature_c": 48.46
+      },
+      "min_sampled_gpu_free_mib": 517.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "stage": "threads"
+    },
+    {
+      "label": "sweet-curve-c4096-s95-t16",
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 16
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 12.340918,
+      "decode_tps": 30.953937138225857,
+      "mean_ttft_s": 0.7094274500013853,
+      "mean_first_text_s": 0.7094283000005817,
+      "mean_request_s": 6.8802702499997395,
+      "mean_prefill_s": 0.707574,
+      "startup_s": 3.047510100004729,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 25,
+        "min_available_ram_gib": 3.772960662841797,
+        "max_process_rss_gib": 11.389610290527344,
+        "max_global_gpu_used_mib": 7336.0,
+        "max_gpu_temperature_c": 45.22
+      },
+      "min_sampled_gpu_free_mib": 560.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "stage": "extended-threads"
+    },
+    {
+      "label": "sweet-curve-c4096-s95-t12",
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 12
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 10.990632,
+      "decode_tps": 34.75687294415826,
+      "mean_ttft_s": 0.6798478999990039,
+      "mean_first_text_s": 0.6798487000014575,
+      "mean_request_s": 6.175513199999841,
+      "mean_prefill_s": 0.6781759999999999,
+      "startup_s": 2.574130300003162,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 23,
+        "min_available_ram_gib": 3.7777099609375,
+        "max_process_rss_gib": 11.388832092285156,
+        "max_global_gpu_used_mib": 7331.0,
+        "max_gpu_temperature_c": 46.91
+      },
+      "min_sampled_gpu_free_mib": 565.0,
+      "eligible": true,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "stage": "extended-threads"
+    },
+    {
+      "label": "sweet-curve-c4096-s95-t2",
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 2
+      },
+      "status": "complete",
+      "fixed_requests": 2,
+      "decode_steps": 382,
+      "decode_seconds": 14.044777,
+      "decode_tps": 27.198723055552964,
+      "mean_ttft_s": 0.782961550001346,
+      "mean_first_text_s": 0.7829623500001617,
+      "mean_request_s": 7.805626749999647,
+      "mean_prefill_s": 0.773962,
+      "startup_s": 2.4297685000055935,
+      "correct": 0,
+      "checked": 0,
+      "resources": {
+        "sample_count": 27,
+        "min_available_ram_gib": 3.3884315490722656,
+        "max_process_rss_gib": 11.386234283447266,
+        "max_global_gpu_used_mib": 7558.0,
+        "max_gpu_temperature_c": 47.34
+      },
+      "min_sampled_gpu_free_mib": 338.0,
+      "eligible": false,
+      "eligibility_rule": "at least 512 MiB sampled free GPU memory and 3 GiB available system RAM",
+      "stage": "extended-threads"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "aggregate": [
+    {
+      "config": {
+        "cache_mib": 4096,
+        "cpu_share": 0.95,
+        "threads": 6
+      },
+      "eligible": true,
+      "runs": 3,
+      "decode_tps": 36.80486175801707,
+      "run_decode_tps": [
+        35.61149457727368,
+        37.9625669660055,
+        36.916155199876634
+      ],
+      "mean_request_s": 4.136725008333694,
+      "mean_ttft_s": 0.6853887666669228,
+      "min_sampled_gpu_free_mib": 1513.0,
+      "min_available_ram_gib": 4.7393341064453125
+    },
+    {
+      "config": {
+        "cache_mib": 5376,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "eligible": false,
+      "runs": 3,
+      "decode_tps": 44.26610972697221,
+      "run_decode_tps": [
+        43.58874363597908,
+        45.56058306425235,
+        43.70354884860936
+      ],
+      "mean_request_s": 3.569233499999124,
+      "mean_ttft_s": 0.6995280333321716,
+      "min_sampled_gpu_free_mib": 233.0,
+      "min_available_ram_gib": 4.651889801025391
+    },
+    {
+      "config": {
+        "cache_mib": 5120,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "eligible": true,
+      "runs": 3,
+      "decode_tps": 43.14387613585667,
+      "run_decode_tps": [
+        42.302477201421326,
+        44.16056119380254,
+        43.009154092062786
+      ],
+      "mean_request_s": 3.529627675000787,
+      "mean_ttft_s": 0.5857609833334815,
+      "min_sampled_gpu_free_mib": 618.0,
+      "min_available_ram_gib": 4.7157440185546875
+    },
+    {
+      "config": {
+        "cache_mib": 5632,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "eligible": false,
+      "runs": 3,
+      "decode_tps": 34.34507911751806,
+      "run_decode_tps": [
+        33.94932875560941,
+        34.59540974755634,
+        34.49759783311624
+      ],
+      "mean_request_s": 6.625273483332421,
+      "mean_ttft_s": 2.926552308332854,
+      "min_sampled_gpu_free_mib": 83.0,
+      "min_available_ram_gib": 4.156261444091797
+    },
+    {
+      "config": {
+        "cache_mib": 3840,
+        "cpu_share": 0.9,
+        "threads": 8
+      },
+      "eligible": true,
+      "runs": 3,
+      "decode_tps": 35.46971408920116,
+      "run_decode_tps": [
+        34.96163236136784,
+        35.948173772622845,
+        35.51314112055425
+      ],
+      "mean_request_s": 4.3087060416649665,
+      "mean_ttft_s": 0.7277531416651376,
+      "min_sampled_gpu_free_mib": 1740.0,
+      "min_available_ram_gib": 4.480594635009766
+    },
+    {
+      "config": {
+        "cache_mib": 6144,
+        "cpu_share": 0.9,
+        "threads": 4
+      },
+      "eligible": false,
+      "runs": 3,
+      "decode_tps": 23.391848410507784,
+      "run_decode_tps": [
+        23.133273475229252,
+        23.724000212021576,
+        23.325998041626345
+      ],
+      "mean_request_s": 8.033082891666103,
+      "mean_ttft_s": 2.6030772083322518,
+      "min_sampled_gpu_free_mib": 292.0,
+      "min_available_ram_gib": 3.9044151306152344
+    },
+    {
+      "config": {
+        "static_layers": 12,
+        "threads": 6,
+        "cache_mib": 0,
+        "cpu_share": 0
+      },
+      "eligible": true,
+      "runs": 3,
+      "decode_tps": 27.907316578749768,
+      "run_decode_tps": [
+        27.873819608211512,
+        28.122084167515723,
+        27.72887470495085
+      ],
+      "mean_request_s": 5.269556558333231,
+      "mean_ttft_s": 0.7181696666678666,
+      "min_sampled_gpu_free_mib": 1653.0,
+      "min_available_ram_gib": 4.529445648193359
+    }
+  ],
+  "fastest": {
+    "config": {
+      "cache_mib": 5376,
+      "cpu_share": 0.9,
+      "threads": 4
+    },
+    "eligible": false,
+    "runs": 3,
+    "decode_tps": 44.26610972697221,
+    "run_decode_tps": [
+      43.58874363597908,
+      45.56058306425235,
+      43.70354884860936
+    ],
+    "mean_request_s": 3.569233499999124,
+    "mean_ttft_s": 0.6995280333321716,
+    "min_sampled_gpu_free_mib": 233.0,
+    "min_available_ram_gib": 4.651889801025391
+  },
+  "recommended": {
+    "config": {
+      "cache_mib": 5120,
+      "cpu_share": 0.9,
+      "threads": 4
+    },
+    "eligible": true,
+    "runs": 3,
+    "decode_tps": 43.14387613585667,
+    "run_decode_tps": [
+      42.302477201421326,
+      44.16056119380254,
+      43.009154092062786
+    ],
+    "mean_request_s": 3.529627675000787,
+    "mean_ttft_s": 0.5857609833334815,
+    "min_sampled_gpu_free_mib": 618.0,
+    "min_available_ram_gib": 4.7157440185546875
+  },
+  "conservative": {
+    "config": {
+      "cache_mib": 5120,
+      "cpu_share": 0.9,
+      "threads": 4
+    },
+    "eligible": true,
+    "runs": 3,
+    "decode_tps": 43.14387613585667,
+    "run_decode_tps": [
+      42.302477201421326,
+      44.16056119380254,
+      43.009154092062786
+    ],
+    "mean_request_s": 3.529627675000787,
+    "mean_ttft_s": 0.5857609833334815,
+    "min_sampled_gpu_free_mib": 618.0,
+    "min_available_ram_gib": 4.7157440185546875
+  },
+  "rule": "Performance choice: smallest cache within 5% of fastest cache configuration completing all three fresh-prompt runs. Earlier 512 MiB GPU / 3 GiB RAM criteria define a separately reported conservative alternative, not a veto on the user's wider experiment."
+}

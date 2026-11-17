@@ -1,0 +1,73 @@
+0.00.088.762 I ggml_cuda_init: found 1 CUDA devices (Total VRAM: 8123 MiB):
+0.00.088.894 I load_backend: loaded CUDA backend from E:\Project_APEX\experiments\002-real-moe-routing\runtime\ggml-cuda.dll
+0.00.146.036 I cmn  common_param:   - CUDA0   : NVIDIA GeForce RTX 5060 (8123 MiB, 7031 MiB free)
+0.00.146.104 I cmn  common_param: system_info: n_threads = 4 (n_threads_batch = 4) / 16 | CUDA : ARCHS = 750,800,860,890,900,1200,1210 | USE_GRAPHS = 1 | FA_QUANTS = q4_0-q4_0,q8_0-q8_0,f16-f16,bf16-bf16,f8_e4m3-f8_e4m3 | NATIVE_FP8 = 1 | BLACKWELL_NATIVE_FP4 = 1 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX_VNNI = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | BMI2 = 1 | LLAMAFILE = 1 | OPENMP = 1 | REPACK = 1 | 
+0.00.224.759 I llama_prepare_model_devices: using device CUDA0 (NVIDIA GeForce RTX 5060) (0000:01:00.0) - 7031 MiB free
+0.00.392.671 I print_info: n_layer               = 24
+0.00.392.671 I print_info: n_layer_all           = 24
+0.00.392.696 I print_info: n_expert              = 32
+0.00.392.696 I print_info: n_expert_used         = 4
+0.00.392.696 I print_info: n_expert_groups       = 0
+0.01.217.269 I load_tensors: offloaded 25/25 layers to GPU
+0.01.217.272 I load_tensors:   CPU_Mapped model buffer size =   586.82 MiB
+0.01.217.273 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.274 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.274 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.275 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.275 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.276 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.276 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.277 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.277 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.277 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.278 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.279 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.279 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.280 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.280 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.281 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.281 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.281 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.282 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.282 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.283 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.283 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.284 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.284 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.285 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.289 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.290 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.290 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.291 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.291 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.292 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.292 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.293 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.293 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.294 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.294 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.295 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.295 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.296 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.296 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.297 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.297 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.298 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.298 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.299 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.299 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.299 I load_tensors:   CPU_Mapped model buffer size =   269.65 MiB
+0.01.217.300 I load_tensors:   CPU_Mapped model buffer size =   134.82 MiB
+0.01.217.301 I load_tensors:        CUDA0 model buffer size =  1242.03 MiB
+0.01.583.612 I llama_context:  CUDA_Host  output buffer size =     0.77 MiB
+0.01.585.181 I llama_kv_cache:      CUDA0 KV buffer size =    48.00 MiB
+0.01.585.787 I llama_kv_cache:      CUDA0 KV buffer size =    12.00 MiB
+0.03.118.630 I impl:      CUDA0 MoE cache size =  9745.07 MiB for 9682.03 MiB of host experts, 95% of the misses on the CPU
+0.03.131.450 E ggml_backend_cuda_buffer_type_alloc_buffer: allocating 168.48 MiB on device 0: cudaMalloc failed: out of memory
+0.03.131.460 E ggml_gallocr_reserve_n_impl: failed to allocate CUDA0 buffer of size 176663680
+0.03.131.462 E graph_reserve: failed to allocate compute buffers
+0.03.533.459 E llama_init_from_model: failed to initialize the context: failed to allocate compute pp buffers
+0.03.533.470 E cmn  common_init_: failed to create context with model 'E:\Project_APEX\experiments\002-real-moe-routing\models\gpt-oss-20b-MXFP4.gguf'
+0.03.533.475 E cmn  common_init_: failed to create context with model 'E:\Project_APEX\experiments\002-real-moe-routing\models\gpt-oss-20b-MXFP4.gguf'
+0.03.533.478 E srv    load_model: failed to create_context with model 'E:\Project_APEX\experiments\002-real-moe-routing\models\gpt-oss-20b-MXFP4.gguf'
+0.03.534.801 E srv  server_run_i: exiting due to model loading error
