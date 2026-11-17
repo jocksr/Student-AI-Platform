@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "kind": "official-model-metadata",
+  "utc": "2026-11-17T16:09:59.622067+00:00",
+  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "E:\\Project_APEX\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.3.5",
+    "psutil": "7.2.2",
+    "torch": "2.9.1",
+    "lz4": "4.4.5",
+    "zstandard": "0.25.0"
+  },
+  "repo": "https://huggingface.co/openai/gpt-oss-120b",
+  "revision": "b5c939de8f754692c1647ca79fbf85e8c1e70f8a",
+  "shards": 15,
+  "downloaded_metadata_bytes": 157698,
+  "config_sha256": "081ee5daf6923c9300247937f97c42cd26bebc88a433ea7d349f995e5c9a2e91",
+  "layers": 36,
+  "experts_per_layer": 128,
+  "top_k": 4,
+  "tensor_payload_bytes": 65248815744,
+  "expert_payload_bytes": 60993699840,
+  "nonexpert_payload_bytes": 4255115904,
+  "serialized_checkpoint_bytes": 65248893184,
+  "logical_parameters_from_shapes": 116829156672,
+  "logical_expert_parameters": 114701598720,
+  "logical_nonexpert_parameters": 2127557952,
+  "expert_mean_serialized_bytes": 13236480,
+  "parameter_count_method": "Two logical FP4 values per uint8 _blocks element; _scales excluded; all other elements counted once. Includes biases.",
+  "index_metadata": {
+    "total_size": 65248815744
+  },
+  "weight_payload_downloaded": false
+}

@@ -1,0 +1,184 @@
+{
+  "utc": "2026-11-17T16:04:49.4347790Z",
+  "source": "read-only Windows CIM and command inventory",
+  "cpu": {
+    "Name": "Intel(R) Core(TM) i5-14400F",
+    "NumberOfCores": 10,
+    "NumberOfLogicalProcessors": 16,
+    "MaxClockSpeed": 2500
+  },
+  "os": {
+    "Caption": "Microsoft Windows 11 Home",
+    "Version": "10.0.26200",
+    "TotalVisibleMemorySize": 33390028,
+    "FreePhysicalMemory": 17840040
+  },
+  "ram": [
+    {
+      "Capacity": 17179869184,
+      "Speed": 2400,
+      "ConfiguredClockSpeed": 3200,
+      "Manufacturer": "Team Group Inc",
+      "PartNumber": "TEAMGROUP-UD4-3200  ",
+      "DeviceLocator": "Controller0-ChannelA-DIMM1",
+      "DataWidth": 64
+    },
+    {
+      "Capacity": 17179869184,
+      "Speed": 2400,
+      "ConfiguredClockSpeed": 3200,
+      "Manufacturer": "Team Group Inc",
+      "PartNumber": "TEAMGROUP-UD4-3200  ",
+      "DeviceLocator": "Controller1-ChannelA-DIMM1",
+      "DataWidth": 64
+    }
+  ],
+  "disks": [
+    {
+      "FriendlyName": "KINGSTON SNV3S1000G",
+      "BusType": "NVMe",
+      "MediaType": "SSD",
+      "Size": 1000204886016
+    },
+    {
+      "FriendlyName": "Samsung SSD 990 PRO 2TB",
+      "BusType": "NVMe",
+      "MediaType": "SSD",
+      "Size": 2000398934016
+    },
+    {
+      "FriendlyName": "WD My Passport 2626",
+      "BusType": "USB",
+      "MediaType": "HDD",
+      "Size": 1000170586112
+    }
+  ],
+  "volumes": [
+    {
+      "DriveLetter": "D",
+      "FileSystem": "exFAT",
+      "Size": 1000150663168,
+      "SizeRemaining": 240021667840
+    },
+    {
+      "DriveLetter": null,
+      "FileSystem": "NTFS",
+      "Size": 931131392,
+      "SizeRemaining": 128458752
+    },
+    {
+      "DriveLetter": "C",
+      "FileSystem": "NTFS",
+      "Size": 999149268992,
+      "SizeRemaining": 137116418048
+    },
+    {
+      "DriveLetter": "E",
+      "FileSystem": "NTFS",
+      "Size": 1999844143104,
+      "SizeRemaining": 1922855485440
+    }
+  ],
+  "partitions": [
+    {
+      "DiskNumber": 0,
+      "PartitionNumber": 1,
+      "DriveLetter": "\u0000",
+      "Size": 104857600
+    },
+    {
+      "DiskNumber": 0,
+      "PartitionNumber": 2,
+      "DriveLetter": "\u0000",
+      "Size": 16777216
+    },
+    {
+      "DiskNumber": 0,
+      "PartitionNumber": 3,
+      "DriveLetter": "C",
+      "Size": 999149273088
+    },
+    {
+      "DiskNumber": 0,
+      "PartitionNumber": 4,
+      "DriveLetter": "\u0000",
+      "Size": 931135488
+    },
+    {
+      "DiskNumber": 1,
+      "PartitionNumber": 1,
+      "DriveLetter": "\u0000",
+      "Size": 536870912
+    },
+    {
+      "DiskNumber": 1,
+      "PartitionNumber": 2,
+      "DriveLetter": "\u0000",
+      "Size": 16777216
+    },
+    {
+      "DiskNumber": 1,
+      "PartitionNumber": 3,
+      "DriveLetter": "E",
+      "Size": 1999844147200
+    },
+    {
+      "DiskNumber": 2,
+      "PartitionNumber": 1,
+      "DriveLetter": "D",
+      "Size": 1000167440384
+    }
+  ],
+  "disk_numbers": [
+    {
+      "Number": 0,
+      "FriendlyName": "KINGSTON SNV3S1000G",
+      "BusType": "NVMe",
+      "Size": 1000204886016
+    },
+    {
+      "Number": 1,
+      "FriendlyName": "Samsung SSD 990 PRO 2TB",
+      "BusType": "NVMe",
+      "Size": 2000398934016
+    },
+    {
+      "Number": 2,
+      "FriendlyName": "WD My Passport 2626",
+      "BusType": "USB",
+      "Size": 1000170586112
+    }
+  ],
+  "tools": [
+    {
+      "Name": "python.exe",
+      "Source": "C:\\Program Files\\Python314\\python.exe"
+    },
+    {
+      "Name": "py.exe",
+      "Source": "C:\\WINDOWS\\py.exe"
+    },
+    {
+      "Name": "git.exe",
+      "Source": "C:\\Program Files\\Git\\cmd\\git.exe"
+    },
+    {
+      "Name": "nvidia-smi.exe",
+      "Source": "C:\\WINDOWS\\system32\\nvidia-smi.exe"
+    },
+    {
+      "Name": "docker.exe",
+      "Source": "C:\\Program Files\\Docker\\Docker\\resources\\bin\\docker.exe"
+    },
+    {
+      "Name": "wsl.exe",
+      "Source": "C:\\WINDOWS\\system32\\wsl.exe"
+    }
+  ],
+  "wsl_status": "Default Distribution: Ubuntu\r\n\r\nDefault Version: 2\r\n\r\n\r\n",
+  "wsl_distributions": "  NAME              STATE           VERSION\r\n\r\n* Ubuntu            Stopped         2\r\n\r\n  docker-desktop    Stopped         2\r\n\r\n\r\n",
+  "docker_client": "Docker version 29.9.2, build a82e528\r\n",
+  "nvidia": "name, memory.total [MiB], memory.free [MiB], driver_version, pcie.link.gen.current, pcie.link.gen.max, pcie.link.width.current, pcie.link.width.max\r\nNVIDIA GeForce RTX 5060, 8151 MiB, 6191 MiB, 621.24, 1, 4, 8, 16\r\n",
+  "cuda_toolkit_folders": [],
+  "visual_studio_compilers": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe"
+}

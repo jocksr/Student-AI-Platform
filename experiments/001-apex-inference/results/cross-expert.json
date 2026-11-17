@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "kind": "measured-cross-expert",
+  "utc": "2026-11-17T16:21:58.596587+00:00",
+  "source_sha256": "421c8622b51bfbb1d2604ee621d99b2db6d25a53f58cb6b39f2ee73137697015",
+  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "E:\\Project_APEX\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.3.5",
+    "psutil": "7.2.2",
+    "torch": "2.9.1",
+    "lz4": "4.4.5",
+    "zstandard": "0.25.0"
+  },
+  "rows": [
+    {
+      "tensor": "model.layers.18.mlp.experts.gate_up_proj_blocks",
+      "bytes_per_sample": 131072,
+      "matching_4k_blocks": 0,
+      "blocks_compared": 32,
+      "independent_stored_bytes": 253631,
+      "base_plus_residual_bytes": 258189,
+      "additional_bytes": 4558,
+      "roundtrip_exact": true,
+      "caveat": "Dependency retrieval/decode costs would be additional; base included in storage total."
+    },
+    {
+      "tensor": "model.layers.18.mlp.experts.gate_up_proj_scales",
+      "bytes_per_sample": 131072,
+      "matching_4k_blocks": 0,
+      "blocks_compared": 32,
+      "independent_stored_bytes": 60320,
+      "base_plus_residual_bytes": 64650,
+      "additional_bytes": 4330,
+      "roundtrip_exact": true,
+      "caveat": "Dependency retrieval/decode costs would be additional; base included in storage total."
+    },
+    {
+      "tensor": "model.layers.0.mlp.experts.down_proj_blocks",
+      "bytes_per_sample": 131072,
+      "matching_4k_blocks": 0,
+      "blocks_compared": 32,
+      "independent_stored_bytes": 254143,
+      "base_plus_residual_bytes": 258095,
+      "additional_bytes": 3952,
+      "roundtrip_exact": true,
+      "caveat": "Dependency retrieval/decode costs would be additional; base included in storage total."
+    },
+    {
+      "tensor": "model.layers.0.mlp.experts.down_proj_scales",
+      "bytes_per_sample": 131072,
+      "matching_4k_blocks": 0,
+      "blocks_compared": 32,
+      "independent_stored_bytes": 55467,
+      "base_plus_residual_bytes": 59213,
+      "additional_bytes": 3746,
+      "roundtrip_exact": true,
+      "caveat": "Dependency retrieval/decode costs would be additional; base included in storage total."
+    },
+    {
+      "tensor": "model.layers.0.mlp.experts.gate_up_proj_blocks",
+      "bytes_per_sample": 131072,
+      "matching_4k_blocks": 0,
+      "blocks_compared": 32,
+      "independent_stored_bytes": 250113,
+      "base_plus_residual_bytes": 256213,
+      "additional_bytes": 6100,
+      "roundtrip_exact": true,
+      "caveat": "Dependency retrieval/decode costs would be additional; base included in storage total."
+    },
+    {
+      "tensor": "model.layers.0.mlp.experts.gate_up_proj_scales",
+      "bytes_per_sample": 131072,
+      "matching_4k_blocks": 0,
+      "blocks_compared": 32,
+      "independent_stored_bytes": 58467,
+      "base_plus_residual_bytes": 61236,
+      "additional_bytes": 2769,
+      "roundtrip_exact": true,
+      "caveat": "Dependency retrieval/decode costs would be additional; base included in storage total."
+    },
+    {
+      "tensor": "model.layers.18.mlp.experts.down_proj_blocks",
+      "bytes_per_sample": 131072,
+      "matching_4k_blocks": 0,
+      "blocks_compared": 32,
+      "independent_stored_bytes": 253688,
+      "base_plus_residual_bytes": 257995,
+      "additional_bytes": 4307,
+      "roundtrip_exact": true,
+      "caveat": "Dependency retrieval/decode costs would be additional; base included in storage total."
+    },
+    {
+      "tensor": "model.layers.18.mlp.experts.down_proj_scales",
+      "bytes_per_sample": 131072,
+      "matching_4k_blocks": 0,
+      "blocks_compared": 32,
+      "independent_stored_bytes": 59133,
+      "base_plus_residual_bytes": 62046,
+      "additional_bytes": 2913,
+      "roundtrip_exact": true,
+      "caveat": "Dependency retrieval/decode costs would be additional; base included in storage total."
+    },
+    {
+      "tensor": "model.layers.35.mlp.experts.down_proj_blocks",
+      "bytes_per_sample": 131072,
+      "matching_4k_blocks": 0,
+      "blocks_compared": 32,
+      "independent_stored_bytes": 251167,
+      "base_plus_residual_bytes": 255195,
+      "additional_bytes": 4028,
+      "roundtrip_exact": true,
+      "caveat": "Dependency retrieval/decode costs would be additional; base included in storage total."
+    },
+    {
+      "tensor": "model.layers.35.mlp.experts.down_proj_scales",
+      "bytes_per_sample": 131072,
+      "matching_4k_blocks": 0,
+      "blocks_compared": 32,
+      "independent_stored_bytes": 52646,
+      "base_plus_residual_bytes": 66817,
+      "additional_bytes": 14171,
+      "roundtrip_exact": true,
+      "caveat": "Dependency retrieval/decode costs would be additional; base included in storage total."
+    },
+    {
+      "tensor": "model.layers.35.mlp.experts.gate_up_proj_blocks",
+      "bytes_per_sample": 131072,
+      "matching_4k_blocks": 0,
+      "blocks_compared": 32,
+      "independent_stored_bytes": 253574,
+      "base_plus_residual_bytes": 257527,
+      "additional_bytes": 3953,
+      "roundtrip_exact": true,
+      "caveat": "Dependency retrieval/decode costs would be additional; base included in storage total."
+    },
+    {
+      "tensor": "model.layers.35.mlp.experts.gate_up_proj_scales",
+      "bytes_per_sample": 131072,
+      "matching_4k_blocks": 0,
+      "blocks_compared": 32,
+      "independent_stored_bytes": 58151,
+      "base_plus_residual_bytes": 71288,
+      "additional_bytes": 13137,
+      "roundtrip_exact": true,
+      "caveat": "Dependency retrieval/decode costs would be additional; base included in storage total."
+    }
+  ],
+  "sample_manifest_sha256": "4c53f191ab3033bbcde8447140d3e019220c187c5f87ac2676dc64b1093b9810"
+}

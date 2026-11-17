@@ -1,0 +1,6 @@
+# Keep source fingerprints stable across Windows and Unix checkouts.
+* text=auto eol=lf
+
+# Measurements and manifests contain byte hashes of other JSON artifacts.
+# Preserve their recorded bytes rather than normalizing line endings.
+*.json -text whitespace=trailing-space,space-before-tab,cr-at-eol

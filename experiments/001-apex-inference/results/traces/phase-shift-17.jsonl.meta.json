@@ -1,0 +1,11 @@
+{
+  "source": "synthetic",
+  "seed": 17,
+  "workload": "phase-shift",
+  "steps": 64,
+  "layers": 36,
+  "experts": 128,
+  "top_k": 4,
+  "sha256": "2796f14dbdc11df335b2d3b64739b3cbef677b4cd56849fe21ee70ec9bf63686",
+  "schema_version": 1
+}

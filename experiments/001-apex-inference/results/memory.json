@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "kind": "measured-memory-copy",
+  "utc": "2026-11-17T16:21:48.683959+00:00",
+  "source_sha256": "421c8622b51bfbb1d2604ee621d99b2db6d25a53f58cb6b39f2ee73137697015",
+  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "E:\\Project_APEX\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.3.5",
+    "psutil": "7.2.2",
+    "torch": "2.9.1",
+    "lz4": "4.4.5",
+    "zstandard": "0.25.0"
+  },
+  "bytes_per_array": 67108864,
+  "samples_ns": [
+    5024900,
+    3778900,
+    3844600,
+    3693200,
+    5094600,
+    4055000,
+    4486500,
+    3776200,
+    4785000
+  ],
+  "median_ns": 4055000,
+  "p95_ns": 5094600,
+  "min_ns": 3693200,
+  "payload_GB_s": 16.54965819975339,
+  "logical_read_plus_write_GB_s": 33.09931639950678,
+  "available_ram_after": 17146109952,
+  "conditions": "Single-thread NumPy copy; warm pages; includes read and write. Not STREAM or theoretical channel bandwidth."
+}

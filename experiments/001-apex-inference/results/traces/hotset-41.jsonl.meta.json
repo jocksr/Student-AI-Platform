@@ -1,0 +1,11 @@
+{
+  "source": "synthetic",
+  "seed": 41,
+  "workload": "hotset",
+  "steps": 64,
+  "layers": 36,
+  "experts": 128,
+  "top_k": 4,
+  "sha256": "d033e4275c503991626f88cb81dddc8d12cbc2bf14ee2993611743019d1b0bcf",
+  "schema_version": 1
+}
